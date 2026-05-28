@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | EduSolver Compare Portal</title>
+  <meta name="description"
+    content="Get in touch with EduSolver's Admissions Desk. Book a free 1-on-1 advisor consultation, resolve accreditation doubts, and secure direct-to-university admissions.">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#f0fdf4',
+              100: '#dcfce7',
+              200: '#bbf7d0',
+              300: '#86efac',
+              400: '#4ade80',
+              500: '#12b809', // Logo brand green
+              600: '#0f9a07',
+              700: '#0c7b05',
+              800: '#0a6104',
+              900: '#084e03',
+            },
+            slate: {
+              950: '#030712',
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Global Styling -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body
+  class="font-sans text-slate-800 bg-[#fbfcfb] selection:bg-brand-100 selection:text-brand-900 bg-grid-pattern min-h-screen flex flex-col overflow-x-hidden">
+
+  <!-- Dynamic Sticky Navbar -->
+  <edu-navbar></edu-navbar>
+
+  <!-- Spacer for fixed header -->
+  <div class="h-28"></div>
+
+  <!-- ==========================================
+       1. HERO HEADER AREA
+       ========================================== -->
+  <section class="relative overflow-hidden py-16 bg-gradient-to-br from-brand-50/40 via-[#fcfdfc] to-emerald-50/20 border-b border-slate-100">
+    <div class="absolute top-0 right-0 w-96 h-96 rounded-full bg-brand-100/10 blur-3xl -z-10 animate-pulse"></div>
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+      <span
+        class="inline-flex items-center space-x-2 bg-brand-50 border border-brand-200 text-brand-700 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider">
+        <i class="fa-solid fa-phone text-brand-500 mr-1.5"></i> Direct Admissions Desk • Uninfluenced Help
+      </span>
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 leading-[1.15] tracking-tight">
+        Get in Touch with our <span class="text-gradient">Admissions Desk</span>
+      </h1>
+      <p class="text-slate-500 text-xs sm:text-sm max-w-xl mx-auto leading-relaxed">
+        Have questions about UGC parameters, semester fees, or NIOS board admissions? Book a slot with our matched expert advisors to clear the noise and get honest guidance.
+      </p>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       2. 1-ON-1 ADVISOR MATCHING FORM WIZARD
+       ========================================== -->
+  <section class="py-16 sm:py-24 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+        
+        <!-- Form Fields (Left 7 Cols) -->
+        <div class="lg:col-span-7 glass border border-slate-200 rounded-3xl p-8 sm:p-10 space-y-6">
+          <div class="space-y-2">
+            <h3 class="text-xl font-extrabold text-slate-950">Book Your 1-on-1 Academic Consultation</h3>
+            <p class="text-xs text-slate-400">Fill in your information to instantly match with the active advisor for your program.</p>
+          </div>
+
+          <form id="advisor-booking-form" onsubmit="handleBookingSubmit(event)" class="space-y-4">
+            
+            <!-- Dual fields: Name & Phone -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-[10px] font-extrabold uppercase text-slate-400 mb-1.5">Full Name</label>
+                <input type="text" id="student-name" required placeholder="Enter your full name" 
+                  class="w-full bg-slate-50 border border-slate-200 text-xs text-slate-800 px-4 py-3.5 rounded-xl focus:outline-none focus:border-brand-500 focus:bg-white transition-all placeholder-slate-450" />
+              </div>
+              <div>
+                <label class="block text-[10px] font-extrabold uppercase text-slate-400 mb-1.5">Mobile Number</label>
+                <input type="tel" id="student-phone" required placeholder="Enter mobile number" 
+                  class="w-full bg-slate-50 border border-slate-200 text-xs text-slate-800 px-4 py-3.5 rounded-xl focus:outline-none focus:border-brand-500 focus:bg-white transition-all placeholder-slate-450" />
+              </div>
+            </div>
+
+            <!-- Single field: Email -->
+            <div>
+              <label class="block text-[10px] font-extrabold uppercase text-slate-400 mb-1.5">Email Address</label>
+              <input type="email" id="student-email" required placeholder="Enter your email address" 
+                class="w-full bg-slate-50 border border-slate-200 text-xs text-slate-800 px-4 py-3.5 rounded-xl focus:outline-none focus:border-brand-500 focus:bg-white transition-all placeholder-slate-450" />
+            </div>
+
+            <!-- Dropdown: Target Program Category (Dynamic Trigger) -->
+            <div>
+              <label class="block text-[10px] font-extrabold uppercase text-slate-400 mb-1.5">Target Program Category</label>
+              <select id="program-category" onchange="triggerAdvisorMatch(this.value)" required 
+                class="w-full bg-slate-50 border border-slate-200 text-xs text-slate-800 px-4 py-3.5 rounded-xl focus:outline-none focus:border-brand-500 focus:bg-white transition-all">
+                <option value="mgmt">Online MBA / BBA (Management degrees)</option>
+                <option value="tech">Online MCA / BCA (Technology degrees)</option>
+                <option value="open">Open Board admissions (NIOS Class 10/12, BOSSE)</option>
+              </select>
+            </div>
+
+            <!-- Dual fields: Date & Time -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-[10px] font-extrabold uppercase text-slate-400 mb-1.5">Preferred Date</label>
+                <input type="date" id="booking-date" required 
+                  class="w-full bg-slate-50 border border-slate-200 text-xs text-slate-800 px-4 py-3.5 rounded-xl focus:outline-none focus:border-brand-500 focus:bg-white transition-all" />
+              </div>
+              <div>
+                <label class="block text-[10px] font-extrabold uppercase text-slate-400 mb-1.5">Preferred Time Slot</label>
+                <select id="booking-time" required 
+                  class="w-full bg-slate-50 border border-slate-200 text-xs text-slate-800 px-4 py-3.5 rounded-xl focus:outline-none focus:border-brand-500 focus:bg-white transition-all">
+                  <option value="10:00 AM - 10:30 AM">10:00 AM - 10:30 AM (Morning Fit)</option>
+                  <option value="11:30 AM - 12:00 PM">11:30 AM - 12:00 PM (Pre-lunch)</option>
+                  <option value="02:30 PM - 03:00 PM">02:30 PM - 03:00 PM (Afternoon Fit)</option>
+                  <option value="04:30 PM - 05:00 PM">04:30 PM - 05:00 PM (Evening Fit)</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="pt-2">
+              <button type="submit" 
+                class="w-full bg-brand-500 hover:bg-brand-600 text-white font-extrabold text-xs py-4 rounded-xl transition-all shadow-md shadow-brand-100 hover:shadow-brand-300 flex items-center justify-center">
+                <i class="fa-solid fa-circle-check mr-2"></i> Book Matching Advisory Session
+              </button>
+            </div>
+
+          </form>
+        </div>
+
+        <!-- Dynamic Matched Advisor Card (Right 5 Cols) -->
+        <div class="lg:col-span-5 flex flex-col justify-between border border-slate-200 bg-slate-50 rounded-3xl p-8 shadow-sm">
+          
+          <div class="space-y-6">
+            <span class="inline-flex items-center space-x-1.5 bg-brand-50 border border-brand-150 text-brand-700 px-3 py-1 rounded-full text-[10px] font-extrabold uppercase tracking-wide">
+              <span class="w-1.5 h-1.5 rounded-full bg-brand-500 animate-ping"></span>
+              <span>Matched Counselor</span>
+            </span>
+
+            <!-- Dynamic Card Display -->
+            <div id="matched-advisor-card" class="space-y-6 transition-all duration-300">
+              
+              <!-- Advisor Photo Frame -->
+              <div class="relative w-36 h-36 mx-auto sm:mx-0 rounded-2xl overflow-hidden border border-slate-200 shadow-sm bg-slate-900">
+                <img id="advisor-display-img" alt="Advisor Portrait" class="object-cover object-top w-full h-full" 
+                  src="../assets/images/support_desk.png" />
+              </div>
+
+              <!-- Advisor Details -->
+              <div class="space-y-2 text-center sm:text-left">
+                <h4 id="advisor-display-name" class="text-lg font-black text-slate-950">Priya Sharma</h4>
+                <p id="advisor-display-role" class="text-xs font-semibold text-brand-600 uppercase tracking-wider">Senior Management Advisor</p>
+                <div class="flex items-center justify-center sm:justify-start space-x-1 text-xs text-slate-400 mt-1">
+                  <i class="fa-solid fa-star text-yellow-500 mr-1"></i> 
+                  <span id="advisor-display-rating" class="font-bold text-slate-700">4.9/5 (1,250+ guided)</span>
+                </div>
+              </div>
+
+              <!-- Specialty tags list -->
+              <div class="border-t border-slate-200 pt-4 space-y-2">
+                <span class="block text-[10px] font-extrabold uppercase text-slate-400">Core Expertise</span>
+                <p id="advisor-display-skills" class="text-xs text-slate-500 leading-relaxed">
+                  UGC-DEB approvals, fee structure planning, executive MBA ROI
+                </p>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="bg-white border border-slate-150 rounded-2xl p-4 mt-6 text-center sm:text-left flex items-start gap-3">
+            <i class="fa-solid fa-shield-halved text-brand-500 mt-0.5 text-base shrink-0"></i>
+            <p class="text-[10px] text-slate-400 leading-relaxed">
+              <strong>100% Uninfluenced Counseling Guarantee:</strong> Our advisors do not chase sales targets or earn commission from universities.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================
+       3. CORE HELP DESKS HOTLINES
+       ========================================== -->
+  <section class="py-16 bg-[#f8fafc] border-t border-b border-slate-100">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center mb-12 max-w-xl mx-auto">
+        <p class="text-xs font-bold tracking-widest text-slate-400 uppercase">Core Assistance Channels</p>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-2">Dedicated Help Desks</h2>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Helpline 1 -->
+        <div class="bg-white border border-slate-100 rounded-3xl p-6 shadow-2xs space-y-4 hover:shadow-md transition-shadow">
+          <div class="w-10 h-10 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center text-lg"><i class="fa-solid fa-headset"></i></div>
+          <div>
+            <h4 class="text-sm font-bold text-slate-950">Toll-Free Helpline</h4>
+            <p class="text-xs text-slate-450 mt-1">UGC-DEB Resolution Desk</p>
+          </div>
+          <p class="text-xs font-extrabold text-brand-600 hover:text-brand-700 transition-colors">1800-456-7890</p>
+        </div>
+
+        <!-- Helpline 2 -->
+        <div class="bg-white border border-slate-100 rounded-3xl p-6 shadow-2xs space-y-4 hover:shadow-md transition-shadow">
+          <div class="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center text-lg"><i class="fa-solid fa-envelope"></i></div>
+          <div>
+            <h4 class="text-sm font-bold text-slate-950">Admissions Desk</h4>
+            <p class="text-xs text-slate-450 mt-1">Direct digital enrollment help</p>
+          </div>
+          <p class="text-xs font-extrabold text-brand-600 hover:text-brand-700 transition-colors">admissions@edusolver.in</p>
+        </div>
+
+        <!-- Helpline 3 -->
+        <div class="bg-white border border-slate-100 rounded-3xl p-6 shadow-2xs space-y-4 hover:shadow-md transition-shadow">
+          <div class="w-10 h-10 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center text-lg"><i class="fa-solid fa-school"></i></div>
+          <div>
+            <h4 class="text-sm font-bold text-slate-950">Open Boards Desk</h4>
+            <p class="text-xs text-slate-450 mt-1">NIOS & BOSSE Admissions</p>
+          </div>
+          <p class="text-xs font-extrabold text-brand-600 hover:text-brand-700 transition-colors">openboards@edusolver.in</p>
+        </div>
+
+        <!-- Helpline 4 -->
+        <div class="bg-white border border-slate-100 rounded-3xl p-6 shadow-2xs space-y-4 hover:shadow-md transition-shadow">
+          <div class="w-10 h-10 rounded-xl bg-slate-50 text-slate-600 flex items-center justify-center text-lg"><i class="fa-solid fa-circle-nodes"></i></div>
+          <div>
+            <h4 class="text-sm font-bold text-slate-950">University Alliances</h4>
+            <p class="text-xs text-slate-450 mt-1">For partner universities</p>
+          </div>
+          <p class="text-xs font-extrabold text-brand-600 hover:text-brand-700 transition-colors">alliances@edusolver.in</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================
+       4. OFFICE HQ LOCATION & SCHEMATIC MOCK MAP
+       ========================================== -->
+  <section class="py-16 sm:py-24 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        
+        <!-- Left: Address profile & building image -->
+        <div class="lg:col-span-5 space-y-6">
+          <div class="space-y-3">
+            <span class="text-xs font-bold tracking-widest text-slate-400 uppercase">National Headquarters</span>
+            <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-950">Visit the EduSolver Hub</h3>
+            <p class="text-slate-500 text-xs sm:text-sm leading-relaxed">
+              Located in the premium business heart of Connaught Place, New Delhi. Drop by for in-person counseling sessions or board document submission auditing.
+            </p>
+          </div>
+
+          <div class="border border-slate-200 rounded-2xl overflow-hidden shadow-md">
+            <img alt="EduSolver CP Office Building" loading="lazy" class="w-full h-48 object-cover" 
+              src="../assets/images/office_hq.png" />
+          </div>
+
+          <div class="flex items-start gap-3">
+            <i class="fa-solid fa-location-dot text-brand-500 mt-1 text-base shrink-0"></i>
+            <div>
+              <p class="text-xs font-bold text-slate-950">New Delhi Office Address</p>
+              <p class="text-xs text-slate-500 mt-0.5">Floor 4, EduSolver Hub, Connaught Place, New Delhi, 110001, India</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: CUSTOM SLEEK GLASS SCHEMATIC MAP (NO IFRAMES) -->
+        <div class="lg:col-span-7 h-[360px] bg-slate-950 rounded-3xl border border-slate-900 shadow-2xl relative overflow-hidden flex flex-col items-center justify-center p-8 select-none">
+          <!-- Dot grid backdrop overlay -->
+          <div class="absolute inset-0 bg-[radial-gradient(rgba(255,255,255,0.05)_1px,transparent_1px)] [background-size:16px_16px] opacity-70"></div>
+          
+          <!-- Mock Map Schematic graphics -->
+          <svg class="absolute inset-0 w-full h-full opacity-35" xmlns="http://www.w3.org/2000/svg">
+            <!-- Road grids -->
+            <path d="M 0,100 L 800,100" stroke="rgba(255,255,255,0.1)" stroke-width="3" />
+            <path d="M 0,260 L 800,260" stroke="rgba(255,255,255,0.1)" stroke-width="4" />
+            <path d="M 200,0 L 200,400" stroke="rgba(255,255,255,0.1)" stroke-width="3" />
+            <path d="M 500,0 L 500,400" stroke="rgba(255,255,255,0.1)" stroke-width="4" />
+            
+            <!-- Circular Outer circles Connaught Place style -->
+            <circle cx="350" cy="180" r="140" fill="none" stroke="rgba(255,255,255,0.07)" stroke-width="6" />
+            <circle cx="350" cy="180" r="90" fill="none" stroke="rgba(18,184,9,0.15)" stroke-width="3" stroke-dasharray="10 6" />
+            <circle cx="350" cy="180" r="40" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="2" />
+          </svg>
+
+          <!-- Metro Line Path (Slate Line with small green dots) -->
+          <div class="absolute top-[260px] left-0 w-full h-1 bg-slate-800 opacity-80 flex items-center justify-around pointer-events-none">
+            <span class="w-2.5 h-2.5 rounded-full bg-slate-600 border border-slate-900" title="Metro Hub A"></span>
+            <span class="w-3.5 h-3.5 rounded-full bg-brand-500 border-2 border-slate-950" title="CP Rajiv Chowk Metro Interchange"></span>
+            <span class="w-2.5 h-2.5 rounded-full bg-slate-600 border border-slate-900" title="Metro Hub B"></span>
+          </div>
+
+          <!-- HQ Pulsing beacon pin -->
+          <div class="absolute top-[170px] left-[340px] flex flex-col items-center pointer-events-none">
+            <div class="relative flex items-center justify-center">
+              <span class="absolute w-10 h-10 rounded-full bg-brand-500/25 animate-ping"></span>
+              <span class="relative w-4 h-4 rounded-full bg-brand-500 border-2 border-white shadow-md"></span>
+            </div>
+            
+            <!-- Float Tag -->
+            <div class="mt-2.5 glass-dark border border-brand-500/30 px-3.5 py-2 rounded-xl text-center shadow-xl backdrop-blur-md">
+              <p class="text-[10px] font-black text-white leading-none uppercase tracking-wide flex items-center gap-1.5">
+                <i class="fa-solid fa-graduation-cap text-brand-400"></i> EduSolver HQ
+              </p>
+              <p class="text-[8px] text-brand-300 mt-1 leading-none">Connaught Place Hub</p>
+            </div>
+          </div>
+
+          <!-- Compass indicator top right -->
+          <div class="absolute top-6 right-6 glass-dark border border-white/10 p-2.5 rounded-xl flex items-center justify-center text-slate-500 text-xs">
+            <i class="fa-solid fa-compass text-brand-500 animate-spin" style="animation-duration: 20s;"></i>
+          </div>
+
+          <!-- Mock Map Scale bottom left -->
+          <div class="absolute bottom-6 left-6 glass-dark border border-white/10 px-3 py-1.5 rounded-xl text-[8px] font-mono text-slate-400 tracking-wider">
+            SCALE: 1 CM = 100M
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================
+       5. VALIDATION FAQS ACCORDION
+       ========================================== -->
+  <section class="py-16 sm:py-24 bg-[#f8fafc] border-t border-b border-slate-100">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center mb-12">
+        <p class="text-xs font-bold tracking-widest text-slate-400 uppercase">Immediate Clarifications</p>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 leading-tight mt-2">Frequently Asked Validation Questions</h2>
+      </div>
+
+      <div class="space-y-4">
+        
+        <!-- Accordion 1 -->
+        <div class="bg-white border border-slate-150 rounded-2xl overflow-hidden shadow-2xs hover:shadow-sm transition-shadow">
+          <button onclick="toggleAccordion('faq-1')" class="w-full px-6 py-5 flex items-center justify-between text-left focus:outline-none select-none">
+            <span class="text-xs sm:text-sm font-bold text-slate-900">How does the 1-on-1 advisor matching actually work?</span>
+            <span class="w-6 h-6 rounded-full bg-slate-50 flex items-center justify-center text-slate-500 text-xs shrink-0 ml-4 transition-transform duration-200" id="faq-1-arrow">
+              <i class="fa-solid fa-chevron-down"></i>
+            </span>
+          </button>
+          <div id="faq-1" class="hidden transition-all duration-300 border-t border-slate-100">
+            <div class="px-6 py-5 text-xs sm:text-sm text-slate-500 leading-relaxed space-y-2">
+              <p>
+                When you input your Target Program Category in our booking form, our framework matches your request directly with the lead counselor certified for that segment:
+              </p>
+              <ul class="list-disc pl-5 space-y-1">
+                <li><strong>Management Desk:</strong> Priya Sharma matches business degree (MBA/BBA) students.</li>
+                <li><strong>Tech Desk:</strong> Rohan Verma coordinates engineering & IT programs (MCA/BCA).</li>
+                <li><strong>Open Schooling Desk:</strong> Dr. Anil Gupta manages secondary classes (NIOS/BOSSE).</li>
+              </ul>
+              <p>
+                Your matched CDA evaluates your academic goals, semester bandwidth, and budget before recommending any college fit.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Accordion 2 -->
+        <div class="bg-white border border-slate-150 rounded-2xl overflow-hidden shadow-2xs hover:shadow-sm transition-shadow">
+          <button onclick="toggleAccordion('faq-2')" class="w-full px-6 py-5 flex items-center justify-between text-left focus:outline-none select-none">
+            <span class="text-xs sm:text-sm font-bold text-slate-900">Are there any consultant hidden fees or payment commissions?</span>
+            <span class="w-6 h-6 rounded-full bg-slate-50 flex items-center justify-center text-slate-500 text-xs shrink-0 ml-4 transition-transform duration-200" id="faq-2-arrow">
+              <i class="fa-solid fa-chevron-down"></i>
+            </span>
+          </button>
+          <div id="faq-2" class="hidden transition-all duration-300 border-t border-slate-100">
+            <div class="px-6 py-5 text-xs sm:text-sm text-slate-500 leading-relaxed">
+              Absolutely not. Our expert advisory services are <strong>100% free of charge</strong> for all aspirants. Furthermore, to guarantee maximum safety, we do not handle student fee pools: learners pay their semester/exam tuition directly into official, authorized university or board bank accounts.
+            </div>
+          </div>
+        </div>
+
+        <!-- Accordion 3 -->
+        <div class="bg-white border border-slate-150 rounded-2xl overflow-hidden shadow-2xs hover:shadow-sm transition-shadow">
+          <button onclick="toggleAccordion('faq-3')" class="w-full px-6 py-5 flex items-center justify-between text-left focus:outline-none select-none">
+            <span class="text-xs sm:text-sm font-bold text-slate-900">How do you verify the UGC-DEB and NAAC accreditations of partners?</span>
+            <span class="w-6 h-6 rounded-full bg-slate-50 flex items-center justify-center text-slate-500 text-xs shrink-0 ml-4 transition-transform duration-200" id="faq-3-arrow">
+              <i class="fa-solid fa-chevron-down"></i>
+            </span>
+          </button>
+          <div id="faq-3" class="hidden transition-all duration-300 border-t border-slate-100">
+            <div class="px-6 py-5 text-xs sm:text-sm text-slate-500 leading-relaxed">
+              Every single distance and online degree program displayed on the EduSolver comparison portal undergoes rigorous verification auditing. Our systems cross-reference listings directly with active UGC-Distance Education Bureau (DEB) authorization catalogs and verified NAAC grade boards. We explain these validation checks in plain, clear English.
+            </div>
+          </div>
+        </div>
+
+        <!-- Accordion 4 -->
+        <div class="bg-white border border-slate-150 rounded-2xl overflow-hidden shadow-2xs hover:shadow-sm transition-shadow">
+          <button onclick="toggleAccordion('faq-4')" class="w-full px-6 py-5 flex items-center justify-between text-left focus:outline-none select-none">
+            <span class="text-xs sm:text-sm font-bold text-slate-900">Do you offer secondary admissions for NIOS and BOSSE open boards?</span>
+            <span class="w-6 h-6 rounded-full bg-slate-50 flex items-center justify-center text-slate-500 text-xs shrink-0 ml-4 transition-transform duration-200" id="faq-4-arrow">
+              <i class="fa-solid fa-chevron-down"></i>
+            </span>
+          </button>
+          <div id="faq-4" class="hidden transition-all duration-300 border-t border-slate-100">
+            <div class="px-6 py-5 text-xs sm:text-sm text-slate-500 leading-relaxed">
+              Yes, we maintain a dedicated open-schooling desk headed by specialized experts. We provide complete support for NIOS (National Institute of Open Schooling) and BOSSE (Board of Open Schooling and Skill Education) secondary (Class 10th) and senior secondary (Class 12th) program admissions.
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================
+       6. ADVISOR SUCCESS POPUP MODAL (HIDDEN)
+       ========================================== -->
+  <div id="counseling-success-modal" class="fixed inset-0 z-50 overflow-y-auto hidden flex items-center justify-center p-4">
+    <!-- Backdrop blur shadow overlay -->
+    <div class="fixed inset-0 bg-slate-950/60 backdrop-blur-sm transition-opacity"></div>
+
+    <!-- Modal Content Panel -->
+    <div class="relative glass max-w-md w-full rounded-3xl p-8 sm:p-10 text-center space-y-6 shadow-2xl border border-slate-200 z-10 animate-pulse-once">
+      
+      <div class="w-16 h-16 rounded-full bg-brand-50 border border-brand-200 flex items-center justify-center text-brand-600 text-2xl mx-auto">
+        <i class="fa-solid fa-circle-check"></i>
+      </div>
+
+      <div class="space-y-2">
+        <h4 class="text-xl font-extrabold text-slate-950">Counseling Slot Reserved!</h4>
+        <p class="text-xs text-slate-400">Your dynamic advisor match has been logged and confirmed in our portal database.</p>
+      </div>
+
+      <!-- Match Summary stats card -->
+      <div class="border border-slate-150 bg-slate-50 rounded-2xl p-5 text-left space-y-3 text-xs text-slate-700">
+        <div class="flex items-center justify-between border-b border-slate-200 pb-2">
+          <span class="text-slate-450 font-bold uppercase text-[9px]">Matched Advisor</span>
+          <span id="modal-summary-name" class="font-extrabold text-slate-900">Priya Sharma</span>
+        </div>
+        <div class="flex items-center justify-between border-b border-slate-200 pb-2">
+          <span class="text-slate-450 font-bold uppercase text-[9px]">Target Program</span>
+          <span id="modal-summary-program" class="font-bold text-slate-900">Management Degrees</span>
+        </div>
+        <div class="flex items-center justify-between border-b border-slate-200 pb-2">
+          <span class="text-slate-450 font-bold uppercase text-[9px]">Confirmed Date</span>
+          <span id="modal-summary-date" class="font-semibold text-slate-800">2026-05-28</span>
+        </div>
+        <div class="flex items-center justify-between">
+          <span class="text-slate-450 font-bold uppercase text-[9px]">Time Slot</span>
+          <span id="modal-summary-time" class="font-semibold text-slate-800">10:00 AM - 10:30 AM</span>
+        </div>
+      </div>
+
+      <p class="text-[10px] text-slate-400">
+        A verification link and counselor dial-in details have been dispatched to your email and phone number.
+      </p>
+
+      <button onclick="closeSuccessModal()" class="w-full bg-brand-500 hover:bg-brand-600 text-white font-extrabold text-xs py-4.5 rounded-xl transition-all shadow-md shadow-brand-100 hover:shadow-brand-300 focus:outline-none">
+        Got it, Thank You!
+      </button>
+
+    </div>
+  </div>
+
+  <!-- Dynamic Footer Component -->
+  <edu-footer></edu-footer>
+
+  <!-- EduSolver JavaScript Dependencies -->
+  <script src="../assets/js/data.js"></script>
+  <script src="../assets/js/component.js"></script>
+
+  <!-- ==========================================
+       7. DYNAMIC ADVISOR SELECTOR & FORM MODAL SCRIPTS
+       ========================================== -->
+  <script type="text/javascript">
+    
+    // Matched Advisor Data definitions
+    const advisorsData = {
+      mgmt: {
+        name: "Priya Sharma",
+        role: "Senior Management Advisor",
+        rating: "4.9/5 (1,250+ guided)",
+        skills: "UGC-DEB approvals, fee structure planning, executive MBA ROI",
+        image: "../assets/images/support_desk.png",
+        programLabel: "Management Degrees"
+      },
+      tech: {
+        name: "Rohan Verma",
+        role: "Technical Program Specialist",
+        rating: "4.8/5 (920+ guided)",
+        skills: "Cloud upskilling, BCA/MCA accreditation, tech placements",
+        image: "../assets/images/mentor_naveen_kasturia.png",
+        programLabel: "Technology Degrees"
+      },
+      open: {
+        name: "Dr. Anil Gupta",
+        role: "Open Board Admissions Lead",
+        rating: "4.9/5 (1,480+ guided)",
+        skills: "NIOS secondary exams, BOSSE curriculum validation, board credit transfers",
+        image: "../assets/images/mentor_vijendra_singh.png",
+        programLabel: "Open Board Admissions"
+      }
+    };
+
+    let activeAdvisorKey = 'mgmt';
+
+    // Dynamic Matching counselor switcher
+    function triggerAdvisorMatch(categoryKey) {
+      const card = document.getElementById("matched-advisor-card");
+      const img = document.getElementById("advisor-display-img");
+      const name = document.getElementById("advisor-display-name");
+      const role = document.getElementById("advisor-display-role");
+      const rating = document.getElementById("advisor-display-rating");
+      const skills = document.getElementById("advisor-display-skills");
+
+      if (!card || !advisorsData[categoryKey]) return;
+
+      activeAdvisorKey = categoryKey;
+
+      // Card quick fade-out animation
+      card.style.opacity = '0.3';
+      card.style.transform = 'translateY(5px)';
+
+      setTimeout(() => {
+        const advisor = advisorsData[categoryKey];
+        img.src = advisor.image;
+        name.innerText = advisor.name;
+        role.innerText = advisor.role;
+        rating.innerText = advisor.rating;
+        skills.innerText = advisor.skills;
+
+        // Card fade-in transition
+        card.style.opacity = '1';
+        card.style.transform = 'translateY(0)';
+      }, 150);
+    }
+
+    // Handle form booking submission
+    function handleBookingSubmit(event) {
+      event.preventDefault();
+      
+      const sName = document.getElementById("student-name").value;
+      const sDate = document.getElementById("booking-date").value;
+      const sTime = document.getElementById("booking-time").value;
+
+      if (!sName || !sDate || !sTime) return;
+
+      // Populate Success Modal statistics summary
+      const advisor = advisorsData[activeAdvisorKey];
+      document.getElementById("modal-summary-name").innerText = advisor.name;
+      document.getElementById("modal-summary-program").innerText = advisor.programLabel;
+      document.getElementById("modal-summary-date").innerText = sDate;
+      document.getElementById("modal-summary-time").innerText = sTime;
+
+      // Trigger Modal display popup
+      const modal = document.getElementById("counseling-success-modal");
+      if (modal) {
+        modal.classList.remove("hidden");
+        document.body.style.overflow = "hidden"; // Disable scroll when modal is active
+      }
+    }
+
+    function closeSuccessModal() {
+      const modal = document.getElementById("counseling-success-modal");
+      const form = document.getElementById("advisor-booking-form");
+
+      if (modal) {
+        modal.classList.add("hidden");
+        document.body.style.overflow = "auto";
+      }
+
+      if (form) {
+        form.reset();
+        // Restore advisor match default
+        triggerAdvisorMatch('mgmt');
+      }
+    }
+
+    // ----------------------------------------------------
+    // FAQS ACCORDION EXPANSION CONTROL
+    // ----------------------------------------------------
+    function toggleAccordion(id) {
+      const faq = document.getElementById(id);
+      const arrow = document.getElementById(id + '-arrow');
+      if (!faq) return;
+
+      faq.classList.toggle('hidden');
+      if (faq.classList.contains('hidden')) {
+        arrow.style.transform = 'rotate(0deg)';
+      } else {
+        arrow.style.transform = 'rotate(180deg)';
+      }
+    }
+
+    // Pre-initialize tomorrow's date in form planner as default
+    document.addEventListener("DOMContentLoaded", () => {
+      const dateInput = document.getElementById("booking-date");
+      if (dateInput) {
+        const tomorrow = new Date();
+        tomorrow.setDate(tomorrow.getDate() + 1);
+        const yyyy = tomorrow.getFullYear();
+        const mm = String(tomorrow.getMonth() + 1).padStart(2, '0');
+        const dd = String(tomorrow.getDate()).padStart(2, '0');
+        dateInput.value = `${yyyy}-${mm}-${dd}`;
+      }
+    });
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | EduSolver Compare Portal</title>
+  <meta name="description"
+    content="Discover EduSolver's mission to establish absolute transparency in higher education. Learn how our unbiased parameters, zero-commission structure, and interactive tools empower student decisions.">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#f0fdf4',
+              100: '#dcfce7',
+              200: '#bbf7d0',
+              300: '#86efac',
+              400: '#4ade80',
+              500: '#12b809', // Logo brand green
+              600: '#0f9a07',
+              700: '#0c7b05',
+              800: '#0a6104',
+              900: '#084e03',
+            },
+            slate: {
+              950: '#030712',
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Global Styling -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body
+  class="font-sans text-slate-800 bg-[#fbfcfb] selection:bg-brand-100 selection:text-brand-900 bg-grid-pattern min-h-screen flex flex-col overflow-x-hidden">
+
+  <!-- Dynamic Sticky Navbar -->
+  <edu-navbar></edu-navbar>
+
+  <!-- Spacer for fixed header -->
+  <div class="h-28"></div>
+
+  <!-- ==========================================
+       1. HERO HEADER AREA (HIGH CONCEPT QUOTE)
+       ========================================== -->
+  <section class="relative overflow-hidden py-20 bg-gradient-to-br from-brand-50/40 via-[#fcfdfc] to-emerald-50/20 border-b border-slate-100">
+    <div class="absolute top-0 right-0 w-[500px] h-[500px] rounded-full bg-brand-100/10 blur-3xl -z-10 animate-pulse"></div>
+    <div class="absolute bottom-0 left-10 w-[300px] h-[300px] rounded-full bg-emerald-50/30 blur-3xl -z-10"></div>
+    
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-8">
+      <span
+        class="inline-flex items-center space-x-2 bg-brand-50 border border-brand-200 text-brand-700 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider">
+        <i class="fa-solid fa-graduation-cap text-brand-500 mr-1.5"></i> The Truth In Higher Education • Unbiased & Free
+      </span>
+      
+      <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-[1.15] tracking-tight max-w-5xl mx-auto">
+        The person helping you choose your education should have <span class="text-gradient italic">nothing to gain</span> from what you choose.
+      </h1>
+
+      <div class="max-w-3xl mx-auto border-l-[3px] p-6 bg-white/70 backdrop-blur-md border-brand-500 pl-6 rounded-r-3xl shadow-sm text-left">
+        <p class="text-slate-900 font-bold text-sm sm:text-base mb-1 leading-snug">
+          Agents are Selling Universities. We Choose the Truth Instead.
+        </p>
+        <p class="text-slate-500 text-xs sm:text-sm leading-relaxed">
+          That is not a positioning statement. It is the rule this platform was built on.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       2. WHY THIS EXISTS SECTION
+       ========================================== -->
+  <section class="py-16 sm:py-24 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-16 mb-12">
+        
+        <!-- Left: Text -->
+        <div class="flex-1 space-y-6">
+          <p class="text-xs font-bold tracking-widest text-slate-400 uppercase">Why This Exists</p>
+          <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 leading-tight">
+            The Decision Nobody Was Helping You Make
+          </h2>
+          <p class="text-slate-500 text-xs sm:text-sm md:text-base leading-relaxed">
+            Online education transformed how India learns. Working professionals could upskill without quitting. Learners in Tier-2 and Tier-3 cities gained access they never had before. The potential was real. But so was the noise.
+          </p>
+          <p class="text-slate-500 text-xs sm:text-sm leading-relaxed">
+            Admissions became driven by aggressive sales calls, not student alignment. Standard search engines showed paid ad outcomes, and rankings lacked clear methodology. We saw a different opportunity: to build the honest, data-driven platform we wish had existed when we were making our own education decisions.
+          </p>
+        </div>
+
+        <!-- Right: Image -->
+        <div class="shrink-0 w-full lg:w-[480px] rounded-3xl overflow-hidden shadow-xl border border-slate-100 group relative">
+          <img alt="The Decision Shaping Learners Decisions" loading="lazy" 
+            class="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105" 
+            src="../assets/images/unbiased_counseling.png" />
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950/20 to-transparent pointer-events-none"></div>
+        </div>
+
+      </div>
+
+      <!-- Green Bullet Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        
+        <!-- Bullet 1 -->
+        <div class="flex items-center gap-3 bg-slate-50 border border-slate-100 rounded-2xl px-5 py-4 hover:border-brand-200 transition-colors">
+          <div class="w-7 h-7 rounded-full bg-brand-50 flex items-center justify-center flex-shrink-0">
+            <i class="fa-solid fa-circle-check text-brand-600 text-sm"></i>
+          </div>
+          <p class="text-xs sm:text-sm font-semibold text-slate-700 leading-snug">Rankings with no transparent methodology</p>
+        </div>
+
+        <!-- Bullet 2 -->
+        <div class="flex items-center gap-3 bg-slate-50 border border-slate-100 rounded-2xl px-5 py-4 hover:border-brand-200 transition-colors">
+          <div class="w-7 h-7 rounded-full bg-brand-50 flex items-center justify-center flex-shrink-0">
+            <i class="fa-solid fa-circle-check text-brand-600 text-sm"></i>
+          </div>
+          <p class="text-xs sm:text-sm font-semibold text-slate-700 leading-snug">Ads designed to impress, not inform</p>
+        </div>
+
+        <!-- Bullet 3 -->
+        <div class="flex items-center gap-3 bg-slate-50 border border-slate-100 rounded-2xl px-5 py-4 hover:border-brand-200 transition-colors">
+          <div class="w-7 h-7 rounded-full bg-brand-50 flex items-center justify-center flex-shrink-0">
+            <i class="fa-solid fa-circle-check text-brand-600 text-sm"></i>
+          </div>
+          <p class="text-xs sm:text-sm font-semibold text-slate-700 leading-snug">University names built on reputation, not outcomes</p>
+        </div>
+
+        <!-- Bullet 4 -->
+        <div class="flex items-center gap-3 bg-slate-50 border border-slate-100 rounded-2xl px-5 py-4 hover:border-brand-200 transition-colors">
+          <div class="w-7 h-7 rounded-full bg-brand-50 flex items-center justify-center flex-shrink-0">
+            <i class="fa-solid fa-circle-check text-brand-600 text-sm"></i>
+          </div>
+          <p class="text-xs sm:text-sm font-semibold text-slate-700 leading-snug">Advice shaped by targets no one admits to</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       3. ONE RULE BANNER (HIGH TRUST METRIC)
+       ========================================== -->
+  <section class="w-full py-16 sm:py-24 bg-gradient-to-br from-[#0c2409] via-[#051703] to-[#010800] text-center relative px-4 overflow-hidden border-t border-b border-brand-900/30">
+    <div class="absolute top-0 left-0 w-full h-full bg-[radial-gradient(ellipse_at_center,rgba(18,184,9,0.15),transparent)] pointer-events-none"></div>
+    <div class="max-w-3xl mx-auto space-y-6 relative z-10">
+      <p class="text-[10px] sm:text-xs font-bold tracking-[0.25em] uppercase text-brand-400">The Founding Belief</p>
+      <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white leading-tight">One Rule. Built Into Everything.</h2>
+      
+      <div class="rounded-3xl px-6 sm:px-10 py-10 mx-auto max-w-2xl backdrop-blur-xl border border-white/10 bg-white/[0.04] shadow-2xl space-y-4">
+        <p class="text-lg sm:text-2xl font-extrabold text-white leading-snug">
+          EduSolver earns <span class="text-brand-300">nothing</span> from universities.
+          <span class="text-brand-400 block sm:inline"><br>Students pay universities directly.</span>
+        </p>
+        <p class="text-xs sm:text-sm text-slate-300 leading-relaxed max-w-lg mx-auto">
+          Every other party in this space — rankings, ads, advisory platforms — has a financial relationship with the universities they recommend. We do not. That is not an accident. It is the only way honest guidance is possible.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       4. OUR PROMISE SECTION
+       ========================================== -->
+  <section class="py-16 sm:py-24 bg-white overflow-hidden">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+        
+        <!-- Left: Image -->
+        <div class="w-full lg:w-[420px] shrink-0 relative">
+          <div class="relative w-full aspect-[4/5] sm:aspect-[1/1] lg:aspect-[3/4] rounded-3xl overflow-hidden shadow-lg border border-slate-100">
+            <img alt="EduSolver Promise Advisor" loading="lazy" class="object-cover w-full h-full" 
+              src="../assets/images/advisor_promise.png" />
+            <div class="absolute bottom-0 inset-x-0 h-1/3 bg-gradient-to-t from-white via-white/40 to-transparent"></div>
+          </div>
+        </div>
+
+        <!-- Right: Text Content -->
+        <div class="flex-1 space-y-6">
+          <p class="text-xs font-bold tracking-widest text-slate-400 uppercase">Our Promise</p>
+          <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 leading-tight">
+            One Factor. Whether It's Right for You.
+          </h2>
+          <p class="text-slate-500 text-sm sm:text-base leading-relaxed mb-4">
+            The question was never — can I find a programme?<br>
+            It was always — how do I know this is the right one?
+          </p>
+
+          <div class="flex flex-col gap-4">
+            
+            <!-- Item 1 -->
+            <div class="flex items-center gap-4 bg-brand-50/50 border border-brand-100 rounded-2xl px-5 py-4 hover:shadow-sm transition-shadow">
+              <div class="w-9 h-9 rounded-xl bg-white border border-brand-200 flex items-center justify-center flex-shrink-0 text-brand-600">
+                <i class="fa-regular fa-clock text-base"></i>
+              </div>
+              <p class="text-xs sm:text-sm font-semibold text-slate-700 leading-snug">If the timing's wrong, we'll tell you to wait.</p>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="flex items-center gap-4 bg-brand-50/50 border border-brand-100 rounded-2xl px-5 py-4 hover:shadow-sm transition-shadow">
+              <div class="w-9 h-9 rounded-xl bg-white border border-brand-200 flex items-center justify-center flex-shrink-0 text-brand-600">
+                <i class="fa-solid fa-calculator text-base"></i>
+              </div>
+              <p class="text-xs sm:text-sm font-semibold text-slate-700 leading-snug">If the cost doesn't match the outcome, we'll say so.</p>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="flex items-center gap-4 bg-brand-50/50 border border-brand-100 rounded-2xl px-5 py-4 hover:shadow-sm transition-shadow">
+              <div class="w-9 h-9 rounded-xl bg-white border border-brand-200 flex items-center justify-center flex-shrink-0 text-brand-600">
+                <i class="fa-solid fa-arrow-turn-up text-base"></i>
+              </div>
+              <p class="text-xs sm:text-sm font-semibold text-slate-700 leading-snug">If there's a better path, we'll show you.</p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       5. 600+ CAREER ADVISORS
+       ========================================== -->
+  <section class="py-16 sm:py-24 bg-[#f8fafc] border-t border-b border-slate-100">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12 max-w-2xl mx-auto">
+        <p class="text-xs font-bold tracking-widest text-slate-400 uppercase">What Makes the Guidance Different</p>
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 mt-2">
+          The Standard Was Already High. Then the Board Walked In.
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+        
+        <!-- Left: Info panel -->
+        <div class="glass border border-slate-200 rounded-3xl p-8 sm:p-10 flex flex-col justify-between space-y-6">
+          <div class="space-y-4">
+            <span class="text-xs font-bold tracking-wider text-brand-600 uppercase">The Career Development Advisors</span>
+            <div class="flex items-baseline space-x-2">
+              <span class="text-5xl sm:text-6xl font-black text-brand-500 leading-none">600+</span>
+              <span class="text-lg sm:text-xl font-bold text-slate-950">Expert CDAs</span>
+            </div>
+            <p class="text-slate-500 text-xs sm:text-sm leading-relaxed">
+              Trained on one principle before anything else: get to the level of the learner. Understand their actual week, their real bandwidth, their genuine reason for doing this. Only then suggest a direction.
+            </p>
+          </div>
+
+          <div class="bg-brand-50 border border-brand-100 rounded-2xl p-5">
+            <p class="text-brand-700 text-xs sm:text-sm font-bold italic leading-snug">
+              "Never recommend what is convenient. Recommend what is right."
+            </p>
+          </div>
+        </div>
+
+        <!-- Right: Detail Items -->
+        <div class="flex flex-col justify-between gap-4">
+          
+          <!-- Detail Card 1 -->
+          <div class="bg-white border border-slate-100 rounded-2xl p-5 shadow-sm flex items-center gap-4">
+            <div class="w-10 h-10 rounded-full bg-brand-50 flex items-center justify-center text-brand-600 flex-shrink-0">
+              <i class="fa-solid fa-business-time"></i>
+            </div>
+            <div>
+              <h4 class="text-sm font-bold text-slate-900">30-minute free consultation</h4>
+              <p class="text-xs text-slate-400 mt-0.5">No commitment to any university ever.</p>
+            </div>
+          </div>
+
+          <!-- Detail Card 2 -->
+          <div class="bg-white border border-slate-100 rounded-2xl p-5 shadow-sm flex items-center gap-4">
+            <div class="w-10 h-10 rounded-full bg-red-50 flex items-center justify-center text-red-500 flex-shrink-0">
+              <i class="fa-solid fa-ban"></i>
+            </div>
+            <div>
+              <h4 class="text-sm font-bold text-slate-900">No target being chased</h4>
+              <p class="text-xs text-slate-400 mt-0.5">Zero commission taken from universities.</p>
+            </div>
+          </div>
+
+          <!-- Detail Card 3 -->
+          <div class="bg-white border border-slate-100 rounded-2xl p-5 shadow-sm flex items-center gap-4">
+            <div class="w-10 h-10 rounded-full bg-emerald-50 flex items-center justify-center text-emerald-600 flex-shrink-0">
+              <i class="fa-solid fa-check-double"></i>
+            </div>
+            <div>
+              <h4 class="text-sm font-bold text-slate-900">Recommend what is right</h4>
+              <p class="text-xs text-slate-400 mt-0.5">Focusing strictly on student academic outcome.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       6. THE BOARD OF MENTORS (INTERACTIVE)
+       ========================================== -->
+  <section class="py-16 sm:py-24 bg-white">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center mb-12">
+        <p class="text-xs font-bold tracking-widest text-slate-400 uppercase">The Board of Mentors</p>
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 leading-tight mt-2">
+          People Who Have Built, Failed, Decided, and Succeeded
+        </h2>
+        <p class="text-xs sm:text-sm text-slate-400 mt-2">
+          Brought in not for their names, but for what they have actually learned.
+        </p>
+      </div>
+
+      <!-- MAIN MENTOR CARD CONTAINER -->
+      <div id="featured-mentor-card" class="border border-slate-200 rounded-3xl overflow-hidden flex flex-col md:flex-row shadow-lg bg-slate-50 transition-all duration-300 min-h-[300px]">
+        
+        <!-- Mentor Image -->
+        <div class="relative w-full md:w-[320px] shrink-0 aspect-[4/3] md:aspect-auto overflow-hidden bg-slate-900 border-r border-slate-200">
+          <img id="mentor-display-img" alt="Featured Mentor" class="object-cover object-top w-full h-full transition-all duration-300" 
+            src="../assets/images/mentor_aman_gupta.png" />
+          <div class="absolute bottom-0 inset-x-0 h-1/4 bg-gradient-to-t from-black/50 to-transparent"></div>
+        </div>
+
+        <!-- Mentor Copy Block -->
+        <div class="flex-1 p-8 sm:p-10 flex flex-col justify-between gap-6">
+          <div class="space-y-4">
+            <span class="text-3xl font-black text-brand-200 leading-none block">
+              <i class="fa-solid fa-quote-left text-brand-500/20"></i>
+            </span>
+            <p id="mentor-display-quote" class="text-base sm:text-xl font-bold text-slate-900 leading-relaxed -mt-2">
+              Don't optimise for the enrollment. Optimise for the capability the learner walks away with.
+            </p>
+            
+            <div class="inline-flex w-fit">
+              <span id="mentor-display-skill" class="text-[10px] bg-brand-50 border border-brand-100 text-brand-700 font-extrabold uppercase tracking-wide rounded-full px-3.5 py-1">
+                Sharpens CDAs on: ROI thinking, career outcome framing
+              </span>
+            </div>
+          </div>
+
+          <div>
+            <p id="mentor-display-name" class="font-extrabold text-slate-950 text-base sm:text-lg">Aman Gupta</p>
+            <p id="mentor-display-title" class="text-xs text-slate-500 mt-0.5">Co-founder, boAt · Shark Tank India Judge</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- MENTOR AVATAR TRAY (SWITCHERS) -->
+      <div class="flex items-center justify-center gap-6 mt-8 sm:mt-10">
+        
+        <!-- Button 1 (Aman Gupta) -->
+        <button onclick="switchMentor(0)" class="mentor-btn relative w-16 h-16 sm:w-20 sm:h-20 rounded-full border-2 border-brand-500 scale-115 shadow-md transition-all focus:outline-none flex-shrink-0" data-index="0">
+          <img alt="Aman Gupta" class="object-cover object-top w-full h-full rounded-full" 
+            src="../assets/images/mentor_aman_gupta.png" />
+        </button>
+
+        <!-- Button 2 (Naveen Kasturia) -->
+        <button onclick="switchMentor(1)" class="mentor-btn relative w-16 h-16 sm:w-20 sm:h-20 rounded-full border-2 border-slate-200 hover:border-brand-400 grayscale hover:grayscale-0 transition-all focus:outline-none flex-shrink-0" data-index="1">
+          <img alt="Naveen Kasturia" class="object-cover object-top w-full h-full rounded-full" 
+            src="../assets/images/mentor_naveen_kasturia.png" />
+        </button>
+
+        <!-- Button 3 (Vijendra Singh) -->
+        <button onclick="switchMentor(2)" class="mentor-btn relative w-16 h-16 sm:w-20 sm:h-20 rounded-full border-2 border-slate-200 hover:border-brand-400 grayscale hover:grayscale-0 transition-all focus:outline-none flex-shrink-0" data-index="2">
+          <img alt="Vijendra Singh" class="object-cover object-top w-full h-full rounded-full" 
+            src="../assets/images/mentor_vijendra_singh.png" />
+        </button>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================
+       7. BUILT FOR CLARITY (16 TOOLS / 8 CARDS GRID)
+       ========================================== -->
+  <section class="py-16 sm:py-24 bg-[#f8fafc] border-t border-b border-slate-100">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col lg:flex-row items-center gap-12 mb-14">
+        <div class="flex-1 max-w-lg space-y-4">
+          <p class="text-xs font-bold tracking-widest text-slate-400 uppercase">Built for Clarity</p>
+          <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 leading-tight">
+            Everything We Built Exists to Help You See Clearly.
+          </h2>
+          <p class="text-xs sm:text-sm text-slate-500 leading-relaxed">
+            Honest guidance is only as good as the information behind it. We built 16 tools — assessments, calculators, real student reviews, live platform trials — so that every conversation a Career Development Advisor has with you is grounded in data, not opinion.
+          </p>
+          <p class="text-xs sm:text-sm font-bold italic text-brand-600">
+            Because advice without evidence is just another opinion.
+          </p>
+        </div>
+
+        <!-- 8 Tools grid -->
+        <div class="flex-1 w-full">
+          <div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-2 gap-4">
+            
+            <!-- Tool 1 -->
+            <div class="bg-white border border-slate-150 rounded-2xl p-4 shadow-2xs flex items-center gap-3 hover:shadow-md hover:border-brand-200 transition-all duration-300">
+              <div class="w-8 h-8 rounded-lg bg-brand-50 flex items-center justify-center flex-shrink-0 text-brand-600">
+                <i class="fa-solid fa-clipboard-list text-sm"></i>
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-slate-800">Assessments</span>
+            </div>
+
+            <!-- Tool 2 -->
+            <div class="bg-white border border-slate-150 rounded-2xl p-4 shadow-2xs flex items-center gap-3 hover:shadow-md hover:border-brand-200 transition-all duration-300">
+              <div class="w-8 h-8 rounded-lg bg-emerald-50 flex items-center justify-center flex-shrink-0 text-emerald-600">
+                <i class="fa-solid fa-calculator text-sm"></i>
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-slate-800">Calculators</span>
+            </div>
+
+            <!-- Tool 3 -->
+            <div class="bg-white border border-slate-150 rounded-2xl p-4 shadow-2xs flex items-center gap-3 hover:shadow-md hover:border-brand-200 transition-all duration-300">
+              <div class="w-8 h-8 rounded-lg bg-brand-50 flex items-center justify-center flex-shrink-0 text-brand-600">
+                <i class="fa-regular fa-star text-sm"></i>
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-slate-800">Student Reviews</span>
+            </div>
+
+            <!-- Tool 4 -->
+            <div class="bg-white border border-slate-150 rounded-2xl p-4 shadow-2xs flex items-center gap-3 hover:shadow-md hover:border-brand-200 transition-all duration-300">
+              <div class="w-8 h-8 rounded-lg bg-slate-50 flex items-center justify-center flex-shrink-0 text-slate-600">
+                <i class="fa-solid fa-desktop text-sm"></i>
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-slate-800">Platform Trials</span>
+            </div>
+
+            <!-- Tool 5 -->
+            <div class="bg-white border border-slate-150 rounded-2xl p-4 shadow-2xs flex items-center gap-3 hover:shadow-md hover:border-brand-200 transition-all duration-300">
+              <div class="w-8 h-8 rounded-lg bg-brand-50 flex items-center justify-center flex-shrink-0 text-brand-600">
+                <i class="fa-solid fa-chart-line text-sm"></i>
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-slate-800">Outcome Data</span>
+            </div>
+
+            <!-- Tool 6 -->
+            <div class="bg-white border border-slate-150 rounded-2xl p-4 shadow-2xs flex items-center gap-3 hover:shadow-md hover:border-brand-200 transition-all duration-300">
+              <div class="w-8 h-8 rounded-lg bg-emerald-50 flex items-center justify-center flex-shrink-0 text-emerald-600">
+                <i class="fa-solid fa-sliders text-sm"></i>
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-slate-800">Program Filters</span>
+            </div>
+
+            <!-- Tool 7 -->
+            <div class="bg-white border border-slate-150 rounded-2xl p-4 shadow-2xs flex items-center gap-3 hover:shadow-md hover:border-brand-200 transition-all duration-300">
+              <div class="w-8 h-8 rounded-lg bg-brand-50 flex items-center justify-center flex-shrink-0 text-brand-600">
+                <i class="fa-solid fa-road text-sm"></i>
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-slate-800">Career Planning</span>
+            </div>
+
+            <!-- Tool 8 -->
+            <div class="bg-white border border-slate-150 rounded-2xl p-4 shadow-2xs flex items-center gap-3 hover:shadow-md hover:border-brand-200 transition-all duration-300">
+              <div class="w-8 h-8 rounded-lg bg-slate-50 flex items-center justify-center flex-shrink-0 text-slate-600">
+                <i class="fa-solid fa-bolt text-sm"></i>
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-slate-800">Skill Mapping</span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================
+       8. THE NUMBERS THAT MATTER (STATS PANELS)
+       ========================================== -->
+  <section id="about-stats-section" class="py-16 sm:py-24 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center mb-12 sm:mb-16">
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight">The Numbers That Matter</h2>
+        <div class="mt-4 mx-auto w-12 h-1 rounded-full bg-brand-500"></div>
+      </div>
+
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+        
+        <!-- Stat Card 1 -->
+        <div class="border border-slate-100 bg-white hover:border-brand-200 hover:shadow-md transition-all duration-300 rounded-3xl p-6 text-center space-y-2">
+          <span id="stat-guided" class="text-3xl sm:text-4xl font-black text-brand-500 block" data-target="15000000">0</span>
+          <span class="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-slate-400">Aspirants Guided</span>
+        </div>
+
+        <!-- Stat Card 2 -->
+        <div class="border border-slate-100 bg-white hover:border-brand-200 hover:shadow-md transition-all duration-300 rounded-3xl p-6 text-center space-y-2">
+          <span id="stat-admitted" class="text-3xl sm:text-4xl font-black text-brand-500 block" data-target="125000">0</span>
+          <span class="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-slate-400">Secured Admissions</span>
+        </div>
+
+        <!-- Stat Card 3 -->
+        <div class="border border-slate-100 bg-white hover:border-brand-200 hover:shadow-md transition-all duration-300 rounded-3xl p-6 text-center space-y-2">
+          <span id="stat-minutes" class="text-3xl sm:text-4xl font-black text-brand-500 block" data-target="15000000">0</span>
+          <span class="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-slate-400">Minutes of Advisory</span>
+        </div>
+
+        <!-- Stat Card 4 -->
+        <div class="border border-slate-100 bg-white hover:border-brand-200 hover:shadow-md transition-all duration-300 rounded-3xl p-6 text-center space-y-2">
+          <span id="stat-partners" class="text-3xl sm:text-4xl font-black text-brand-500 block" data-target="100">0</span>
+          <span class="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-slate-400">Accredited Partners</span>
+        </div>
+
+        <!-- Stat Card 5 -->
+        <div class="border border-slate-100 bg-white hover:border-brand-200 hover:shadow-md transition-all duration-300 rounded-3xl p-6 text-center space-y-2">
+          <span class="text-3xl sm:text-4xl font-black text-slate-900 block">30+</span>
+          <span class="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-slate-400">Evaluation Factors</span>
+        </div>
+
+        <!-- Stat Card 6 -->
+        <div class="border border-slate-100 bg-white hover:border-brand-200 hover:shadow-md transition-all duration-300 rounded-3xl p-6 text-center space-y-2">
+          <span class="text-3xl sm:text-4xl font-black text-slate-900 block">4.8 / 5</span>
+          <span class="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-slate-400">Google Rating</span>
+        </div>
+
+        <!-- Stat Card 7 -->
+        <div class="border border-slate-100 bg-white hover:border-brand-200 hover:shadow-md transition-all duration-300 rounded-3xl p-6 text-center space-y-2">
+          <span class="text-3xl sm:text-4xl font-black text-slate-900 block">3,338</span>
+          <span class="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-slate-400">Google Reviews</span>
+        </div>
+
+        <!-- Stat Card 8 -->
+        <div class="border border-slate-100 bg-white hover:border-brand-200 hover:shadow-md transition-all duration-300 rounded-3xl p-6 text-center space-y-2">
+          <span class="text-3xl sm:text-4xl font-black text-slate-900 block">100%</span>
+          <span class="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-slate-400">Unbiased Guarantee</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       9. NARRATIVE PLATFORM PROMISE
+       ========================================== -->
+  <section class="py-16 sm:py-24 bg-gradient-to-br from-slate-900 via-slate-950 to-slate-900 text-center relative px-4 overflow-hidden border-t border-slate-800">
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(18,184,9,0.1),transparent)] pointer-events-none"></div>
+    <div class="max-w-3xl mx-auto space-y-6 relative z-10">
+      <p class="text-[10px] sm:text-xs font-bold tracking-[0.2em] uppercase text-brand-400">Our Target</p>
+      
+      <p class="text-slate-400 text-sm sm:text-base leading-relaxed">
+        95% of India's online education decisions are still made without honest guidance.
+      </p>
+      
+      <p class="text-base sm:text-xl text-slate-200 leading-relaxed font-semibold max-w-2xl mx-auto">
+        <span class="text-white font-extrabold">EduSolver exists until that number changes.</span><br>
+        Not until the category matures. Not until the next milestone. Until the number changes.
+      </p>
+
+      <p class="text-slate-400 text-xs sm:text-sm leading-relaxed max-w-lg mx-auto">
+        That is what this platform is for. That is what our Career Development Advisors are trained for. That is what our Board of Mentors signed up to help with.
+      </p>
+
+      <p class="pt-4 text-lg sm:text-xl font-extrabold text-white tracking-wider">
+        One number. One direction.
+      </p>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       10. HOW WE GOT HERE (TIMELINE SLIDER)
+       ========================================== -->
+  <section class="py-16 sm:py-24 bg-[#f8fafc] overflow-hidden">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Carousel Header controls -->
+      <div class="flex flex-row items-center justify-between mb-10 gap-4">
+        
+        <button onclick="slideTimeline('prev')" aria-label="Previous" 
+          class="shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-full border border-slate-200 bg-white hover:bg-brand-50 hover:text-brand-600 transition-colors flex items-center justify-center text-slate-600 shadow-sm focus:outline-none">
+          <i class="fa-solid fa-chevron-left text-sm"></i>
+        </button>
+        
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 text-center tracking-tight">How We Got Here</h2>
+        
+        <button onclick="slideTimeline('next')" aria-label="Next" 
+          class="shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-full border border-slate-200 bg-white hover:bg-brand-50 hover:text-brand-600 transition-colors flex items-center justify-center text-slate-600 shadow-sm focus:outline-none">
+          <i class="fa-solid fa-chevron-right text-sm"></i>
+        </button>
+
+      </div>
+
+      <!-- Chronological timeline slider content -->
+      <div id="timeline-scroll-container" class="flex gap-6 overflow-x-auto scroll-smooth scrollbar-hidden py-4 px-2 select-none">
+        
+        <!-- Slide 1: 2019 -->
+        <div class="flex-none w-[280px] sm:w-[320px] md:w-[350px]">
+          <div class="h-full bg-white border border-slate-100 rounded-3xl p-8 hover:border-brand-200 hover:shadow-md transition-all duration-300 flex flex-col justify-center space-y-4">
+            <span class="text-3xl sm:text-4xl font-black text-brand-500 leading-none">2019</span>
+            <h4 class="font-bold text-slate-900 text-sm sm:text-base">The Spark</h4>
+            <p class="text-xs sm:text-sm text-slate-500 leading-relaxed">
+              Launched as a verified digital catalog for distance education to bring authentic, jargon-free program data to tier-2 cities.
+            </p>
+          </div>
+        </div>
+
+        <!-- Slide 2: 2021 -->
+        <div class="flex-none w-[280px] sm:w-[320px] md:w-[350px]">
+          <div class="h-full bg-white border border-slate-100 rounded-3xl p-8 hover:border-brand-200 hover:shadow-md transition-all duration-300 flex flex-col justify-center space-y-4">
+            <span class="text-3xl sm:text-4xl font-black text-brand-500 leading-none">2021</span>
+            <h4 class="font-bold text-slate-900 text-sm sm:text-base">Digital Breakthrough</h4>
+            <p class="text-xs sm:text-sm text-slate-500 leading-relaxed">
+              Reached 1 Lakh lifetime guided student counseling sessions. Introduced India's first 3D comparison tool with parameter auditing.
+            </p>
+          </div>
+        </div>
+
+        <!-- Slide 3: 2023 -->
+        <div class="flex-none w-[280px] sm:w-[320px] md:w-[350px]">
+          <div class="h-full bg-white border border-slate-100 rounded-3xl p-8 hover:border-brand-200 hover:shadow-md transition-all duration-300 flex flex-col justify-center space-y-4">
+            <span class="text-3xl sm:text-4xl font-black text-brand-500 leading-none">2023</span>
+            <h4 class="font-bold text-slate-900 text-sm sm:text-base">Direct Payments Enabled</h4>
+            <p class="text-xs sm:text-sm text-slate-500 leading-relaxed">
+              Expanded CDA team to 300+ trained experts. Launched verified digital payment gates allowing students to pay universities directly.
+            </p>
+          </div>
+        </div>
+
+        <!-- Slide 4: 2025 -->
+        <div class="flex-none w-[280px] sm:w-[320px] md:w-[350px]">
+          <div class="h-full bg-white border border-slate-100 rounded-3xl p-8 hover:border-brand-200 hover:shadow-md transition-all duration-300 flex flex-col justify-center space-y-4">
+            <span class="text-3xl sm:text-4xl font-black text-brand-500 leading-none">2025</span>
+            <h4 class="font-bold text-slate-900 text-sm sm:text-base">Board of Mentors Established</h4>
+            <p class="text-xs sm:text-sm text-slate-500 leading-relaxed">
+              Established the Board of Mentors containing top Indian industry builders to ensure real outcome-driven counseling workflows.
+            </p>
+          </div>
+        </div>
+
+        <!-- Slide 5: 2026 -->
+        <div class="flex-none w-[280px] sm:w-[320px] md:w-[350px]">
+          <div class="h-full bg-white border border-slate-100 rounded-3xl p-8 hover:border-brand-200 hover:shadow-md transition-all duration-300 flex flex-col justify-center space-y-4">
+            <span class="text-3xl sm:text-4xl font-black text-brand-500 leading-none">2026</span>
+            <h4 class="font-bold text-slate-900 text-sm sm:text-base">1.5 Crore Lifetime Aspirants</h4>
+            <p class="text-xs sm:text-sm text-slate-500 leading-relaxed">
+              EduSolver becomes the largest verified platform comparison engine with 1.5 Crore lifetime guided sessions and 100+ accredited partners.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================
+       11. HIGH CONVERSION CTA PANEL
+       ========================================== -->
+  <section class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="relative bg-slate-950 rounded-3xl p-8 sm:p-12 overflow-hidden shadow-2xl text-center space-y-6">
+        <!-- Brand Green mesh glow -->
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(18,184,9,0.18),transparent)] pointer-events-none"></div>
+
+        <span class="inline-block bg-brand-500/20 text-brand-400 border border-brand-500/30 text-[10px] sm:text-xs font-bold uppercase tracking-wider px-4 py-1.5 rounded-full">Our Unbiased Promise</span>
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white leading-tight max-w-2xl mx-auto">
+          Still Confused About Your College Selection?
+        </h2>
+        <p class="text-xs sm:text-sm text-slate-300 max-w-xl mx-auto leading-relaxed">
+          Let our experienced counselors map your educational background and target course goals to secure direct, accredited admissions today.
+        </p>
+
+        <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4 max-w-md mx-auto">
+          <a href="../index.html#contact" class="w-full sm:w-auto bg-brand-500 hover:bg-brand-600 text-white font-extrabold text-xs px-8 py-4 rounded-xl transition-all shadow-lg flex items-center justify-center"><i class="fa-solid fa-phone mr-2"></i> Book Free Consultation</a>
+          <a href="services.html" class="w-full sm:w-auto border border-white/20 hover:bg-white/10 text-white font-bold text-xs px-8 py-4 rounded-xl transition-all flex items-center justify-center"><i class="fa-solid fa-sliders mr-2"></i> Explore Services</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dynamic Footer Component -->
+  <edu-footer></edu-footer>
+
+  <!-- EduSolver JavaScript Dependencies -->
+  <script src="../assets/js/data.js"></script>
+  <script src="../assets/js/component.js"></script>
+
+  <!-- ==========================================
+       12. INTERACTIVE SCRIPTS & DYNAMIC DATA
+       ========================================== -->
+  <script type="text/javascript">
+    
+    // ----------------------------------------------------
+    // INTERACTIVE MENTOR BOARD SWITCHER SCRIPT
+    // ----------------------------------------------------
+    const mentorsData = [
+      {
+        name: "Aman Gupta",
+        title: "Co-founder, boAt · Shark Tank India Judge",
+        quote: "Don't optimise for the enrollment. Optimise for the capability the learner walks away with.",
+        skill: "Sharpens CDAs on: ROI thinking, career outcome framing",
+        image: "../assets/images/mentor_aman_gupta.png"
+      },
+      {
+        name: "Naveen Kasturia",
+        title: "Leading Actor & Creator · Civil Engineer",
+        quote: "Education is not just about a certificate, it's about the storytelling of your personal growth and creative skills.",
+        skill: "Sharpens CDAs on: Creative industries, upskilling workflows",
+        image: "../assets/images/mentor_naveen_kasturia.png"
+      },
+      {
+        name: "Vijendra Singh",
+        title: "Distinguished Academician & Mentorship Expert",
+        quote: "Honest parameters are the ultimate guide. Never choose a course built on hype; examine the verified outcomes instead.",
+        skill: "Sharpens CDAs on: Academic rigorousness, UGC validation",
+        image: "../assets/images/mentor_vijendra_singh.png"
+      }
+    ];
+
+    function switchMentor(index) {
+      const card = document.getElementById("featured-mentor-card");
+      const mImg = document.getElementById("mentor-display-img");
+      const mQuote = document.getElementById("mentor-display-quote");
+      const mSkill = document.getElementById("mentor-display-skill");
+      const mName = document.getElementById("mentor-display-name");
+      const mTitle = document.getElementById("mentor-display-title");
+
+      if (!card || index < 0 || index >= mentorsData.length) return;
+
+      // Add elegant fade transition out
+      card.style.opacity = "0.3";
+      card.style.transform = "translateY(5px)";
+
+      setTimeout(() => {
+        const selected = mentorsData[index];
+
+        mImg.src = selected.image;
+        mQuote.innerText = selected.quote;
+        mSkill.innerText = selected.skill;
+        mName.innerText = selected.name;
+        mTitle.innerText = selected.title;
+
+        // Active button highlighting
+        const buttons = document.querySelectorAll(".mentor-btn");
+        buttons.forEach((btn, i) => {
+          if (i === index) {
+            btn.classList.remove("border-slate-200", "grayscale", "scale-100");
+            btn.classList.add("border-brand-500", "scale-115");
+          } else {
+            btn.classList.remove("border-brand-500", "scale-115");
+            btn.classList.add("border-slate-200", "grayscale", "scale-100");
+          }
+        });
+
+        // Elegant transition back in
+        card.style.opacity = "1";
+        card.style.transform = "translateY(0)";
+      }, 200);
+    }
+
+    // ----------------------------------------------------
+    // TIMELINE SLIDER CONTROL
+    // ----------------------------------------------------
+    function slideTimeline(direction) {
+      const container = document.getElementById("timeline-scroll-container");
+      if (!container) return;
+
+      const cardWidth = 370; // Width of card + gap
+      if (direction === "next") {
+        container.scrollLeft += cardWidth;
+      } else {
+        container.scrollLeft -= cardWidth;
+      }
+    }
+
+    // ----------------------------------------------------
+    // STATS COUNT-UP ANIMATION SCRIPT
+    // ----------------------------------------------------
+    document.addEventListener('DOMContentLoaded', function () {
+      
+      function animateAboutCounters() {
+        const stats = [
+          { id: "stat-guided", suffix: "+" },
+          { id: "stat-admitted", suffix: "+" },
+          { id: "stat-minutes", suffix: "+" },
+          { id: "stat-partners", suffix: "+" }
+        ];
+
+        stats.forEach(stat => {
+          const el = document.getElementById(stat.id);
+          if (!el) return;
+
+          const targetValue = parseInt(el.getAttribute('data-target'));
+          const duration = 2000; // 2 seconds duration
+          const frameRate = 30;
+          const totalFrames = (duration / 1000) * frameRate;
+          const increment = targetValue / totalFrames;
+
+          let currentValue = 0;
+          let frame = 0;
+
+          const timer = setInterval(() => {
+            frame++;
+            currentValue += increment;
+
+            if (frame >= totalFrames) {
+              clearInterval(timer);
+              el.innerText = targetValue.toLocaleString('en-IN') + stat.suffix;
+            } else {
+              el.innerText = Math.floor(currentValue).toLocaleString('en-IN') + stat.suffix;
+            }
+          }, 1000 / frameRate);
+        });
+      }
+
+      // Intersection Observer to trigger count up
+      const statsSection = document.getElementById('about-stats-section');
+      if (statsSection) {
+        let animatedAlready = false;
+
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting && !animatedAlready) {
+              animatedAlready = true;
+              animateAboutCounters();
+              observer.unobserve(statsSection);
+            }
+          });
+        }, { threshold: 0.1 });
+
+        observer.observe(statsSection);
+      }
+
+    });
+  </script>
+</body>
+
+</html>

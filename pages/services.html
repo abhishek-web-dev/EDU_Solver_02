@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Services & Programs | EduSolver Compare Portal</title>
+  <meta name="description"
+    content="Explore fully accredited online Graduation, Masters, Diploma, and Teaching courses. Compare parameters, and find the perfect university matching your budget.">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#f0fdf4',
+              100: '#dcfce7',
+              200: '#bbf7d0',
+              300: '#86efac',
+              400: '#4ade80',
+              500: '#12b809', // Primary green in the logo
+              600: '#0f9a07',
+              700: '#0c7b05',
+              800: '#0a6104',
+              900: '#084e03',
+            },
+            slate: {
+              950: '#030712',
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Global Styling -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body
+  class="font-sans text-slate-800 bg-[#fbfcfb] selection:bg-brand-100 selection:text-brand-900 bg-grid-pattern min-h-screen flex flex-col overflow-x-hidden">
+
+  <!-- Dynamic Sticky Navbar -->
+  <edu-navbar></edu-navbar>
+
+  <!-- Spacer for fixed header -->
+  <div class="h-28"></div>
+
+  <!-- ==========================================
+       1. HERO HEADER AREA (LOGO GREEN INITIATIVES)
+       ========================================== -->
+  <section class="relative overflow-hidden py-16 bg-gradient-to-br from-brand-50/40 to-emerald-50/20 border-b border-slate-100">
+    <div class="absolute top-0 right-0 w-96 h-96 rounded-full bg-brand-100/20 blur-3xl -z-10 animate-pulse"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+      <span
+        class="inline-flex items-center space-x-2 bg-brand-50 border border-brand-200 text-brand-700 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider">
+        <i class="fa-solid fa-shield-halved text-brand-500 mr-1.5"></i> UGC-DEB & NAAC A+ Verified Admissions
+      </span>
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 leading-[1.1] tracking-tight">
+        Discover Verified <span class="text-gradient">Online & Distance Services</span>
+      </h1>
+      <p class="text-slate-500 text-xs sm:text-sm max-w-xl mx-auto leading-relaxed">
+        Compare parameters of top-ranked accredited universities. Explore courses, semester fees, global validations, and connect with direct counsellors.
+      </p>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       2. AI-POWERED MATCHING WIDGET (COLLEGE VIDYA REF)
+       ========================================== -->
+  <section class="py-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="glass border border-slate-100 shadow-xl rounded-3xl p-6 sm:p-8 flex flex-col lg:flex-row items-center justify-between gap-8 relative overflow-hidden">
+      <!-- Radial gradient -->
+      <div class="absolute inset-0 bg-[radial-gradient(circle_at_10%_10%,rgba(18,184,9,0.05),transparent)] pointer-events-none"></div>
+
+      <!-- Left Header -->
+      <div class="space-y-3 lg:max-w-md shrink-0">
+        <div class="flex items-center space-x-2 text-brand-700 bg-brand-50 border border-brand-100 rounded-lg px-2.5 py-1 w-max">
+          <i class="fa-solid fa-bolt text-xs"></i>
+          <span class="text-[10px] font-extrabold uppercase tracking-wider">Compare in 2 Mins</span>
+        </div>
+        <h2 class="text-xl sm:text-2xl font-extrabold text-slate-900 leading-tight">AI-Powered University Matcher</h2>
+        <p class="text-xs text-slate-500 leading-relaxed">
+          Not sure where to apply? Fill out our simple preference parameters to map budget thresholds, learning choices, and get recommended fits.
+        </p>
+      </div>
+
+      <!-- Interactive Mini Form -->
+      <form id="ai-matcher-form" class="w-full grid grid-cols-1 sm:grid-cols-3 gap-4 bg-white/70 p-4 rounded-2xl border border-slate-100 flex-grow max-w-3xl" onsubmit="handleMatch(event)">
+        <!-- Step 1: Program Tier -->
+        <div class="space-y-1">
+          <label class="text-[10px] font-bold uppercase tracking-wider text-slate-400 block"><i class="fa-solid fa-layer-group text-slate-400 mr-1"></i> Program Tier</label>
+          <select id="match-tier" class="w-full text-xs font-semibold text-slate-800 bg-[#f8fafc] border border-slate-200 rounded-xl px-3.5 py-3 focus:outline-none focus:border-brand-500">
+            <option value="ug">Undergraduate (UG)</option>
+            <option value="pg">Postgraduate (PG)</option>
+            <option value="skill">Skilling / Diploma</option>
+          </select>
+        </div>
+
+        <!-- Step 2: Budget -->
+        <div class="space-y-1">
+          <label class="text-[10px] font-bold uppercase tracking-wider text-slate-400 block"><i class="fa-solid fa-indian-rupee-sign text-slate-400 mr-1"></i> Semester Budget</label>
+          <select id="match-budget" class="w-full text-xs font-semibold text-slate-800 bg-[#f8fafc] border border-slate-200 rounded-xl px-3.5 py-3 focus:outline-none focus:border-brand-500">
+            <option value="low">Under ₹25,000</option>
+            <option value="mid">₹25,000 - ₹50,000</option>
+            <option value="high">Above ₹50,000</option>
+          </select>
+        </div>
+
+        <!-- Step 3: Stream -->
+        <div class="space-y-1">
+          <label class="text-[10px] font-bold uppercase tracking-wider text-slate-400 block"><i class="fa-solid fa-laptop-code text-slate-400 mr-1"></i> Specialization Area</label>
+          <select id="match-stream" class="w-full text-xs font-semibold text-slate-800 bg-[#f8fafc] border border-slate-200 rounded-xl px-3.5 py-3 focus:outline-none focus:border-brand-500">
+            <option value="business">Management & Business</option>
+            <option value="tech">Technology & Computer Science</option>
+            <option value="arts">Liberal Arts & Humanities</option>
+          </select>
+        </div>
+
+        <!-- CTA Button -->
+        <button type="submit" class="sm:col-span-3 w-full bg-brand-500 hover:bg-brand-600 text-white font-bold text-xs py-3.5 rounded-xl transition-all shadow-md shadow-brand-100 flex items-center justify-center space-x-2">
+          <i class="fa-solid fa-wand-magic-sparkles"></i>
+          <span>Launch AI Matching Engine</span>
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       3. SERVICES & COURSE SIDEBAR GRID EXPLORER
+       ========================================== -->
+  <section class="py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+
+      <!-- Left Sidebar: Categories Navigation Drawer -->
+      <aside class="lg:col-span-4 bg-white border border-slate-100 rounded-3xl p-4 shadow-sm space-y-2 sticky top-28">
+        <h3 class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 mb-4"><i class="fa-solid fa-list-ul mr-2"></i> Service Categories</h3>
+
+        <!-- Navigation buttons -->
+        <div class="space-y-1.5 flex flex-col" id="sidebar-nav">
+          
+          <button onclick="switchCategory('ug')" id="btn-ug" class="category-btn active flex items-start text-left w-full px-4 py-3.5 rounded-2xl border transition-all duration-300 bg-brand-500 text-white border-brand-500 shadow-lg shadow-brand-100">
+            <div class="flex-grow">
+              <span class="title text-sm font-bold block">Graduation Courses</span>
+              <span class="sub text-[10px] block text-white/80 mt-0.5">After 12th UG Degrees</span>
+            </div>
+            <i class="fa-solid fa-chevron-right text-xs shrink-0 self-center opacity-60 ml-2"></i>
+          </button>
+
+          <button onclick="switchCategory('pg')" id="btn-pg" class="category-btn flex items-start text-left w-full px-4 py-3.5 rounded-2xl border border-slate-200/50 bg-[#fafbfa] text-slate-600 hover:border-brand-300 hover:text-brand-600 transition-all duration-300">
+            <div class="flex-grow">
+              <span class="title text-sm font-bold block">Masters Courses</span>
+              <span class="sub text-[10px] block text-slate-400 mt-0.5">Postgraduate PG Degrees</span>
+            </div>
+            <i class="fa-solid fa-chevron-right text-xs shrink-0 self-center opacity-60 ml-2"></i>
+          </button>
+
+          <button onclick="switchCategory('diploma')" id="btn-diploma" class="category-btn flex items-start text-left w-full px-4 py-3.5 rounded-2xl border border-slate-200/50 bg-[#fafbfa] text-slate-600 hover:border-brand-300 hover:text-brand-600 transition-all duration-300">
+            <div class="flex-grow">
+              <span class="title text-sm font-bold block">Diploma Courses</span>
+              <span class="sub text-[10px] block text-slate-400 mt-0.5">Polytechnic & Technical</span>
+            </div>
+            <i class="fa-solid fa-chevron-right text-xs shrink-0 self-center opacity-60 ml-2"></i>
+          </button>
+
+          <button onclick="switchCategory('teaching')" id="btn-teaching" class="category-btn flex items-start text-left w-full px-4 py-3.5 rounded-2xl border border-slate-200/50 bg-[#fafbfa] text-slate-600 hover:border-brand-300 hover:text-brand-600 transition-all duration-300">
+            <div class="flex-grow">
+              <span class="title text-sm font-bold block">Teaching Courses</span>
+              <span class="sub text-[10px] block text-slate-400 mt-0.5">NTT, B.Ed, D.El.Ed</span>
+            </div>
+            <i class="fa-solid fa-chevron-right text-xs shrink-0 self-center opacity-60 ml-2"></i>
+          </button>
+
+          <button onclick="switchCategory('skills')" id="btn-skills" class="category-btn flex items-start text-left w-full px-4 py-3.5 rounded-2xl border border-slate-200/50 bg-[#fafbfa] text-slate-600 hover:border-brand-300 hover:text-brand-600 transition-all duration-300">
+            <div class="flex-grow">
+              <span class="title text-sm font-bold block">Skill Development</span>
+              <span class="sub text-[10px] block text-slate-400 mt-0.5">Govt Approved Training</span>
+            </div>
+            <i class="fa-solid fa-chevron-right text-xs shrink-0 self-center opacity-60 ml-2"></i>
+          </button>
+
+          <button onclick="switchCategory('vocational')" id="btn-vocational" class="category-btn flex items-start text-left w-full px-4 py-3.5 rounded-2xl border border-slate-200/50 bg-[#fafbfa] text-slate-600 hover:border-brand-300 hover:text-brand-600 transition-all duration-300">
+            <div class="flex-grow">
+              <span class="title text-sm font-bold block">Vocational Training</span>
+              <span class="sub text-[10px] block text-slate-400 mt-0.5">Job-Ready Expertise</span>
+            </div>
+            <i class="fa-solid fa-chevron-right text-xs shrink-0 self-center opacity-60 ml-2"></i>
+          </button>
+
+          <button onclick="switchCategory('class12')" id="btn-class12" class="category-btn flex items-start text-left w-full px-4 py-3.5 rounded-2xl border border-slate-200/50 bg-[#fafbfa] text-slate-600 hover:border-brand-300 hover:text-brand-600 transition-all duration-300">
+            <div class="flex-grow">
+              <span class="title text-sm font-bold block">Class 12th (Open)</span>
+              <span class="sub text-[10px] block text-slate-400 mt-0.5">Senior Secondary Ed.</span>
+            </div>
+            <i class="fa-solid fa-chevron-right text-xs shrink-0 self-center opacity-60 ml-2"></i>
+          </button>
+
+          <button onclick="switchCategory('class10')" id="btn-class10" class="category-btn flex items-start text-left w-full px-4 py-3.5 rounded-2xl border border-slate-200/50 bg-[#fafbfa] text-slate-600 hover:border-brand-300 hover:text-brand-600 transition-all duration-300">
+            <div class="flex-grow">
+              <span class="title text-sm font-bold block">Class 10th (Open)</span>
+              <span class="sub text-[10px] block text-slate-400 mt-0.5">Secondary Education</span>
+            </div>
+            <i class="fa-solid fa-chevron-right text-xs shrink-0 self-center opacity-60 ml-2"></i>
+          </button>
+
+        </div>
+      </aside>
+
+      <!-- Right Column: Course Cards Grid Area -->
+      <main class="lg:col-span-8 space-y-6">
+
+        <!-- Grid Header -->
+        <div class="flex items-center justify-between pb-3 border-b border-slate-100">
+          <div>
+            <h2 id="grid-header-title" class="text-xl font-extrabold text-slate-900">Graduation Courses</h2>
+            <p id="grid-header-desc" class="text-xs text-slate-400 mt-0.5">After 12th UG Degrees</p>
+          </div>
+          <span id="grid-header-count" class="bg-brand-50 text-brand-700 text-xs font-bold px-3 py-1 rounded-full border border-brand-100">6 Programs</span>
+        </div>
+
+        <!-- Dynamic Cards Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6" id="services-grid">
+          <!-- JS dynamically loads catalog items here -->
+        </div>
+
+      </main>
+
+    </div>
+  </section>
+
+  <!-- ==========================================
+       4. INTERACTIVE COUNSELING ROADMAP (NEW)
+       ========================================== -->
+  <section class="py-16 bg-white border-t border-b border-slate-100/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center space-y-4 max-w-2xl mx-auto mb-14">
+        <span class="text-brand-600 font-extrabold text-xs uppercase tracking-widest bg-brand-50 px-3 py-1 rounded-full">Seamless Roadmap</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">Your Path To A Verified Career Degree</h2>
+        <p class="text-slate-400 text-xs sm:text-sm">We combine intelligent AI systems with seasoned counseling experts to guide your path seamlessly.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
+        <!-- Connecting Line -->
+        <div class="hidden md:block absolute top-[28%] left-[10%] right-[10%] h-[1px] border-t border-dashed border-brand-200 -z-10"></div>
+
+        <!-- Step 1 -->
+        <div class="text-center space-y-4 relative group">
+          <div class="w-14 h-14 rounded-full bg-brand-50 border border-brand-100 text-brand-600 text-xl font-extrabold flex items-center justify-center mx-auto shadow-sm group-hover:scale-105 transition-all">1</div>
+          <h4 class="text-sm font-extrabold text-slate-900">Run AI Preference Match</h4>
+          <p class="text-xs text-slate-400 leading-relaxed max-w-xs mx-auto">Fill in budget limits, streams, and learning targets on our smart matcher engine.</p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="text-center space-y-4 relative group">
+          <div class="w-14 h-14 rounded-full bg-brand-50 border border-brand-100 text-brand-600 text-xl font-extrabold flex items-center justify-center mx-auto shadow-sm group-hover:scale-105 transition-all">2</div>
+          <h4 class="text-sm font-extrabold text-slate-900">Audit Accreditations</h4>
+          <p class="text-xs text-slate-400 leading-relaxed max-w-xs mx-auto">Check side-by-side matrices of valid UGC-DEB, AICTE approvals, and fee installments.</p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="text-center space-y-4 relative group">
+          <div class="w-14 h-14 rounded-full bg-brand-50 border border-brand-100 text-brand-600 text-xl font-extrabold flex items-center justify-center mx-auto shadow-sm group-hover:scale-105 transition-all">3</div>
+          <h4 class="text-sm font-extrabold text-slate-900">1-on-1 Advisor Session</h4>
+          <p class="text-xs text-slate-400 leading-relaxed max-w-xs mx-auto">Discuss learning modules, examinations, and eligibility structures with direct counsellors.</p>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="text-center space-y-4 relative group">
+          <div class="w-14 h-14 rounded-full bg-brand-50 border border-brand-100 text-brand-600 text-xl font-extrabold flex items-center justify-center mx-auto shadow-sm group-hover:scale-105 transition-all">4</div>
+          <h4 class="text-sm font-extrabold text-slate-900">Direct Secure Enrolment</h4>
+          <p class="text-xs text-slate-400 leading-relaxed max-w-xs mx-auto">Secure direct university enrollment with audited documents and 0% EMI payment gateways.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       5. ACCREDITATION & APPROVALS GUIDELINE HANDBOOK (NEW)
+       ========================================== -->
+  <section class="py-16 bg-[#f8fafc]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center space-y-4 max-w-2xl mx-auto mb-14">
+        <span class="text-brand-600 font-extrabold text-xs uppercase tracking-widest bg-brand-50 px-3 py-1 rounded-full">Trust Framework</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">Accreditation Audit Guidelines</h2>
+        <p class="text-slate-400 text-xs sm:text-sm">Understanding university approvals is critical for degree validity. We verify all listings against standard metrics.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
+        
+        <!-- Audit 1 -->
+        <div class="bg-white border border-slate-100 rounded-3xl p-6 shadow-sm hover:shadow-md transition-shadow space-y-4">
+          <div class="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center text-lg"><i class="fa-solid fa-file-shield"></i></div>
+          <h4 class="text-sm font-extrabold text-slate-900">UGC-DEB Compliant</h4>
+          <p class="text-xs text-slate-400 leading-relaxed">Officially mandates that online degrees are fully equal to regular physical degrees for recruitment.</p>
+        </div>
+
+        <!-- Audit 2 -->
+        <div class="bg-white border border-slate-100 rounded-3xl p-6 shadow-sm hover:shadow-md transition-shadow space-y-4">
+          <div class="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center text-lg"><i class="fa-solid fa-medal"></i></div>
+          <h4 class="text-sm font-extrabold text-slate-900">NAAC A+/A++ Grade</h4>
+          <p class="text-xs text-slate-400 leading-relaxed">Evaluates the highest quality tiers in faculty, support services, and online library portals.</p>
+        </div>
+
+        <!-- Audit 3 -->
+        <div class="bg-white border border-slate-100 rounded-3xl p-6 shadow-sm hover:shadow-md transition-shadow space-y-4">
+          <div class="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center text-lg"><i class="fa-solid fa-trophy"></i></div>
+          <h4 class="text-sm font-extrabold text-slate-900">NIRF Top 100 Rankings</h4>
+          <p class="text-xs text-slate-400 leading-relaxed">Confirms administrative reputation and active performance levels across Indian institutions.</p>
+        </div>
+
+        <!-- Audit 4 -->
+        <div class="bg-white border border-slate-100 rounded-3xl p-6 shadow-sm hover:shadow-md transition-shadow space-y-4">
+          <div class="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center text-lg"><i class="fa-solid fa-microchip"></i></div>
+          <h4 class="text-sm font-extrabold text-slate-900">AICTE Validation</h4>
+          <p class="text-xs text-slate-400 leading-relaxed">Mandatory accreditation for computer application (MCA/BCA) and technical courses.</p>
+        </div>
+
+        <!-- Audit 5 -->
+        <div class="bg-white border border-slate-100 rounded-3xl p-6 shadow-sm hover:shadow-md transition-shadow space-y-4">
+          <div class="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center text-lg"><i class="fa-solid fa-globe"></i></div>
+          <h4 class="text-sm font-extrabold text-slate-900">WES Recognition</h4>
+          <p class="text-xs text-slate-400 leading-relaxed">Confirms credential equivalency globally for visas, green cards, or foreign universities.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       6. ALUMNI PLACEMENTS & SALARY HIKES TRACKER (NEW)
+       ========================================== -->
+  <section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center space-y-4 max-w-2xl mx-auto mb-14">
+        <span class="text-brand-600 font-extrabold text-xs uppercase tracking-widest bg-brand-50 px-3 py-1 rounded-full">Success Catalog</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">Verified Placements & Salary Hikes</h2>
+        <p class="text-slate-400 text-xs sm:text-sm">See how online programs empower working professionals to achieve career promotions.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Scholar 1 -->
+        <div class="bg-[#fafbfa] border border-slate-100 rounded-3xl p-6 space-y-4 flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="flex items-center space-x-3">
+              <div class="w-10 h-10 rounded-full bg-brand-100 text-brand-800 font-bold flex items-center justify-center">AS</div>
+              <div>
+                <h4 class="text-sm font-extrabold text-slate-800">Ananya Sharma</h4>
+                <p class="text-[10px] text-slate-400">Online MBA Graduate</p>
+              </div>
+            </div>
+            <p class="text-xs text-slate-500 leading-relaxed italic">"Choosing Amity Online through EduSolver resolved my confusion. Got placed as Consultant with excellent support."</p>
+          </div>
+          <div class="pt-4 border-t border-slate-200/50 flex items-center justify-between">
+            <span class="text-[10px] bg-brand-50 text-brand-700 px-2 py-0.5 rounded-md font-bold">150% Salary Hike 🚀</span>
+            <span class="text-xs font-bold text-slate-800">placed at KPMG</span>
+          </div>
+        </div>
+
+        <!-- Scholar 2 -->
+        <div class="bg-[#fafbfa] border border-slate-100 rounded-3xl p-6 space-y-4 flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="flex items-center space-x-3">
+              <div class="w-10 h-10 rounded-full bg-brand-100 text-brand-800 font-bold flex items-center justify-center">RG</div>
+              <div>
+                <h4 class="text-sm font-extrabold text-slate-800">Rohan Gupta</h4>
+                <p class="text-[10px] text-slate-400">Online MCA Graduate</p>
+              </div>
+            </div>
+            <p class="text-xs text-slate-500 leading-relaxed italic">"The Virtual Systems lab access and online guidance made learning seamless. Easily transitioned to Tech Lead."</p>
+          </div>
+          <div class="pt-4 border-t border-slate-200/50 flex items-center justify-between">
+            <span class="text-[10px] bg-brand-50 text-brand-700 px-2 py-0.5 rounded-md font-bold">180% Salary Hike 🚀</span>
+            <span class="text-xs font-bold text-slate-800">placed at Amazon</span>
+          </div>
+        </div>
+
+        <!-- Scholar 3 -->
+        <div class="bg-[#fafbfa] border border-slate-100 rounded-3xl p-6 space-y-4 flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="flex items-center space-x-3">
+              <div class="w-10 h-10 rounded-full bg-brand-100 text-brand-800 font-bold flex items-center justify-center">PD</div>
+              <div>
+                <h4 class="text-sm font-extrabold text-slate-800">Preeti Das</h4>
+                <p class="text-[10px] text-slate-400">Online BCA Graduate</p>
+              </div>
+            </div>
+            <p class="text-xs text-slate-500 leading-relaxed italic">"Affordable fees and modular classes allowed me to complete degree alongside my job. Excellent guidance."</p>
+          </div>
+          <div class="pt-4 border-t border-slate-200/50 flex items-center justify-between">
+            <span class="text-[10px] bg-brand-50 text-brand-700 px-2 py-0.5 rounded-md font-bold">120% Salary Hike 🚀</span>
+            <span class="text-xs font-bold text-slate-800">placed at TCS</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       7. SERVICES FAQ ACCORDION PANEL (NEW)
+       ========================================== -->
+  <section class="py-16 bg-[#f8fafc] border-t border-slate-100/50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center space-y-4 max-w-2xl mx-auto mb-14">
+        <span class="text-brand-600 font-extrabold text-xs uppercase tracking-widest bg-brand-50 px-3 py-1 rounded-full">Answers Portal</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">Services & Enquiries FAQs</h2>
+        <p class="text-slate-400 text-xs sm:text-sm">Get instant clarification on accreditation, fees payment options, and admissions.</p>
+      </div>
+
+      <div class="space-y-4">
+        
+        <!-- FAQ 1 -->
+        <div class="border border-slate-200 rounded-2xl overflow-hidden transition-all bg-white">
+          <button class="w-full flex items-center justify-between p-5 text-left font-bold text-slate-850 focus:outline-none" onclick="toggleFAQ(0)">
+            <span class="text-slate-900 text-sm">Are online degrees legally valid for government jobs?</span>
+            <i class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-200" id="services-faq-arrow-0"></i>
+          </button>
+          <div class="services-faq-content hidden transition-all duration-300 ease-in-out" id="services-faq-content-0">
+            <p class="p-5 pt-0 text-xs text-slate-500 leading-relaxed border-t border-slate-100 bg-white">
+              Yes, absolutely. Per UGC notification, online degrees awarded by recognized universities under the UGC-DEB framework hold equal validity to regular physical campus degrees for all government examinations, corporate promotions, and global evaluations.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="border border-slate-200 rounded-2xl overflow-hidden transition-all bg-white">
+          <button class="w-full flex items-center justify-between p-5 text-left font-bold text-slate-850 focus:outline-none" onclick="toggleFAQ(1)">
+            <span class="text-slate-900 text-sm">Can I divide semester fees into monthly installments?</span>
+            <i class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-200" id="services-faq-arrow-1"></i>
+          </button>
+          <div class="services-faq-content hidden transition-all duration-300 ease-in-out" id="services-faq-content-1">
+            <p class="p-5 pt-0 text-xs text-slate-500 leading-relaxed border-t border-slate-100 bg-white">
+              Yes, we provide student support services integrating multiple banking options that offer 0% interest credit options and easy EMI structures, allowing you to pay semester fees smoothly in easy monthly intervals.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="border border-slate-200 rounded-2xl overflow-hidden transition-all bg-white">
+          <button class="w-full flex items-center justify-between p-5 text-left font-bold text-slate-850 focus:outline-none" onclick="toggleFAQ(2)">
+            <span class="text-slate-900 text-sm">How does the AI University Matcher work?</span>
+            <i class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-200" id="services-faq-arrow-2"></i>
+          </button>
+          <div class="services-faq-content hidden transition-all duration-300 ease-in-out" id="services-faq-content-2">
+            <p class="p-5 pt-0 text-xs text-slate-500 leading-relaxed border-t border-slate-100 bg-white">
+              The matching engine runs real-time filters against our database parameters (including fee scales, specialization areas, and NAAC ratings) to identify the top accredited university program that fits your exact qualifications and career budget.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       8. MODALS & POPUPS
+       ========================================== -->
+  <!-- AI Matching Matcher Result Popup Modal (Green Accent) -->
+  <div id="matcher-modal" class="fixed inset-0 z-[100] hidden items-center justify-center bg-slate-900/60 backdrop-blur-sm p-4">
+    <div class="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl relative border border-slate-100 animate-float">
+      <button onclick="closeModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 focus:outline-none text-lg">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <!-- Modal Content -->
+      <div class="text-center space-y-5">
+        <div class="w-16 h-16 rounded-full bg-brand-50 text-brand-600 flex items-center justify-center mx-auto text-3xl">
+          <i class="fa-solid fa-wand-magic-sparkles"></i>
+        </div>
+        <div class="space-y-1">
+          <span class="text-[9px] bg-brand-100 text-brand-800 font-extrabold uppercase tracking-widest px-3 py-1 rounded-full">Perfect AI Match Found</span>
+          <h3 class="text-xl font-extrabold text-slate-900 pt-2" id="modal-match-title">Amity Online MCA</h3>
+          <p class="text-xs text-slate-500">Based on your target tier, specialization preference, and budget</p>
+        </div>
+
+        <div class="grid grid-cols-2 gap-4 border-t border-b border-slate-100 py-4 text-left">
+          <div>
+            <span class="text-[9px] font-bold text-slate-400 uppercase block">Accreditation</span>
+            <span class="text-xs font-bold text-slate-800 flex items-center" id="modal-match-naac"><i class="fa-solid fa-award text-brand-500 mr-1"></i> NAAC A++ rated</span>
+          </div>
+          <div>
+            <span class="text-[9px] font-bold text-slate-400 uppercase block">Semester Fee</span>
+            <span class="text-xs font-bold text-brand-600 text-sm" id="modal-match-fee">₹35,000 /Sem</span>
+          </div>
+          <div class="col-span-2">
+            <span class="text-[9px] font-bold text-slate-400 uppercase block">Key USP</span>
+            <span class="text-xs text-slate-700 leading-snug" id="modal-match-usp">UGC-DEB equal recognition policy. Structured placement drives.</span>
+          </div>
+        </div>
+
+        <div class="flex flex-col sm:flex-row gap-3 pt-2">
+          <button onclick="closeModal()" class="w-full border border-slate-200 hover:border-slate-300 text-slate-600 font-bold text-xs py-3.5 rounded-xl transition-all">Close</button>
+          <a href="#contact" onclick="closeModal()" class="w-full bg-brand-500 hover:bg-brand-600 text-white font-bold text-xs py-3.5 rounded-xl transition-all text-center shadow-md flex items-center justify-center space-x-2">
+            <i class="fa-solid fa-phone"></i>
+            <span>Enquire Free Now</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dynamic Sticky Footer Components -->
+  <edu-footer></edu-footer>
+
+  <!-- EduSolver JavaScript Dependencies -->
+  <script src="../assets/js/data.js"></script>
+  <script src="../assets/js/component.js"></script>
+
+  <!-- ==========================================
+       9. DYNAMIC JAVASCRIPT LOGIC
+       ========================================== -->
+  <script type="text/javascript">
+    
+    // Complete high-fidelity datasets representing the user's screenshot services
+    const servicesData = {
+      ug: {
+        title: "Graduation Courses",
+        desc: "After 12th UG Degrees",
+        count: "6 Programs",
+        courses: [
+          { name: "B.Com (General)", desc: "Bachelor of Commerce", tag: "HIGH ROI", icon: "fa-solid fa-chart-line" },
+          { name: "BBA", desc: "Bachelor of Business Admin", tag: "TRENDING", icon: "fa-solid fa-briefcase" },
+          { name: "BCA", desc: "Bachelors in Computer Applications", tag: "IN-DEMAND", icon: "fa-solid fa-laptop-code" },
+          { name: "BA", desc: "Bachelor of Arts", tag: "FLEXIBLE", icon: "fa-solid fa-book" },
+          { name: "B.Sc (IT/CS)", desc: "Bachelor of Science in Tech", tag: "FUTURE PROOF", icon: "fa-solid fa-microchip" },
+          { name: "B.Tech (Professional)", desc: "Bachelor of Technology", tag: "ACCREDITED", icon: "fa-solid fa-gears" }
+        ]
+      },
+      pg: {
+        title: "Masters Courses",
+        desc: "Postgraduate PG Degrees",
+        count: "6 Programs",
+        courses: [
+          { name: "Online MBA (General)", desc: "Master of Business Administration", tag: "RECOMMENDED", icon: "fa-solid fa-user-tie" },
+          { name: "Online MCA", desc: "Master of Computer Applications", tag: "HIGH PLACEMENTS", icon: "fa-solid fa-laptop-code" },
+          { name: "M.Sc (Data Science)", desc: "Master of Science in Tech", tag: "AI POWERED", icon: "fa-solid fa-brain" },
+          { name: "M.Com", desc: "Master of Commerce", tag: "JOB STEADY", icon: "fa-solid fa-chart-bar" },
+          { name: "MA (English/Journalism)", desc: "Master of Arts", tag: "CREATIVE", icon: "fa-solid fa-pen-nib" },
+          { name: "Executive PG Diploma", desc: "Management Specializations", tag: "FAST TRACK", icon: "fa-solid fa-certificate" }
+        ]
+      },
+      diploma: {
+        title: "Diploma Courses",
+        desc: "Polytechnic & Technical",
+        count: "4 Programs",
+        courses: [
+          { name: "PG Diploma in Data Science", desc: "Postgraduate Diploma", tag: "HIGH ROI", icon: "fa-solid fa-database" },
+          { name: "PG Diploma in Digital Marketing", desc: "Postgraduate Diploma", tag: "TRENDING", icon: "fa-solid fa-bullhorn" },
+          { name: "Diploma in Computer Apps", desc: "Technical Diploma", tag: "JOB READY", icon: "fa-solid fa-terminal" },
+          { name: "Advanced Diploma in Admin", desc: "Management Diploma", tag: "FLEXIBLE", icon: "fa-solid fa-building" }
+        ]
+      },
+      teaching: {
+        title: "Teaching Courses",
+        desc: "NTT, B.Ed, D.El.Ed",
+        count: "3 Programs",
+        courses: [
+          { name: "B.Ed", desc: "Bachelor of Education", tag: "UGC APPROVED", icon: "fa-solid fa-graduation-cap" },
+          { name: "NTT", desc: "Nursery Teacher Training", tag: "IN DEMAND", icon: "fa-solid fa-child" },
+          { name: "D.El.Ed", desc: "Elementary Education", tag: "GOVT VALID", icon: "fa-solid fa-apple-whole" }
+        ]
+      },
+      skills: {
+        title: "Skill Development",
+        desc: "Govt Approved Training",
+        count: "4 Programs",
+        courses: [
+          { name: "Python & AI Engineering", desc: "Advanced Tech Certification", tag: "FUTURE PROOF", icon: "fa-solid fa-robot" },
+          { name: "Digital Marketing Specialist", desc: "Growth & Sales Certification", tag: "TRENDING", icon: "fa-solid fa-magnifying-glass-chart" },
+          { name: "Cyber Security Expert", desc: "Ethical Hacking Certification", tag: "IN-DEMAND", icon: "fa-solid fa-shield-halved" },
+          { name: "Cloud Architecture", desc: "Infrastructure Certification", tag: "HIGH PAY", icon: "fa-solid fa-cloud" }
+        ]
+      },
+      vocational: {
+        title: "Vocational Training",
+        desc: "Job-Ready Expertise",
+        count: "4 Programs",
+        courses: [
+          { name: "Hotel Management", desc: "Hospitality Certification", tag: "GLOBAL CAREER", icon: "fa-solid fa-hotel" },
+          { name: "Graphic Design & Multimedia", desc: "Creative Certification", tag: "FLEXIBLE", icon: "fa-solid fa-palette" },
+          { name: "Logistics & Supply Chain", desc: "Operations Certification", tag: "IN-DEMAND", icon: "fa-solid fa-truck-fast" },
+          { name: "Healthcare Admin", desc: "Medical Operations", tag: "STABLE", icon: "fa-solid fa-suitcase-medical" }
+        ]
+      },
+      class12: {
+        title: "Class 12th (Open)",
+        desc: "Senior Secondary Ed.",
+        count: "3 Programs",
+        courses: [
+          { name: "Class 12th Science", desc: "NIOS Senior Secondary", tag: "BOARD COMPLIANT", icon: "fa-solid fa-flask" },
+          { name: "Class 12th Commerce", desc: "NIOS Senior Secondary", tag: "HIGH POTENTIAL", icon: "fa-solid fa-calculator" },
+          { name: "Class 12th Arts", desc: "NIOS Senior Secondary", tag: "FLEXIBLE", icon: "fa-solid fa-building-columns" }
+        ]
+      },
+      class10: {
+        title: "Class 10th (Open)",
+        desc: "Secondary Education",
+        count: "1 Program",
+        courses: [
+          { name: "Class 10th Secondary", desc: "NIOS Secondary Education", tag: "BOARD APPROVED", icon: "fa-solid fa-book-open-reader" }
+        ]
+      }
+    };
+
+    // Category button active/inactive styling helpers (Brand green style strictly matching logo)
+    const activeClass = "category-btn active flex items-start text-left w-full px-4 py-3.5 rounded-2xl border transition-all duration-300 bg-brand-500 text-white border-brand-500 shadow-lg shadow-brand-100";
+    const inactiveClass = "category-btn flex items-start text-left w-full px-4 py-3.5 rounded-2xl border border-slate-200/50 bg-[#fafbfa] text-slate-600 hover:border-brand-300 hover:text-brand-600 transition-all duration-300";
+
+    function switchCategory(catKey) {
+      const category = servicesData[catKey];
+      if (!category) return;
+
+      // Update active state of sidebar buttons
+      const buttons = document.querySelectorAll('.category-btn');
+      buttons.forEach(btn => {
+        btn.className = inactiveClass;
+        // Restore subtitle gray class
+        const subText = btn.querySelector('.sub');
+        if (subText) subText.className = "sub text-[10px] block text-slate-400 mt-0.5";
+      });
+
+      const activeBtn = document.getElementById('btn-' + catKey);
+      if (activeBtn) {
+        activeBtn.className = activeClass;
+        // Make active subtitle text white
+        const subText = activeBtn.querySelector('.sub');
+        if (subText) subText.className = "sub text-[10px] block text-white/80 mt-0.5";
+      }
+
+      // Update grid headers
+      document.getElementById('grid-header-title').innerText = category.title;
+      document.getElementById('grid-header-desc').innerText = category.desc;
+      document.getElementById('grid-header-count').innerText = category.count;
+
+      // Load Grid Cards with fade-in transition
+      const grid = document.getElementById('services-grid');
+      grid.style.opacity = '0';
+      grid.style.transform = 'translateY(10px)';
+      grid.style.transition = 'all 0.3s ease-out';
+
+      setTimeout(() => {
+        grid.innerHTML = '';
+        category.courses.forEach(c => {
+          const card = document.createElement('div');
+          card.className = "bg-white border border-slate-200/70 hover:border-brand-300 hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 rounded-3xl p-6 flex flex-col justify-between";
+          
+          card.innerHTML = `
+            <div>
+              <!-- Tag -->
+              <span class="inline-block bg-[#f0fdf4] text-brand-700 text-[9px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider mb-4 border border-brand-100">
+                ⚡ ${c.tag}
+              </span>
+
+              <!-- Icon & Description -->
+              <div class="flex items-center space-x-3.5 mb-4">
+                <div class="w-12 h-12 rounded-2xl bg-brand-50/60 text-brand-600 flex items-center justify-center text-xl shrink-0"><i class="${c.icon}"></i></div>
+                <div>
+                  <h3 class="text-sm sm:text-base font-extrabold text-slate-900 leading-tight">${c.name}</h3>
+                  <p class="text-[11px] text-slate-400 font-semibold mt-0.5">${c.desc}</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- CTA -->
+            <a href="#contact" class="w-full text-center bg-brand-500 hover:bg-brand-600 text-white font-bold text-xs py-3.5 rounded-xl transition-all shadow-md mt-4 block">
+              Explore Program
+            </a>
+          `;
+          grid.appendChild(card);
+        });
+
+        // Always add a "View All Programs" card at the end
+        const viewAllCard = document.createElement('div');
+        viewAllCard.className = "border border-dashed border-slate-300 hover:border-brand-500 hover:shadow-md transition-all duration-300 rounded-3xl p-6 flex flex-col items-center justify-center text-center cursor-pointer min-h-[190px]";
+        viewAllCard.onclick = () => { window.location.hash = "#contact"; };
+        viewAllCard.innerHTML = `
+          <div class="w-12 h-12 rounded-full bg-[#f8fafc] hover:bg-brand-50 text-slate-500 hover:text-brand-600 flex items-center justify-center text-xl mb-3 shadow-inner border border-slate-100 transition-colors">
+            <i class="fa-solid fa-arrow-right"></i>
+          </div>
+          <h3 class="text-sm font-bold text-slate-800">View All Programs</h3>
+          <p class="text-[10px] text-slate-400 mt-1">See complete list of courses</p>
+        `;
+        grid.appendChild(viewAllCard);
+
+        grid.style.opacity = '1';
+        grid.style.transform = 'translateY(0)';
+      }, 150);
+    }
+
+    // AI Matcher logic mimicking College Vidya comparison matches
+    function handleMatch(e) {
+      e.preventDefault();
+      
+      const tier = document.getElementById('match-tier').value;
+      const budget = document.getElementById('match-budget').value;
+      const stream = document.getElementById('match-stream').value;
+
+      let matchedName = "Amity Online MCA";
+      let matchedFee = "₹35,000 /Sem";
+      let matchedNaac = "<i class='fa-solid fa-award text-brand-500 mr-1'></i> NAAC A++ Rated";
+      let matchedUsp = "UGC-DEB approved degree. Dual specialization option with digital interface portal support.";
+
+      // Custom selector logic to give realistic outcomes
+      if (tier === 'ug') {
+        if (budget === 'low') {
+          matchedName = "LPU Online BCA";
+          matchedFee = "₹24,000 /Sem";
+          matchedNaac = "<i class='fa-solid fa-award text-brand-500 mr-1'></i> NAAC A+ Rated";
+          matchedUsp = "Flexible online lectures. Massive technical curriculum and direct recruitment partners support.";
+        } else if (stream === 'business') {
+          matchedName = "Amity Online BBA";
+          matchedFee = "₹32,000 /Sem";
+          matchedNaac = "<i class='fa-solid fa-award text-brand-500 mr-1'></i> NAAC A++ Rated";
+          matchedUsp = "Highly recognized globally. Placement assurance through corporate recruiter networks.";
+        } else {
+          matchedName = "Manipal Online BCA";
+          matchedFee = "₹28,000 /Sem";
+          matchedNaac = "<i class='fa-solid fa-award text-brand-500 mr-1'></i> NIRF top 100 rated";
+          matchedUsp = "Highly structured interactive web classrooms. Free access to technical certifications.";
+        }
+      } else if (tier === 'pg') {
+        if (stream === 'business') {
+          matchedName = "Manipal Online MBA";
+          matchedFee = "₹40,000 /Sem";
+          matchedNaac = "<i class='fa-solid fa-award text-brand-500 mr-1'></i> NIRF top 100 rated";
+          matchedUsp = "Includes executive masterclass options. Equal to regular campus MBA with valid credentials.";
+        } else if (budget === 'high') {
+          matchedName = "M.Sc in Data Science & AI";
+          matchedFee = "₹45,000 /Sem";
+          matchedNaac = "<i class='fa-solid fa-award text-brand-500 mr-1'></i> UGC-DEB Approved";
+          matchedUsp = "Build advanced machine learning algorithms. Deep corporate recruitment program.";
+        } else {
+          matchedName = "LPU Online MCA";
+          matchedFee = "₹26,000 /Sem";
+          matchedNaac = "<i class='fa-solid fa-award text-brand-500 mr-1'></i> NAAC A+ Rated";
+          matchedUsp = "Affordable, industry-grade technical MCA program featuring extensive virtual systems lab access.";
+        }
+      } else {
+        matchedName = "PG Diploma in Data Science";
+        matchedFee = "₹45,000 /Sem";
+        matchedNaac = "<i class='fa-solid fa-award text-brand-500 mr-1'></i> UGC-DEB Approved";
+        matchedUsp = "1-year fast-track industry credential. Perfect for quick transition into analytics roles.";
+      }
+
+      // Display Modal with matched details
+      document.getElementById('modal-match-title').innerText = matchedName;
+      document.getElementById('modal-match-fee').innerText = matchedFee;
+      document.getElementById('modal-match-naac').innerHTML = matchedNaac;
+      document.getElementById('modal-match-usp').innerText = matchedUsp;
+
+      const modal = document.getElementById('matcher-modal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    function closeModal() {
+      const modal = document.getElementById('matcher-modal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    // Dynamic FAQ accordion mechanics specifically for services FAQs
+    function toggleFAQ(index) {
+      const contents = document.querySelectorAll('.services-faq-content');
+      const arrows = document.querySelectorAll('[id^="services-faq-arrow-"]');
+      const currentArrow = document.getElementById('services-faq-arrow-' + index);
+
+      contents.forEach((el, idx) => {
+        if (idx === index) {
+          if (el.classList.contains('hidden')) {
+            el.classList.remove('hidden');
+            if (currentArrow) currentArrow.style.transform = 'rotate(180deg)';
+          } else {
+            el.classList.add('hidden');
+            if (currentArrow) currentArrow.style.transform = 'rotate(0deg)';
+          }
+        } else {
+          el.classList.add('hidden');
+          const otherArrow = document.getElementById('services-faq-arrow-' + idx);
+          if (otherArrow) otherArrow.style.transform = 'rotate(0deg)';
+        }
+      });
+    }
+
+    // Default initialization loading Graduation Courses (UG)
+    window.addEventListener('DOMContentLoaded', () => {
+      switchCategory('ug');
+    });
+
+  </script>
+</body>
+
+</html>
