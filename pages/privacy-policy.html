@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy | EduSolver</title>
+  <meta name="description"
+    content="Review EduSolver's privacy policy, data collection compliance protocols, and protection metrics under Indian IT Act provisions.">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#f0fdf4',
+              100: '#dcfce7',
+              200: '#bbf7d0',
+              300: '#86efac',
+              400: '#4ade80',
+              500: '#12b809', // Logo brand green
+              600: '#0f9a07',
+              700: '#0c7b05',
+              800: '#0a6104',
+              900: '#084e03',
+            },
+            slate: {
+              950: '#030712',
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Global Styling -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body
+  class="font-sans text-slate-800 bg-[#fbfcfb] selection:bg-brand-100 selection:text-brand-900 bg-grid-pattern min-h-screen flex flex-col overflow-x-hidden">
+
+  <!-- Dynamic Sticky Navbar -->
+  <edu-navbar></edu-navbar>
+
+  <!-- Spacer for fixed header -->
+  <div class="h-28"></div>
+
+  <!-- ==========================================
+       1. HERO HEADER AREA
+       ========================================== -->
+  <section class="relative overflow-hidden py-12 bg-gradient-to-br from-brand-50/40 via-[#fcfdfc] to-emerald-50/20 border-b border-slate-100">
+    <div class="absolute top-0 right-0 w-96 h-96 rounded-full bg-brand-100/10 blur-3xl -z-10 animate-pulse"></div>
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+      <span
+        class="inline-flex items-center space-x-2 bg-brand-50 border border-brand-200 text-brand-700 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider">
+        <i class="fa-solid fa-lock text-brand-500 mr-1.5"></i> Secure Data Environment
+      </span>
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 leading-[1.15] tracking-tight">
+        Privacy Policy
+      </h1>
+      <p class="text-slate-500 text-xs sm:text-sm max-w-xl mx-auto leading-relaxed">
+        Last Updated: May 29, 2026. Understand how we secure, process, and protect your educational counseling metrics.
+      </p>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       2. TEXT CONTENT
+       ========================================== -->
+  <section class="py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 text-xs sm:text-sm text-slate-500 leading-relaxed">
+      
+      <div class="space-y-3">
+        <h3 class="text-base font-extrabold text-slate-950">1. Data Collection Framework</h3>
+        <p>
+          We collect personal credentials including name, email address, mobile number, target program categories, and preferred consultation times solely to map your profile to our certified Career Development Advisors (CDAs). All submissions represent direct opt-ins.
+        </p>
+      </div>
+
+      <div class="space-y-3">
+        <h3 class="text-base font-extrabold text-slate-950">2. UGC-DEB Direct Directives Parity</h3>
+        <p>
+          EduSolver aggregates verified fees, regulatory rankings, and WES accreditation scores directly from institutional registries. We do not represent universities nor charge mediators' fees. Your tuition is paid directly into authorized university accounts.
+        </p>
+      </div>
+
+      <div class="space-y-3">
+        <h3 class="text-base font-extrabold text-slate-950">3. Information Protection Compliance</h3>
+        <p>
+          We employ state-of-the-art secure socket layers (SSL) and digital system firewalls to ensure that aspirant credentials remain completely confidential. We do not sell, rent, or lease student contact indices to external marketing networks.
+        </p>
+      </div>
+
+      <div class="space-y-3">
+        <h3 class="text-base font-extrabold text-slate-950">4. Cookies & Trackers</h3>
+        <p>
+          Our platform utilizes light cookie markers to remember target stream configurations, program checklist selections, and active checkbox parameters within our Side-by-Side Comparison matrices.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Dynamic Footer Component -->
+  <edu-footer></edu-footer>
+
+  <!-- EduSolver JavaScript Dependencies -->
+  <script src="../assets/js/data.js"></script>
+  <script src="../assets/js/component.js"></script>
+</body>
+
+</html>

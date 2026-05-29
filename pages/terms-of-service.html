@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms of Service | EduSolver</title>
+  <meta name="description"
+    content="Review EduSolver's terms of service, advisory conditions, and payment protocols.">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#f0fdf4',
+              100: '#dcfce7',
+              200: '#bbf7d0',
+              300: '#86efac',
+              400: '#4ade80',
+              500: '#12b809', // Logo brand green
+              600: '#0f9a07',
+              700: '#0c7b05',
+              800: '#0a6104',
+              900: '#084e03',
+            },
+            slate: {
+              950: '#030712',
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Global Styling -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body
+  class="font-sans text-slate-800 bg-[#fbfcfb] selection:bg-brand-100 selection:text-brand-900 bg-grid-pattern min-h-screen flex flex-col overflow-x-hidden">
+
+  <!-- Dynamic Sticky Navbar -->
+  <edu-navbar></edu-navbar>
+
+  <!-- Spacer for fixed header -->
+  <div class="h-28"></div>
+
+  <!-- ==========================================
+       1. HERO HEADER AREA
+       ========================================== -->
+  <section class="relative overflow-hidden py-12 bg-gradient-to-br from-brand-50/40 via-[#fcfdfc] to-emerald-50/20 border-b border-slate-100">
+    <div class="absolute top-0 right-0 w-96 h-96 rounded-full bg-brand-100/10 blur-3xl -z-10 animate-pulse"></div>
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+      <span
+        class="inline-flex items-center space-x-2 bg-brand-50 border border-brand-200 text-brand-700 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider">
+        <i class="fa-solid fa-file-contract text-brand-500 mr-1.5"></i> Platform Usage Terms
+      </span>
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 leading-[1.15] tracking-tight">
+        Terms of Service
+      </h1>
+      <p class="text-slate-500 text-xs sm:text-sm max-w-xl mx-auto leading-relaxed">
+        Last Updated: May 29, 2026. Review rules governing your access to the EduSolver comparison portal.
+      </p>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       2. TEXT CONTENT
+       ========================================== -->
+  <section class="py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 text-xs sm:text-sm text-slate-500 leading-relaxed">
+      
+      <div class="space-y-3">
+        <h3 class="text-base font-extrabold text-slate-950">1. Acceptance of Terms</h3>
+        <p>
+          By accessing the EduSolver portal, you accept these terms of service, valid compliance conditions, and data use protocols. If you do not agree, please do not use the advisory matcher or interactive comparison matrices.
+        </p>
+      </div>
+
+      <div class="space-y-3">
+        <h3 class="text-base font-extrabold text-slate-950">2. Free Audited Advisory</h3>
+        <p>
+          EduSolver provides 100% free educational guidance sessions. We aggregate UGC-DEB, AICTE, and NAAC ratings parameters strictly for informational mapping purposes. Students are solely responsible for verifying their specific qualification criteria before applying.
+        </p>
+      </div>
+
+      <div class="space-y-3">
+        <h3 class="text-base font-extrabold text-slate-950">3. Direct Tuition Payments</h3>
+        <p>
+          EduSolver operates under a zero-commission model. We do not process, hold, or escrow student tuition fees. Learners pay their semester, admission, or NIOS board tuition directly into authorized institutional bank accounts. We are not responsible for any transaction failures.
+        </p>
+      </div>
+
+      <div class="space-y-3">
+        <h3 class="text-base font-extrabold text-slate-950">4. Intellectual Property</h3>
+        <p>
+          All assets, including our comparison engines, sidebar active scripts, logo styles, layout codes, and content configurations, are protected under copyright and trademark laws.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Dynamic Footer Component -->
+  <edu-footer></edu-footer>
+
+  <!-- EduSolver JavaScript Dependencies -->
+  <script src="../assets/js/data.js"></script>
+  <script src="../assets/js/component.js"></script>
+</body>
+
+</html>

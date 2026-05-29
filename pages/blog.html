@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Insights & Educational Guides | EduSolver</title>
+  <meta name="description"
+    content="Stay updated on syllabus guidelines, UGC-DEB directives, NAAC evaluation grades, online study models, and placement opportunities.">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#f0fdf4',
+              100: '#dcfce7',
+              200: '#bbf7d0',
+              300: '#86efac',
+              400: '#4ade80',
+              500: '#12b809', // Logo brand green
+              600: '#0f9a07',
+              700: '#0c7b05',
+              800: '#0a6104',
+              900: '#084e03',
+            },
+            slate: {
+              950: '#030712',
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Global Styling -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body
+  class="font-sans text-slate-800 bg-[#fbfcfb] selection:bg-brand-100 selection:text-brand-900 bg-grid-pattern min-h-screen flex flex-col overflow-x-hidden">
+
+  <!-- Dynamic Sticky Navbar -->
+  <edu-navbar></edu-navbar>
+
+  <!-- Spacer for fixed header -->
+  <div class="h-28"></div>
+
+  <!-- ==========================================
+       1. HERO HEADER AREA
+       ========================================== -->
+  <section class="relative overflow-hidden py-16 bg-gradient-to-br from-brand-50/40 via-[#fcfdfc] to-emerald-50/20 border-b border-slate-100">
+    <div class="absolute top-0 right-0 w-96 h-96 rounded-full bg-brand-100/10 blur-3xl -z-10 animate-pulse"></div>
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+      <span
+        class="inline-flex items-center space-x-2 bg-brand-50 border border-brand-200 text-brand-700 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider">
+        <i class="fa-solid fa-book-open text-brand-500 mr-1.5"></i> Vetted Research & Guidelines Portal
+      </span>
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 leading-[1.15] tracking-tight">
+        Latest Educational <span class="text-gradient">Insights & Guides</span>
+      </h1>
+      <p class="text-slate-500 text-xs sm:text-sm max-w-xl mx-auto leading-relaxed">
+        Understand distance education structures, UGC-DEB parity directives, NAAC accreditation audits, and true corporate placement values.
+      </p>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       2. INSIGHTS ARTICLES GRID & FILTERS WIDGET
+       ========================================== -->
+  <section class="py-16 sm:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Interactive Filters Ticker -->
+      <div class="flex flex-wrap items-center justify-center gap-2.5 mb-12">
+        <button onclick="filterBlogs('all')" id="btn-blog-all"
+          class="px-5 py-2.5 rounded-xl text-sm font-bold border border-brand-500 bg-brand-500 text-white shadow-md transition-all">All Guides</button>
+        <button onclick="filterBlogs('ugc')" id="btn-blog-ugc"
+          class="px-5 py-2.5 rounded-xl text-sm font-semibold border border-slate-200 bg-[#fafbfa] text-slate-655 hover:border-brand-300 hover:text-brand-600 transition-all">UGC Guidelines</button>
+        <button onclick="filterBlogs('accred')" id="btn-blog-accred"
+          class="px-5 py-2.5 rounded-xl text-sm font-semibold border border-slate-200 bg-[#fafbfa] text-slate-655 hover:border-brand-300 hover:text-brand-600 transition-all">Accreditation</button>
+        <button onclick="filterBlogs('placements')" id="btn-blog-placements"
+          class="px-5 py-2.5 rounded-xl text-sm font-semibold border border-slate-200 bg-[#fafbfa] text-slate-655 hover:border-brand-300 hover:text-brand-600 transition-all">IT Placements</button>
+      </div>
+
+      <!-- Articles Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="blogs-grid">
+
+        <!-- Article 1: UGC -->
+        <article class="blog-card bg-white border border-slate-100 hover:border-brand-200 rounded-[32px] overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between" data-cat="ugc">
+          <div>
+            <div class="h-48 bg-gradient-to-tr from-brand-100 to-brand-50/50 flex items-center justify-center p-6 relative overflow-hidden group">
+              <span class="text-6xl text-brand-300 opacity-60 group-hover:scale-105 duration-300"><i class="fa-solid fa-graduation-cap"></i></span>
+            </div>
+            <div class="p-6 space-y-3.5">
+              <div class="flex justify-between items-center text-[10px] font-bold text-slate-400 uppercase">
+                <span><i class="fa-solid fa-tag text-brand-500 mr-1.5"></i>UGC Guidelines</span>
+                <span>5 Mins Read</span>
+              </div>
+              <h3 class="text-base font-extrabold text-slate-900 leading-snug hover:text-brand-500 transition-colors"><a href="javascript:readArticle(0)">Are Online MBA Degrees Valid for Government Jobs?</a></h3>
+              <p class="text-xs text-slate-500 leading-relaxed line-clamp-2">Explains the UGC-Distance Education Bureau (DEB) notifications equating approved online degrees to regular campus degrees.</p>
+            </div>
+          </div>
+          <div class="p-6 pt-0 border-t border-slate-100/50 flex items-center justify-between text-xs mt-4">
+            <span class="text-slate-400 font-bold">May 20, 2026</span>
+            <button onclick="readArticle(0)" class="font-extrabold text-brand-600 hover:text-brand-700 flex items-center focus:outline-none">Read Guide <i class="fa-solid fa-arrow-right ml-1"></i></button>
+          </div>
+        </article>
+
+        <!-- Article 2: Accred -->
+        <article class="blog-card bg-white border border-slate-100 hover:border-brand-200 rounded-[32px] overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between" data-cat="accred">
+          <div>
+            <div class="h-48 bg-gradient-to-tr from-brand-100 to-brand-50/50 flex items-center justify-center p-6 relative overflow-hidden group">
+              <span class="text-6xl text-brand-300 opacity-60 group-hover:scale-105 duration-300"><i class="fa-solid fa-medal"></i></span>
+            </div>
+            <div class="p-6 space-y-3.5">
+              <div class="flex justify-between items-center text-[10px] font-bold text-slate-400 uppercase">
+                <span><i class="fa-solid fa-tag text-brand-500 mr-1.5"></i>Accreditation</span>
+                <span>8 Mins Read</span>
+              </div>
+              <h3 class="text-base font-extrabold text-slate-900 leading-snug hover:text-brand-500 transition-colors"><a href="javascript:readArticle(1)">Benefits of Choosing NAAC A++ Online Colleges</a></h3>
+              <p class="text-xs text-slate-500 leading-relaxed line-clamp-2">Why accreditation grades matter for private placement databases, government job elevations, and foreign WES credentials evaluations.</p>
+            </div>
+          </div>
+          <div class="p-6 pt-0 border-t border-slate-100/50 flex items-center justify-between text-xs mt-4">
+            <span class="text-slate-400 font-bold">May 15, 2026</span>
+            <button onclick="readArticle(1)" class="font-extrabold text-brand-600 hover:text-brand-700 flex items-center focus:outline-none">Read Guide <i class="fa-solid fa-arrow-right ml-1"></i></button>
+          </div>
+        </article>
+
+        <!-- Article 3: Placements -->
+        <article class="blog-card bg-white border border-slate-100 hover:border-brand-200 rounded-[32px] overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between" data-cat="placements">
+          <div>
+            <div class="h-48 bg-gradient-to-tr from-brand-100 to-brand-50/50 flex items-center justify-center p-6 relative overflow-hidden group">
+              <span class="text-6xl text-brand-300 opacity-60 group-hover:scale-105 duration-300"><i class="fa-solid fa-laptop-code"></i></span>
+            </div>
+            <div class="p-6 space-y-3.5">
+              <div class="flex justify-between items-center text-[10px] font-bold text-slate-400 uppercase">
+                <span><i class="fa-solid fa-tag text-brand-500 mr-1.5"></i>IT Placements</span>
+                <span>6 Mins Read</span>
+              </div>
+              <h3 class="text-base font-extrabold text-slate-900 leading-snug hover:text-brand-500 transition-colors"><a href="javascript:readArticle(2)">Online MCA vs. Regular BCA: Value Analysis</a></h3>
+              <p class="text-xs text-slate-500 leading-relaxed line-clamp-2">An in-depth perspective on how technical skills verify capabilities, and why virtual labs simulate enterprise software environments.</p>
+            </div>
+          </div>
+          <div class="p-6 pt-0 border-t border-slate-100/50 flex items-center justify-between text-xs mt-4">
+            <span class="text-slate-400 font-bold">May 10, 2026</span>
+            <button onclick="readArticle(2)" class="font-extrabold text-brand-600 hover:text-brand-700 flex items-center focus:outline-none">Read Guide <i class="fa-solid fa-arrow-right ml-1"></i></button>
+          </div>
+        </article>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================
+       3. MODAL FOR INLINE FULL TEXT READING
+       ========================================== -->
+  <div id="article-reader-modal" class="fixed inset-0 z-50 overflow-y-auto hidden flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm">
+    <div class="bg-white rounded-3xl max-w-2xl w-full p-6 sm:p-8 shadow-2xl border border-slate-200 relative animate-float">
+      <button onclick="closeArticleModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-655 focus:outline-none text-lg">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div class="space-y-6">
+        <div class="space-y-2">
+          <span id="modal-article-tag" class="inline-block bg-[#f0fdf4] text-brand-700 text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-wider border border-brand-100">UGC Guidelines</span>
+          <h3 id="modal-article-title" class="text-xl sm:text-2xl font-extrabold text-slate-950 leading-tight">Are Online MBA Degrees Valid?</h3>
+          <p id="modal-article-meta" class="text-[10px] text-slate-400 font-bold">Published: May 20, 2026 · 5 Mins Read</p>
+        </div>
+
+        <div id="modal-article-content" class="text-xs sm:text-sm text-slate-500 leading-relaxed max-h-[320px] overflow-y-auto pr-2 space-y-4 border-t border-b border-slate-100 py-4">
+          <!-- Guide content injected dynamically -->
+        </div>
+
+        <div class="flex gap-4">
+          <a href="contact.html" class="flex-grow text-center bg-brand-500 hover:bg-brand-600 text-white font-extrabold text-xs py-4 rounded-xl transition-all shadow-md">Enquire Admissions Counselors</a>
+          <button onclick="closeArticleModal()" class="px-6 py-4 border border-slate-200 hover:border-slate-350 text-slate-600 font-bold text-xs rounded-xl transition-all">Close Guide</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dynamic Footer Component -->
+  <edu-footer></edu-footer>
+
+  <!-- EduSolver JavaScript Dependencies -->
+  <script src="../assets/js/data.js"></script>
+  <script src="../assets/js/component.js"></script>
+
+  <!-- Dynamic Blog Filter & Reader Script -->
+  <script type="text/javascript">
+    const articlesData = [
+      {
+        title: "Are Online MBA Degrees Valid for Government Jobs?",
+        tag: "UGC Guidelines",
+        meta: "Published: May 20, 2026 · 5 Mins Read",
+        content: `
+          <p><strong>Yes, absolutely.</strong> Per the University Grants Commission (UGC) distance education notifications, all online degrees awarded by UGC-DEB approved institutions carry 100% legal parity with standard physical campus credentials.</p>
+          <p>This means you are legally qualified to apply for civil services, bank examinations, PSU rosters, and corporate elevations. The recruitment guidelines prohibit any discrimination based on physical vs. virtual program formats, provided the university holds active valid regulatory approvals.</p>
+          <p>Additionally, WES and global accreditation frameworks validate these credentials, ensuring overseas placement and academic visa qualifications.</p>
+        `
+      },
+      {
+        title: "Benefits of Choosing NAAC A++ Online Colleges",
+        tag: "Accreditation",
+        meta: "Published: May 15, 2026 · 8 Mins Read",
+        content: `
+          <p><strong>Accreditation grades are the ultimate seal of quality.</strong> Institutions securing NAAC A++ ratings undergo comprehensive audits checking faculty profiles, virtual library portfolios, and technical exam integrity systems.</p>
+          <p>When you select an A++ rated partner college, you unlock:
+            <ul class="list-disc pl-5 mt-2 space-y-1">
+              <li>High corporate placements validation.</li>
+              <li>Better credit mappings for international study abroad options.</li>
+              <li>More structured, live masterclass interfaces guided by industry pioneers.</li>
+            </ul>
+          </p>
+          <p>At EduSolver, we verify regulatory scores directly against National Assessment and Accreditation Council databases to guarantee truth in rankings.</p>
+        `
+      },
+      {
+        title: "Online MCA vs. Regular BCA: Value Analysis",
+        tag: "IT Placements",
+        meta: "Published: May 10, 2026 · 6 Mins Read",
+        content: `
+          <p><strong>Technical capabilities drive technical placements.</strong> Recruitment algorithms check active software portfolios, system design mastery, and practical skilling milestones far before checking degrees.</p>
+          <p>An online MCA program from an approved university integrates high-end simulated laboratories, virtual database systems, and expert-led coding cohorts that provide equal practical competency to traditional offline study models.</p>
+          <p>We analyze placements packages across TCS, KPMG, and Amazon, demonstrating that verified online degrees lead to equal salary structures alongside flexible learning opportunities.</p>
+        `
+      }
+    ];
+
+    // Filter cards dynamically
+    function filterBlogs(category) {
+      const cards = document.querySelectorAll('.blog-card');
+      const buttons = document.querySelectorAll('[id^="btn-blog-"]');
+
+      // Reset button styles
+      buttons.forEach(btn => {
+        btn.className = "px-5 py-2.5 rounded-xl text-sm font-semibold border border-slate-200 bg-[#fafbfa] text-slate-655 hover:border-brand-300 hover:text-brand-600 transition-all";
+      });
+
+      const activeBtn = document.getElementById('btn-blog-' + category);
+      if (activeBtn) {
+        activeBtn.className = "px-5 py-2.5 rounded-xl text-sm font-bold border border-brand-500 bg-brand-500 text-white shadow-md transition-all";
+      }
+
+      // Filter card displays
+      cards.forEach(card => {
+        const catAttr = card.getAttribute('data-cat');
+        if (category === 'all' || catAttr === category) {
+          card.classList.remove('hidden');
+          card.style.opacity = '1';
+        } else {
+          card.classList.add('hidden');
+          card.style.opacity = '0';
+        }
+      });
+    }
+
+    // Modal full text reading
+    function readArticle(index) {
+      const modal = document.getElementById('article-reader-modal');
+      const selected = articlesData[index];
+      if (!modal || !selected) return;
+
+      document.getElementById('modal-article-title').innerText = selected.title;
+      document.getElementById('modal-article-tag').innerText = selected.tag;
+      document.getElementById('modal-article-meta').innerText = selected.meta;
+      document.getElementById('modal-article-content').innerHTML = selected.content;
+
+      modal.classList.remove('hidden');
+      document.body.style.overflow = "hidden"; // Disable scroll when modal is active
+    }
+
+    function closeArticleModal() {
+      const modal = document.getElementById('article-reader-modal');
+      if (modal) {
+        modal.classList.add('hidden');
+        document.body.style.overflow = "auto";
+      }
+    }
+  </script>
+</body>
+
+</html>

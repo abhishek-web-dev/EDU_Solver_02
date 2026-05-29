@@ -83,3 +83,132 @@
 .marquee-fade-right {
   background: linear-gradient(to left, white 0%, transparent 100%);
 }
+
+/* Premium Sidebar Course Navigator Styles */
+.premium-course-sidebar {
+  border-right: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.course-sidebar-btn {
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border-left: 4px solid transparent;
+}
+
+.course-sidebar-btn.active {
+  background: #12b809; /* Primary logo green */
+  color: white !important;
+  border-left-color: #0c7b05; /* Dark brand green accent bar */
+  box-shadow: 0 10px 15px -3px rgba(18, 184, 9, 0.25);
+}
+
+.course-sidebar-btn.active h4 {
+  color: white !important;
+}
+
+.course-sidebar-btn.active p {
+  color: #dcfce7 !important; /* Soft logo green tint */
+}
+
+.course-program-card {
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.course-program-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 25px -5px rgba(18, 184, 9, 0.06), 0 10px 10px -5px rgba(18, 184, 9, 0.02);
+  border-color: rgba(18, 184, 9, 0.2);
+}
+
+.view-all-dotted-card {
+  border: 2px dashed #cbd5e1;
+  transition: all 0.3s ease;
+}
+
+.view-all-dotted-card:hover {
+  border-color: #12b809; /* Logo green */
+  background-color: rgba(240, 253, 244, 0.6); /* Very soft green bg */
+}
+
+/* Animations */
+.animate-slide-up-fade {
+  animation: slideUpFade 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes slideUpFade {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Card hover glow */
+.premium-glow-hover {
+  transition: all 0.3s ease;
+}
+
+.premium-glow-hover:hover {
+  box-shadow: 0 0 25px rgba(18, 184, 9, 0.15);
+  border-color: rgba(18, 184, 9, 0.3);
+}
+
+/* Floating animation delays */
+.animation-delay-200 {
+  animation-delay: 0.2s;
+}
+
+.animation-delay-400 {
+  animation-delay: 0.4s;
+}
+
+.animation-delay-600 {
+  animation-delay: 0.6s;
+}
+
+/* AI Quiz Matcher Visual Transitions & Glows */
+.quiz-step {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.quiz-option-card {
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.quiz-option-card:hover {
+  border-color: rgba(18, 184, 9, 0.3);
+  background-color: rgba(240, 253, 244, 0.2);
+  transform: translateY(-2px);
+}
+
+.quiz-option-card.selected {
+  border-color: #12b809 !important;
+  background-color: rgba(240, 253, 244, 0.8) !important;
+  box-shadow: 0 10px 20px -5px rgba(18, 184, 9, 0.15);
+}
+
+/* Admissions Stepper Interactive Accents */
+.step-connector-active {
+  border-color: #12b809 !important;
+}
+
+.timeline-glow-active {
+  box-shadow: 0 0 0 6px rgba(18, 184, 9, 0.25);
+  background-color: #12b809 !important;
+}
+
+/* Visual Partner/Recruiter Card Accents */
+.visual-logo-card {
+  transition: all 0.3s ease;
+}
+
+.visual-logo-card:hover {
+  transform: scale(1.05);
+  border-color: rgba(18, 184, 9, 0.25);
+  box-shadow: 0 10px 15px -3px rgba(18, 184, 9, 0.08);
+}
+
+

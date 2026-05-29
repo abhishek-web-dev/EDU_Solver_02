@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Course Details & Syllabus | EduSolver</title>
+  <meta name="description"
+    content="Review verified online degree programs, semester fees, eligibility criteria, and detailed semester-wise syllabus roadmaps. Book a free counselor call.">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#f0fdf4',
+              100: '#dcfce7',
+              200: '#bbf7d0',
+              300: '#86efac',
+              400: '#4ade80',
+              500: '#12b809', // Logo brand green
+              600: '#0f9a07',
+              700: '#0c7b05',
+              800: '#0a6104',
+              900: '#084e03',
+            },
+            slate: {
+              950: '#030712',
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Global Styling -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body
+  class="font-sans text-slate-800 bg-[#fbfcfb] selection:bg-brand-100 selection:text-brand-900 bg-grid-pattern min-h-screen flex flex-col overflow-x-hidden">
+
+  <!-- Dynamic Sticky Navbar -->
+  <edu-navbar></edu-navbar>
+
+  <!-- Spacer for fixed header -->
+  <div class="h-28"></div>
+
+  <!-- ==========================================
+       1. HERO DETAILS BANNER
+       ========================================== -->
+  <section class="relative overflow-hidden py-16 bg-gradient-to-br from-brand-50/40 via-[#fcfdfc] to-emerald-50/20 border-b border-slate-100">
+    <div class="absolute top-0 right-0 w-96 h-96 rounded-full bg-brand-100/10 blur-3xl -z-10 animate-pulse"></div>
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+      <span id="course-details-tag"
+        class="inline-flex items-center space-x-2 bg-brand-50 border border-brand-200 text-brand-700 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider">
+        <i class="fa-solid fa-graduation-cap text-brand-500 mr-1.5"></i> ⚡ Premium Verified Course
+      </span>
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 leading-[1.15] tracking-tight" id="course-details-title">
+        Online MBA
+      </h1>
+      <p class="text-slate-500 text-sm sm:text-base max-w-xl mx-auto leading-relaxed" id="course-details-desc">
+        Master of Business Administration
+      </p>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       2. INTERACTIVE SYLLABUS & BOOKING WIDGET
+       ========================================== -->
+  <section class="py-16 sm:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch">
+        
+        <!-- Left: Course Vitals & Dynamic Syllabus (7 Cols) -->
+        <div class="lg:col-span-7 space-y-8">
+          
+          <!-- Key Vitals Grid -->
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 bg-[#f8fafc] border border-slate-100 p-6 rounded-3xl">
+            <div class="text-center sm:text-left space-y-1">
+              <span class="text-[10px] font-black text-slate-400 uppercase tracking-widest block">Accreditation</span>
+              <span class="text-xs font-bold text-slate-800" id="detail-accred">UGC-DEB, NAAC Approved</span>
+            </div>
+            <div class="text-center sm:text-left space-y-1 border-t sm:border-t-0 sm:border-l border-slate-200/50 pt-4 sm:pt-0 sm:pl-6">
+              <span class="text-[10px] font-black text-slate-400 uppercase tracking-widest block">Average Package</span>
+              <span class="text-xs font-bold text-brand-600" id="detail-salary">₹6.5L - ₹15L PA</span>
+            </div>
+            <div class="text-center sm:text-left space-y-1 border-t sm:border-t-0 sm:border-l border-slate-200/50 pt-4 sm:pt-0 sm:pl-6">
+              <span class="text-[10px] font-black text-slate-400 uppercase tracking-widest block">Study Duration</span>
+              <span class="text-xs font-bold text-slate-800" id="detail-duration">2 Years (4 Semesters)</span>
+            </div>
+          </div>
+
+          <!-- Eligibility Parameters -->
+          <div class="space-y-4">
+            <h3 class="text-lg font-black text-slate-950">Academic Eligibility Guidelines</h3>
+            <ul class="space-y-3">
+              <li class="flex items-start space-x-3 bg-slate-50 border border-slate-100 rounded-2xl px-5 py-4">
+                <div class="w-6 h-6 rounded-full bg-brand-50 flex items-center justify-center text-brand-600 shrink-0 mt-0.5"><i class="fa-solid fa-check text-xs"></i></div>
+                <div>
+                  <h4 class="text-xs font-extrabold text-slate-900 uppercase">Qualifying Credentials</h4>
+                  <p class="text-xs text-slate-500 mt-1" id="detail-elig-desc">Bachelor's degree with a minimum of 50% marks from a recognized board/university.</p>
+                </div>
+              </li>
+              <li class="flex items-start space-x-3 bg-slate-50 border border-slate-100 rounded-2xl px-5 py-4">
+                <div class="w-6 h-6 rounded-full bg-brand-50 flex items-center justify-center text-brand-600 shrink-0 mt-0.5"><i class="fa-solid fa-check text-xs"></i></div>
+                <div>
+                  <h4 class="text-xs font-extrabold text-slate-900 uppercase">Validity Certification</h4>
+                  <p class="text-xs text-slate-500 mt-1">Legally recognized at par with standard offline physical campus programs for private promotions and government rosters.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Interactive Semester Syllabus Roadmap -->
+          <div class="space-y-4">
+            <h3 class="text-lg font-black text-slate-950">Semester Syllabus Roadmap</h3>
+            
+            <div class="space-y-3">
+              
+              <!-- Accordion 1 -->
+              <div class="border border-slate-200 rounded-2xl overflow-hidden">
+                <button onclick="toggleSyllabus(1)" class="w-full flex items-center justify-between p-5 text-left font-bold text-slate-900 focus:outline-none bg-slate-50/50">
+                  <span class="text-sm">Semester 1: Foundation Studies</span>
+                  <i class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-200" id="syllabus-arrow-1"></i>
+                </button>
+                <div id="syllabus-content-1" class="hidden border-t border-slate-200 bg-white p-5 text-xs text-slate-500 leading-relaxed">
+                  Focuses on building baseline frameworks including foundational principles, management logic, organizational structures, mathematical/quantitative analysis systems, and comprehensive academic business communications.
+                </div>
+              </div>
+
+              <!-- Accordion 2 -->
+              <div class="border border-slate-200 rounded-2xl overflow-hidden">
+                <button onclick="toggleSyllabus(2)" class="w-full flex items-center justify-between p-5 text-left font-bold text-slate-900 focus:outline-none bg-slate-50/50">
+                  <span class="text-sm">Semester 2: Specialization Analytics</span>
+                  <i class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-200" id="syllabus-arrow-2"></i>
+                </button>
+                <div id="syllabus-content-2" class="hidden border-t border-slate-200 bg-white p-5 text-xs text-slate-500 leading-relaxed">
+                  Transitions to specific segment studies featuring advanced core analytics, data architecture maps, specialized stream frameworks, dynamic practical portfolios, and academic team assignments.
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right: Slick Counselor Booking Form (5 Cols) -->
+        <div class="lg:col-span-5 flex flex-col justify-between border border-slate-200 bg-slate-50 rounded-[32px] p-8 shadow-sm">
+          <div class="space-y-6">
+            <span class="inline-flex items-center space-x-1.5 bg-brand-50 border border-brand-150 text-brand-700 px-3.5 py-1 rounded-full text-[10px] font-black uppercase tracking-wide">
+              <span class="w-1.5 h-1.5 rounded-full bg-brand-500 animate-ping"></span>
+              <span>Matched Advisory Desk</span>
+            </span>
+
+            <div class="space-y-4">
+              <h3 class="text-xl font-extrabold text-slate-950">Book Matched Program Advisory</h3>
+              <p class="text-xs text-slate-450 leading-relaxed">Fill in your information to instantly connect with the lead Career Development Advisor for this program segment.</p>
+            </div>
+
+            <!-- Booking fields -->
+            <form onsubmit="handleDynamicBooking(event)" class="space-y-4">
+              <div>
+                <label class="block text-[9px] font-extrabold uppercase text-slate-400 mb-1">Your Full Name</label>
+                <input type="text" id="booking-name" required placeholder="Enter full name" 
+                  class="w-full bg-white border border-slate-200 text-xs text-slate-800 px-4 py-3.5 rounded-xl focus:outline-none focus:border-brand-500 transition-all placeholder-slate-400" />
+              </div>
+              <div>
+                <label class="block text-[9px] font-extrabold uppercase text-slate-400 mb-1">Your Phone Number</label>
+                <input type="tel" id="booking-phone" required placeholder="Enter mobile number" 
+                  class="w-full bg-white border border-slate-200 text-xs text-slate-800 px-4 py-3.5 rounded-xl focus:outline-none focus:border-brand-500 transition-all placeholder-slate-400" />
+              </div>
+              <div>
+                <label class="block text-[9px] font-extrabold uppercase text-slate-400 mb-1">Your Email</label>
+                <input type="email" id="booking-email" required placeholder="Enter email address" 
+                  class="w-full bg-white border border-slate-200 text-xs text-slate-800 px-4 py-3.5 rounded-xl focus:outline-none focus:border-brand-500 transition-all placeholder-slate-400" />
+              </div>
+
+              <button type="submit" class="w-full bg-brand-500 hover:bg-brand-600 text-white font-extrabold text-xs py-4 rounded-xl transition-all shadow-md shadow-brand-100 hover:shadow-brand-300">
+                Book Free Consultation Slot
+              </button>
+            </form>
+          </div>
+
+          <div class="bg-white border border-slate-150 rounded-2xl p-4 mt-6 flex items-start gap-2.5">
+            <i class="fa-solid fa-shield-halved text-brand-500 mt-0.5 text-base shrink-0"></i>
+            <p class="text-[9px] text-slate-400 leading-relaxed">
+              <strong>100% Honest Counseling Promise:</strong> We aggregates verified, accreditation-authorized fees side-by-side. Tuition is paid directly into official university accounts.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================
+       3. CONFEIRMATION SUCCESS DIALOG POPUP
+       ========================================== -->
+  <div id="booking-modal" class="fixed inset-0 z-50 overflow-y-auto hidden flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm">
+    <div class="bg-white rounded-3xl max-w-md w-full p-8 text-center space-y-6 shadow-2xl border border-slate-200 relative">
+      <div class="w-16 h-16 rounded-full bg-brand-50 border border-brand-200 flex items-center justify-center text-brand-600 text-2xl mx-auto"><i class="fa-solid fa-circle-check"></i></div>
+      
+      <div class="space-y-1">
+        <h4 class="text-xl font-extrabold text-slate-950">Advisory Slot Reserved!</h4>
+        <p class="text-xs text-slate-400">Your profile maps directly to our lead CDA specialist for this program.</p>
+      </div>
+
+      <div class="border border-slate-150 bg-slate-50 rounded-2xl p-5 text-left text-xs text-slate-700 space-y-2.5">
+        <div class="flex items-center justify-between border-b border-slate-200 pb-1.5">
+          <span class="text-slate-400 font-bold uppercase text-[9px]">Aspirant</span>
+          <span id="summary-name" class="font-extrabold text-slate-900">Rohan Kumar</span>
+        </div>
+        <div class="flex items-center justify-between">
+          <span class="text-slate-400 font-bold uppercase text-[9px]">Target Stream</span>
+          <span id="summary-course" class="font-bold text-slate-900">Online MBA</span>
+        </div>
+      </div>
+
+      <p class="text-[10px] text-slate-400">A verification link and dial-in details have been dispatched to your mobile number.</p>
+      <button onclick="closeBookingModal()" class="w-full bg-brand-500 hover:bg-brand-600 text-white font-extrabold text-xs py-4 rounded-xl transition-all shadow-md focus:outline-none">Got it, Thank You!</button>
+    </div>
+  </div>
+
+  <!-- Dynamic Footer Component -->
+  <edu-footer></edu-footer>
+
+  <!-- EduSolver JavaScript Dependencies -->
+  <script src="../assets/js/data.js"></script>
+  <script src="../assets/js/component.js"></script>
+
+  <!-- Page dynamic parsing script -->
+  <script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", () => {
+      // 1. Parse URL parameters ?cat=graduation&course=bca
+      const params = new URLSearchParams(window.location.search);
+      const catKey = params.get('cat') || 'masters';
+      const courseQuery = params.get('course') || 'mba';
+
+      const data = (window.EduSolverData && window.EduSolverData.courseCategories) || {};
+      const category = data[catKey];
+      
+      let matchedCourse = null;
+      if (category) {
+        matchedCourse = category.courses.find(c => c.name.toLowerCase().includes(courseQuery.toLowerCase()));
+      }
+
+      // Default fallback if no match found
+      if (!matchedCourse) {
+        matchedCourse = {
+          name: "Online MBA",
+          desc: "Master of Business Administration",
+          tag: "TOP RATED",
+          icon: "fa-solid fa-user-tie"
+        };
+      }
+
+      // 2. Dynamic DOM compile
+      document.getElementById('course-details-title').innerText = matchedCourse.name;
+      document.getElementById('course-details-desc').innerText = matchedCourse.desc;
+      document.getElementById('course-details-tag').innerHTML = `<i class="fa-solid fa-graduation-cap text-brand-500 mr-1.5"></i> ⚡ ${matchedCourse.tag}`;
+
+      // Adjust vitals depending on stream
+      if (matchedCourse.name.toLowerCase().includes('mca') || matchedCourse.name.toLowerCase().includes('bca') || matchedCourse.name.toLowerCase().includes('b.sc')) {
+        document.getElementById('detail-accred').innerText = "AICTE & UGC-DEB Valid";
+        document.getElementById('detail-salary').innerText = "₹7.0L - ₹18.0L PA";
+        document.getElementById('detail-elig-desc').innerText = "Technical Bachelor's degree (BCA/B.Sc IT/Tech) or Class 12th passed with Mathematics.";
+      } else if (matchedCourse.name.toLowerCase().includes('10th') || matchedCourse.name.toLowerCase().includes('12th')) {
+        document.getElementById('detail-accred').innerText = "NIOS / State Board Certified";
+        document.getElementById('detail-salary').innerText = "Academic Pathway";
+        document.getElementById('detail-duration').innerText = "1 Year Coursework";
+        document.getElementById('detail-elig-desc').innerText = "Prior board schooling records. Direct flexible examinations support.";
+      }
+    });
+
+    // Toggle Syllabus roadmaps
+    function toggleSyllabus(id) {
+      const el = document.getElementById('syllabus-content-' + id);
+      const arrow = document.getElementById('syllabus-arrow-' + id);
+      if (!el) return;
+
+      el.classList.toggle('hidden');
+      if (el.classList.contains('hidden')) arrow.style.transform = 'rotate(0deg)';
+      else arrow.style.transform = 'rotate(180deg)';
+    }
+
+    // Handle form booking submissions
+    function handleDynamicBooking(e) {
+      e.preventDefault();
+      const name = document.getElementById('booking-name').value;
+      const courseName = document.getElementById('course-details-title').innerText;
+
+      document.getElementById('summary-name').innerText = name;
+      document.getElementById('summary-course').innerText = courseName;
+
+      const modal = document.getElementById('booking-modal');
+      if (modal) {
+        modal.classList.remove('hidden');
+        document.body.style.overflow = "hidden";
+      }
+    }
+
+    function closeBookingModal() {
+      const modal = document.getElementById('booking-modal');
+      if (modal) {
+        modal.classList.add('hidden');
+        document.body.style.overflow = "auto";
+      }
+      document.getElementById('booking-name').value = '';
+      document.getElementById('booking-phone').value = '';
+      document.getElementById('booking-email').value = '';
+    }
+  </script>
+</body>
+
+</html>

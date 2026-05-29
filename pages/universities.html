@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accredited Partner Universities | EduSolver</title>
+  <meta name="description"
+    content="Explore and compare UGC-DEB approved and NAAC A+/A++ rated partner universities. Find the best online degree programs matching your budget.">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#f0fdf4',
+              100: '#dcfce7',
+              200: '#bbf7d0',
+              300: '#86efac',
+              400: '#4ade80',
+              500: '#12b809', // Logo brand green
+              600: '#0f9a07',
+              700: '#0c7b05',
+              800: '#0a6104',
+              900: '#084e03',
+            },
+            slate: {
+              950: '#030712',
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Global Styling -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body
+  class="font-sans text-slate-800 bg-[#fbfcfb] selection:bg-brand-100 selection:text-brand-900 bg-grid-pattern min-h-screen flex flex-col overflow-x-hidden">
+
+  <!-- Dynamic Sticky Navbar -->
+  <edu-navbar></edu-navbar>
+
+  <!-- Spacer for fixed header -->
+  <div class="h-28"></div>
+
+  <!-- ==========================================
+       1. HERO HEADER AREA
+       ========================================== -->
+  <section class="relative overflow-hidden py-16 bg-gradient-to-br from-brand-50/40 via-[#fcfdfc] to-emerald-50/20 border-b border-slate-100">
+    <div class="absolute top-0 right-0 w-96 h-96 rounded-full bg-brand-100/10 blur-3xl -z-10 animate-pulse"></div>
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+      <span
+        class="inline-flex items-center space-x-2 bg-brand-50 border border-brand-200 text-brand-700 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider">
+        <i class="fa-solid fa-building-columns text-brand-500 mr-1.5"></i> Vetted & Accredited Institutions Only
+      </span>
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 leading-[1.15] tracking-tight">
+        Compare Verified <span class="text-gradient">Partner Universities</span>
+      </h1>
+      <p class="text-slate-500 text-xs sm:text-sm max-w-xl mx-auto leading-relaxed">
+        Verify UGC-DEB approvals, NAAC ratings, true fees, and placement percentages directly side-by-side in real-time. No mediators, no hidden targets.
+      </p>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       2. UNIVERSITY SHIELD/ACCEDT CARD SHOWCASES
+       ========================================== -->
+  <section class="py-16 sm:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Section Header -->
+      <div class="text-center mb-12 max-w-xl mx-auto">
+        <span class="text-brand-500 font-extrabold text-xs uppercase tracking-widest bg-brand-50 px-3 py-1 rounded-full">Institutional Roster</span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-2">Accredited Higher Education Partners</h2>
+      </div>
+
+      <!-- University Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+
+        <!-- Card 1: Amity Online -->
+        <div class="bg-[#fcfdfc] border border-slate-100 hover:border-brand-200 rounded-[32px] overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col justify-between">
+          <div>
+            <div class="h-36 bg-gradient-to-tr from-brand-600/10 to-brand-400/20 relative flex items-center justify-center p-4">
+              <span class="absolute top-4 left-4 bg-white/95 backdrop-blur text-slate-900 text-[10px] font-black px-3 py-1 rounded-full"><i class="fa-solid fa-certificate text-brand-500 mr-1.5"></i>NAAC A++ Rated</span>
+              <div class="w-16 h-16 rounded-2xl bg-white shadow-md flex items-center justify-center p-2"><i class="fa-solid fa-graduation-cap text-brand-600 text-3xl"></i></div>
+            </div>
+            <div class="p-6 space-y-4">
+              <h3 class="text-lg font-black text-slate-950">Amity University Online</h3>
+              <p class="text-xs text-slate-450 leading-relaxed">Renowned globally for highly structured business programs, executive masterclasses, and an immersive custom student study portal.</p>
+              
+              <div class="grid grid-cols-3 gap-2 py-3 border-t border-b border-slate-100">
+                <div class="text-center">
+                  <span class="text-[9px] text-slate-400 block font-bold uppercase">Approvals</span>
+                  <span class="text-xs font-bold text-slate-800">UGC-DEB, AICTE</span>
+                </div>
+                <div class="text-center">
+                  <span class="text-[9px] text-slate-400 block font-bold uppercase">Sem Fee Starts</span>
+                  <span class="text-xs font-bold text-brand-600">₹35,000</span>
+                </div>
+                <div class="text-center">
+                  <span class="text-[9px] text-slate-400 block font-bold uppercase">Global Val</span>
+                  <span class="text-xs font-bold text-slate-800">WES, AIU</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="p-6 pt-0 flex gap-2">
+            <a href="#comparison-dashboard" class="px-4 py-3.5 border border-brand-500 hover:bg-brand-50 text-brand-600 text-xs font-bold rounded-xl transition-colors text-center flex-grow">Compare Metrics</a>
+            <a href="contact.html" class="px-4 py-3.5 bg-brand-500 hover:bg-brand-600 text-white text-xs font-bold rounded-xl transition-colors text-center flex-grow">Apply Now</a>
+          </div>
+        </div>
+
+        <!-- Card 2: LPU Online -->
+        <div class="bg-[#fcfdfc] border border-slate-100 hover:border-brand-200 rounded-[32px] overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col justify-between">
+          <div>
+            <div class="h-36 bg-gradient-to-tr from-brand-600/10 to-brand-400/20 relative flex items-center justify-center p-4">
+              <span class="absolute top-4 left-4 bg-white/95 backdrop-blur text-slate-900 text-[10px] font-black px-3 py-1 rounded-full"><i class="fa-solid fa-certificate text-brand-500 mr-1.5"></i>NAAC A+ Accredited</span>
+              <div class="w-16 h-16 rounded-2xl bg-white shadow-md flex items-center justify-center p-2"><i class="fa-solid fa-university text-brand-600 text-3xl"></i></div>
+            </div>
+            <div class="p-6 space-y-4">
+              <h3 class="text-lg font-black text-slate-950">LPU Online</h3>
+              <p class="text-xs text-slate-450 leading-relaxed">Massive digital learning catalog, industry-focused virtual software labs, and extensive dedicated placement drives.</p>
+              
+              <div class="grid grid-cols-3 gap-2 py-3 border-t border-b border-slate-100">
+                <div class="text-center">
+                  <span class="text-[9px] text-slate-400 block font-bold uppercase">Approvals</span>
+                  <span class="text-xs font-bold text-slate-800">UGC-DEB</span>
+                </div>
+                <div class="text-center">
+                  <span class="text-[9px] text-slate-400 block font-bold uppercase">Sem Fee Starts</span>
+                  <span class="text-xs font-bold text-brand-600">₹24,000</span>
+                </div>
+                <div class="text-center">
+                  <span class="text-[9px] text-slate-400 block font-bold uppercase">Hiring Partners</span>
+                  <span class="text-xs font-bold text-slate-800">250+ Co.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="p-6 pt-0 flex gap-2">
+            <a href="#comparison-dashboard" class="px-4 py-3.5 border border-brand-500 hover:bg-brand-50 text-brand-600 text-xs font-bold rounded-xl transition-colors text-center flex-grow">Compare Metrics</a>
+            <a href="contact.html" class="px-4 py-3.5 bg-brand-500 hover:bg-brand-600 text-white text-xs font-bold rounded-xl transition-colors text-center flex-grow">Apply Now</a>
+          </div>
+        </div>
+
+        <!-- Card 3: Sikkim Manipal Online -->
+        <div class="bg-[#fcfdfc] border border-slate-100 hover:border-brand-200 rounded-[32px] overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col justify-between">
+          <div>
+            <div class="h-36 bg-gradient-to-tr from-brand-600/10 to-brand-400/20 relative flex items-center justify-center p-4">
+              <span class="absolute top-4 left-4 bg-white/95 backdrop-blur text-slate-900 text-[10px] font-black px-3 py-1 rounded-full"><i class="fa-solid fa-certificate text-brand-500 mr-1.5"></i>NIRF Top 100 Ranked</span>
+              <div class="w-16 h-16 rounded-2xl bg-white shadow-md flex items-center justify-center p-2"><i class="fa-solid fa-graduation-cap text-brand-600 text-3xl"></i></div>
+            </div>
+            <div class="p-6 space-y-4">
+              <h3 class="text-lg font-black text-slate-950">Sikkim Manipal Online</h3>
+              <p class="text-xs text-slate-450 leading-relaxed">Premium educational history, highly structured cohort-led modules, and an extensive global alumni mentor network.</p>
+              
+              <div class="grid grid-cols-3 gap-2 py-3 border-t border-b border-slate-100">
+                <div class="text-center">
+                  <span class="text-[9px] text-slate-400 block font-bold uppercase">Approvals</span>
+                  <span class="text-xs font-bold text-slate-800">UGC-DEB, NAAC</span>
+                </div>
+                <div class="text-center">
+                  <span class="text-[9px] text-slate-400 block font-bold uppercase">Sem Fee Starts</span>
+                  <span class="text-xs font-bold text-brand-600">₹40,000</span>
+                </div>
+                <div class="text-center">
+                  <span class="text-[9px] text-slate-400 block font-bold uppercase">Avg Salary Package</span>
+                  <span class="text-xs font-bold text-slate-800">₹7.2 LPA</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="p-6 pt-0 flex gap-2">
+            <a href="#comparison-dashboard" class="px-4 py-3.5 border border-brand-500 hover:bg-brand-50 text-brand-600 text-xs font-bold rounded-xl transition-colors text-center flex-grow">Compare Metrics</a>
+            <a href="contact.html" class="px-4 py-3.5 bg-brand-500 hover:bg-brand-600 text-white text-xs font-bold rounded-xl transition-colors text-center flex-grow">Apply Now</a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================
+       3. INTERACTIVE SIDE-BY-SIDE MATRIX WIDGET
+       ========================================== -->
+  <section id="comparison-dashboard" class="py-16 bg-[#f8fafc] border-t border-b border-slate-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Section Header -->
+      <div class="text-center space-y-4 max-w-2xl mx-auto mb-12">
+        <span class="text-brand-500 font-extrabold text-xs uppercase tracking-widest bg-brand-50 px-3 py-1 rounded-full border border-brand-100">Interactive Analyzer</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">Accreditation Comparison Dashboard</h2>
+        <p class="text-slate-500 text-sm sm:text-base">Toggle selection boxes to review criteria columns side-by-side instantly.</p>
+      </div>
+
+      <!-- Selector Grid -->
+      <div class="bg-white border border-slate-100 shadow-xl rounded-3xl p-6 sm:p-8">
+        <div class="mb-8">
+          <h3 class="text-xs font-black text-slate-400 uppercase tracking-widest mb-4">Select Universities to Compare:</h3>
+          <div class="flex flex-wrap gap-4">
+            
+            <label class="flex items-center space-x-3 bg-slate-50 border border-slate-200 rounded-2xl px-5 py-3.5 cursor-pointer hover:border-brand-500 transition-all select-none">
+              <input type="checkbox" id="chk-amity" checked class="w-4.5 h-4.5 rounded text-brand-500 focus:ring-brand-500 accent-brand-500" onchange="runLocalComparison()">
+              <span class="text-sm font-bold text-slate-800">Amity University Online</span>
+            </label>
+
+            <label class="flex items-center space-x-3 bg-slate-50 border border-slate-200 rounded-2xl px-5 py-3.5 cursor-pointer hover:border-brand-500 transition-all select-none">
+              <input type="checkbox" id="chk-lpu" checked class="w-4.5 h-4.5 rounded text-brand-500 focus:ring-brand-500 accent-brand-500" onchange="runLocalComparison()">
+              <span class="text-sm font-bold text-slate-800">LPU Online</span>
+            </label>
+
+            <label class="flex items-center space-x-3 bg-slate-50 border border-slate-200 rounded-2xl px-5 py-3.5 cursor-pointer hover:border-brand-500 transition-all select-none">
+              <input type="checkbox" id="chk-manipal" checked class="w-4.5 h-4.5 rounded text-brand-500 focus:ring-brand-500 accent-brand-500" onchange="runLocalComparison()">
+              <span class="text-sm font-bold text-slate-800">Manipal Online</span>
+            </label>
+
+          </div>
+        </div>
+
+        <!-- Real-time Comparison Matrix -->
+        <div class="overflow-x-auto rounded-2xl border border-slate-100 shadow-inner">
+          <table class="w-full text-left border-collapse bg-white">
+            <thead>
+              <tr class="bg-slate-50 border-b border-slate-100">
+                <th class="p-4 text-xs font-extrabold uppercase text-slate-400 tracking-wider min-w-[200px]">Criteria Parameter</th>
+                <th id="col-h-amity" class="p-4 text-sm font-bold text-slate-900 border-l border-slate-100 min-w-[180px]">Amity Online</th>
+                <th id="col-h-lpu" class="p-4 text-sm font-bold text-slate-900 border-l border-slate-100 min-w-[180px]">LPU Online</th>
+                <th id="col-h-manipal" class="p-4 text-sm font-bold text-slate-900 border-l border-slate-100 min-w-[180px]">Manipal Online</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-100">
+              
+              <!-- UGC DEB -->
+              <tr>
+                <td class="p-4 text-xs font-bold text-slate-900 bg-slate-50/50">UGC-DEB Approval</td>
+                <td id="col-app-amity" class="p-4 text-xs text-slate-700 border-l border-slate-100"><i class="fa-solid fa-circle-check text-brand-500 mr-1.5"></i>Yes (Verified)</td>
+                <td id="col-app-lpu" class="p-4 text-xs text-slate-700 border-l border-slate-100"><i class="fa-solid fa-circle-check text-brand-500 mr-1.5"></i>Yes (Verified)</td>
+                <td id="col-app-manipal" class="p-4 text-xs text-slate-700 border-l border-slate-100"><i class="fa-solid fa-circle-check text-brand-500 mr-1.5"></i>Yes (Verified)</td>
+              </tr>
+
+              <!-- NAAC -->
+              <tr>
+                <td class="p-4 text-xs font-bold text-slate-900 bg-slate-50/50">NAAC Rating</td>
+                <td id="col-naac-amity" class="p-4 text-xs text-slate-700 border-l border-slate-100 font-semibold">Grade A++ (Score: 3.65)</td>
+                <td id="col-naac-lpu" class="p-4 text-xs text-slate-700 border-l border-slate-100 font-semibold">Grade A+ (Score: 3.52)</td>
+                <td id="col-naac-manipal" class="p-4 text-xs text-slate-700 border-l border-slate-100 font-semibold">Grade A+ (Score: 3.28)</td>
+              </tr>
+
+              <!-- Tuition Fee -->
+              <tr>
+                <td class="p-4 text-xs font-bold text-slate-900 bg-slate-50/50">Sem Fee Starts</td>
+                <td id="col-fee-amity" class="p-4 text-xs font-bold text-brand-600 border-l border-slate-100">₹35,000 / Sem</td>
+                <td id="col-fee-lpu" class="p-4 text-xs font-bold text-brand-600 border-l border-slate-100">₹24,000 / Sem</td>
+                <td id="col-fee-manipal" class="p-4 text-xs font-bold text-brand-600 border-l border-slate-100">₹40,000 / Sem</td>
+              </tr>
+
+              <!-- Avg Salary -->
+              <tr>
+                <td class="p-4 text-xs font-bold text-slate-900 bg-slate-50/50">Avg Placement Package</td>
+                <td id="col-sal-amity" class="p-4 text-xs text-slate-700 border-l border-slate-100 font-medium">₹6.8 LPA</td>
+                <td id="col-sal-lpu" class="p-4 text-xs text-slate-700 border-l border-slate-100 font-medium">₹6.2 LPA</td>
+                <td id="col-sal-manipal" class="p-4 text-xs text-slate-700 border-l border-slate-100 font-medium">₹7.2 LPA</td>
+              </tr>
+
+              <!-- Recruiter Partners -->
+              <tr>
+                <td class="p-4 text-xs font-bold text-slate-900 bg-slate-50/50">Recruiting Partners</td>
+                <td id="col-corp-amity" class="p-4 text-xs text-slate-700 border-l border-slate-100 font-semibold">150+ Corporates</td>
+                <td id="col-corp-lpu" class="p-4 text-xs text-slate-700 border-l border-slate-100 font-semibold">250+ Corporates</td>
+                <td id="col-corp-manipal" class="p-4 text-xs text-slate-700 border-l border-slate-100 font-semibold">120+ Corporates</td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================
+       4. CONVERSION ADVOCATE DESK CTA
+       ========================================== -->
+  <section class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="relative bg-slate-950 rounded-3xl p-8 sm:p-12 overflow-hidden shadow-2xl text-center space-y-6">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(18,184,9,0.18),transparent)] pointer-events-none"></div>
+
+        <span class="inline-block bg-brand-500/20 text-brand-400 border border-brand-500/30 text-[10px] sm:text-xs font-bold uppercase tracking-wider px-4 py-1.5 rounded-full">Direct admissions support</span>
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white leading-tight max-w-2xl mx-auto">Still Confused About Your University Choice?</h2>
+        <p class="text-xs sm:text-sm text-slate-300 max-w-xl mx-auto leading-relaxed">
+          Book a 100% free consultation slot. Our expert advisors evaluate your profile and help secure direct-to-university admissions with absolute clarity.
+        </p>
+
+        <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4 max-w-md mx-auto">
+          <a href="contact.html" class="w-full sm:w-auto bg-brand-500 hover:bg-brand-600 text-white font-extrabold text-xs px-8 py-4 rounded-xl transition-all shadow-lg flex items-center justify-center"><i class="fa-solid fa-phone mr-2"></i> Book Free Advisory Call</a>
+          <a href="services.html" class="w-full sm:w-auto border border-white/20 hover:bg-white/10 text-white font-bold text-xs px-8 py-4 rounded-xl transition-all flex items-center justify-center"><i class="fa-solid fa-sliders mr-2"></i> Explore Services</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dynamic Footer Component -->
+  <edu-footer></edu-footer>
+
+  <!-- EduSolver JavaScript Dependencies -->
+  <script src="../assets/js/data.js"></script>
+  <script src="../assets/js/component.js"></script>
+
+  <!-- Script for local comparison toggles -->
+  <script type="text/javascript">
+    function runLocalComparison() {
+      const amity = document.getElementById('chk-amity').checked;
+      const lpu = document.getElementById('chk-lpu').checked;
+      const manipal = document.getElementById('chk-manipal').checked;
+
+      toggleLocalColumn('col-h-amity', 'col-app-amity', 'col-naac-amity', 'col-fee-amity', 'col-sal-amity', 'col-corp-amity', amity);
+      toggleLocalColumn('col-h-lpu', 'col-app-lpu', 'col-naac-lpu', 'col-fee-lpu', 'col-sal-lpu', 'col-corp-lpu', lpu);
+      toggleLocalColumn('col-h-manipal', 'col-app-manipal', 'col-naac-manipal', 'col-fee-manipal', 'col-sal-manipal', 'col-corp-manipal', manipal);
+    }
+
+    function toggleLocalColumn(...args) {
+      const isVisible = args.pop();
+      args.forEach(id => {
+        const el = document.getElementById(id);
+        if (el) {
+          if (isVisible) el.classList.remove('hidden');
+          else el.classList.add('hidden');
+        }
+      });
+    }
+  </script>
+</body>
+
+</html>
