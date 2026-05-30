@@ -4,7 +4,15 @@
   // Helper to get relative path prefix based on URL depth
   function getPathPrefix() {
     const pathname = window.location.pathname;
-    // Check if we are inside /pages/ or /admin/
+    // Check if we are inside nested subdirectories under pages
+    if (
+      pathname.includes('/courses/') || 
+      pathname.includes('/universities/') || 
+      pathname.includes('/accreditations/')
+    ) {
+      return '../../';
+    }
+    // Check if we are inside /pages/ or /admin/ (single level)
     if (pathname.includes('/pages/') || pathname.includes('/admin/')) {
       return '../';
     }
@@ -48,19 +56,19 @@
                       <div>
                         <h4 class="text-[10px] font-black uppercase tracking-wider text-slate-400 mb-3.5 px-2">Trending Degrees</h4>
                         <ul class="space-y-1">
-                          <li><a href="${prefix}pages/service-detail.html?cat=masters&course=mba"
+                          <li><a href="${prefix}pages/courses/online-mba.html"
                               class="flex items-center px-2 py-2 rounded-lg text-sm text-slate-700 hover:text-brand-600 hover:bg-brand-50/60 transition-all"><span
                                 class="w-1.5 h-1.5 rounded-full bg-brand-500 mr-2.5 inline-block shrink-0"></span>Online MBA</a></li>
-                          <li><a href="${prefix}pages/service-detail.html?cat=masters&course=mca"
+                          <li><a href="${prefix}pages/courses/online-mca.html"
                               class="flex items-center px-2 py-2 rounded-lg text-sm text-slate-700 hover:text-brand-600 hover:bg-brand-50/60 transition-all"><span
                                 class="w-1.5 h-1.5 rounded-full bg-brand-500 mr-2.5 inline-block shrink-0"></span>Online MCA</a></li>
-                          <li><a href="${prefix}pages/service-detail.html?cat=graduation&course=bba"
+                          <li><a href="${prefix}pages/courses/online-bba.html"
                               class="flex items-center px-2 py-2 rounded-lg text-sm text-slate-700 hover:text-brand-600 hover:bg-brand-50/60 transition-all"><span
                                 class="w-1.5 h-1.5 rounded-full bg-brand-500 mr-2.5 inline-block shrink-0"></span>Online BBA</a></li>
-                          <li><a href="${prefix}pages/service-detail.html?cat=graduation&course=bca"
+                          <li><a href="${prefix}pages/courses/online-bca.html"
                               class="flex items-center px-2 py-2 rounded-lg text-sm text-slate-700 hover:text-brand-600 hover:bg-brand-50/60 transition-all"><span
                                 class="w-1.5 h-1.5 rounded-full bg-brand-500 mr-2.5 inline-block shrink-0"></span>Online BCA</a></li>
-                          <li><a href="${prefix}pages/service-detail.html?cat=graduation&course=b.sc"
+                          <li><a href="${prefix}pages/courses/bsc-it-cs.html"
                               class="flex items-center px-2 py-2 rounded-lg text-sm text-slate-700 hover:text-brand-600 hover:bg-brand-50/60 transition-all"><span
                                 class="w-1.5 h-1.5 rounded-full bg-brand-500 mr-2.5 inline-block shrink-0"></span>B.Sc (IT/CS)</a></li>
                         </ul>
@@ -68,19 +76,19 @@
                       <div>
                         <h4 class="text-[10px] font-black uppercase tracking-wider text-slate-400 mb-3.5 px-2">Certifications</h4>
                         <ul class="space-y-1">
-                          <li><a href="${prefix}pages/service-detail.html?cat=skill&course=data"
+                          <li><a href="${prefix}pages/courses/data-science-pg.html"
                               class="flex items-center px-2 py-2 rounded-lg text-sm text-slate-700 hover:text-brand-600 hover:bg-brand-50/60 transition-all"><span
                                 class="w-1.5 h-1.5 rounded-full bg-brand-500 mr-2.5 inline-block shrink-0"></span>Data Science PG</a></li>
-                          <li><a href="${prefix}pages/service-detail.html?cat=skill&course=digital"
+                          <li><a href="${prefix}pages/courses/digital-marketing.html"
                               class="flex items-center px-2 py-2 rounded-lg text-sm text-slate-700 hover:text-brand-600 hover:bg-brand-50/60 transition-all"><span
                                 class="w-1.5 h-1.5 rounded-full bg-brand-500 mr-2.5 inline-block shrink-0"></span>Digital Marketing</a></li>
-                          <li><a href="${prefix}pages/service-detail.html?cat=skill&course=full"
+                          <li><a href="${prefix}pages/courses/full-stack-development.html"
                               class="flex items-center px-2 py-2 rounded-lg text-sm text-slate-700 hover:text-brand-600 hover:bg-brand-50/60 transition-all"><span
                                 class="w-1.5 h-1.5 rounded-full bg-brand-500 mr-2.5 inline-block shrink-0"></span>Full Stack Dev</a></li>
-                          <li><a href="${prefix}pages/service-detail.html?cat=skill&course=ai"
+                          <li><a href="${prefix}pages/courses/ai-ml.html"
                               class="flex items-center px-2 py-2 rounded-lg text-sm text-slate-700 hover:text-brand-600 hover:bg-brand-50/60 transition-all"><span
                                 class="w-1.5 h-1.5 rounded-full bg-brand-500 mr-2.5 inline-block shrink-0"></span>AI & Machine Learning</a></li>
-                          <li><a href="${prefix}pages/service-detail.html?cat=skill&course=cyber"
+                          <li><a href="${prefix}pages/courses/cyber-security.html"
                               class="flex items-center px-2 py-2 rounded-lg text-sm text-slate-700 hover:text-brand-600 hover:bg-brand-50/60 transition-all"><span
                                 class="w-1.5 h-1.5 rounded-full bg-brand-500 mr-2.5 inline-block shrink-0"></span>Cyber Security</a></li>
                         </ul>
@@ -94,7 +102,7 @@
                         <h5 class="text-sm font-extrabold text-slate-900 leading-snug mb-1">AI-Powered Executive MBA</h5>
                         <p class="text-[11px] text-slate-500 leading-relaxed mb-3">Learn leadership & AI application tools side-by-side with global mentorship.</p>
                       </div>
-                      <a href="${prefix}pages/service-detail.html?cat=masters&course=mba"
+                      <a href="${prefix}pages/courses/online-mba.html"
                         class="text-xs font-bold text-brand-600 hover:text-brand-700 flex items-center transition-all">Explore Program <i class="fa-solid fa-arrow-right ml-1"></i></a>
                     </div>
                   </div>
@@ -113,19 +121,19 @@
                     <div>
                       <h4 class="text-[10px] font-black uppercase tracking-wider text-slate-400 mb-3.5 px-2">Top Ranked</h4>
                       <ul class="space-y-1">
-                        <li><a href="${prefix}pages/universities.html"
+                        <li><a href="${prefix}pages/universities/amity-university.html"
                             class="flex items-center px-2 py-2 rounded-lg text-sm text-slate-700 hover:text-brand-600 hover:bg-brand-50/60 transition-all"><i
                               class="fa-solid fa-award text-brand-500 mr-2.5 text-[15px]"></i>Amity University</a></li>
-                        <li><a href="${prefix}pages/universities.html"
+                        <li><a href="${prefix}pages/universities/lpu-online.html"
                             class="flex items-center px-2 py-2 rounded-lg text-sm text-slate-700 hover:text-brand-600 hover:bg-brand-50/60 transition-all"><i
                               class="fa-solid fa-award text-brand-500 mr-2.5 text-[15px]"></i>LPU Online</a></li>
-                        <li><a href="${prefix}pages/universities.html"
+                        <li><a href="${prefix}pages/universities/manipal-university.html"
                             class="flex items-center px-2 py-2 rounded-lg text-sm text-slate-700 hover:text-brand-600 hover:bg-brand-50/60 transition-all"><i
                               class="fa-solid fa-award text-brand-500 mr-2.5 text-[15px]"></i>Manipal University</a></li>
-                        <li><a href="${prefix}pages/universities.html"
+                        <li><a href="${prefix}pages/universities/chandigarh-university.html"
                             class="flex items-center px-2 py-2 rounded-lg text-sm text-slate-700 hover:text-brand-600 hover:bg-brand-50/60 transition-all"><i
                               class="fa-solid fa-award text-brand-500 mr-2.5 text-[15px]"></i>Chandigarh University</a></li>
-                        <li><a href="${prefix}pages/universities.html"
+                        <li><a href="${prefix}pages/universities/jain-online.html"
                             class="flex items-center px-2 py-2 rounded-lg text-sm text-slate-700 hover:text-brand-600 hover:bg-brand-50/60 transition-all"><i
                               class="fa-solid fa-award text-brand-500 mr-2.5 text-[15px]"></i>Jain Online</a></li>
                       </ul>
@@ -133,19 +141,19 @@
                     <div>
                       <h4 class="text-[10px] font-black uppercase tracking-wider text-slate-400 mb-3.5 px-2">Accreditation Categories</h4>
                       <ul class="space-y-1">
-                        <li><a href="${prefix}pages/universities.html"
+                        <li><a href="${prefix}pages/accreditations/ugc-deb.html"
                             class="flex items-center px-2 py-2 rounded-lg text-sm text-slate-700 hover:text-brand-600 hover:bg-brand-50/60 transition-all"><i
                               class="fa-solid fa-circle-check text-brand-500 mr-2.5 text-[14px]"></i>UGC-DEB Approved</a></li>
-                        <li><a href="${prefix}pages/universities.html"
+                        <li><a href="${prefix}pages/accreditations/naac.html"
                             class="flex items-center px-2 py-2 rounded-lg text-sm text-slate-700 hover:text-brand-600 hover:bg-brand-50/60 transition-all"><i
                               class="fa-solid fa-circle-check text-brand-500 mr-2.5 text-[14px]"></i>NAAC A+/A++ Grade</a></li>
-                        <li><a href="${prefix}pages/universities.html"
+                        <li><a href="${prefix}pages/accreditations/nirf.html"
                             class="flex items-center px-2 py-2 rounded-lg text-sm text-slate-700 hover:text-brand-600 hover:bg-brand-50/60 transition-all"><i
                               class="fa-solid fa-circle-check text-brand-500 mr-2.5 text-[14px]"></i>NIRF Top 100 Ranked</a></li>
-                        <li><a href="${prefix}pages/universities.html"
+                        <li><a href="${prefix}pages/accreditations/aicte.html"
                             class="flex items-center px-2 py-2 rounded-lg text-sm text-slate-700 hover:text-brand-600 hover:bg-brand-50/60 transition-all"><i
                               class="fa-solid fa-circle-check text-brand-500 mr-2.5 text-[14px]"></i>AICTE Approved</a></li>
-                        <li><a href="${prefix}pages/universities.html"
+                        <li><a href="${prefix}pages/accreditations/wes.html"
                             class="flex items-center px-2 py-2 rounded-lg text-sm text-slate-700 hover:text-brand-600 hover:bg-brand-50/60 transition-all"><i
                               class="fa-solid fa-circle-check text-brand-500 mr-2.5 text-[14px]"></i>WES Approved Universities</a></li>
                       </ul>
@@ -169,22 +177,25 @@
                     Privacy & Policy <i class="fa-solid fa-chevron-down text-[10px] ml-1.5 transition-transform duration-200"></i>
                   </button>
 
-                  <!-- DROPDOWN MENU: Privacy & Policy (White bg, slate text, hover brand-green, separators) -->
+                  <!-- DROPDOWN MENU: Privacy & Policy -->
                   <div
                     class="mega-menu absolute right-0 top-full mt-2 w-[240px] rounded-[24px] bg-white border border-slate-100 shadow-2xl p-4 z-50 flex flex-col">
-                    <a href="${prefix}pages/terms-of-service.html"
+                    <a href="${prefix}pages/privacy-policy.html"
+                      class="block w-full text-left px-4 py-2 text-xs font-semibold text-slate-700 hover:text-brand-600 hover:bg-brand-50/60 rounded-lg transition-colors">Privacy Policy</a>
+                    <div class="h-[1px] bg-slate-100 my-1 w-full"></div>
+                    <a href="${prefix}pages/refund-policy.html"
                       class="block w-full text-left px-4 py-2 text-xs font-semibold text-slate-700 hover:text-brand-600 hover:bg-brand-50/60 rounded-lg transition-colors">Refund Policy</a>
                     <div class="h-[1px] bg-slate-100 my-1 w-full"></div>
-                    <a href="${prefix}pages/contact.html"
+                    <a href="${prefix}pages/pay-now.html"
                       class="block w-full text-left px-4 py-2 text-xs font-semibold text-slate-700 hover:text-brand-600 hover:bg-brand-50/60 rounded-lg transition-colors">Pay Now</a>
                     <div class="h-[1px] bg-slate-100 my-1 w-full"></div>
-                    <a href="${prefix}pages/terms-of-service.html"
+                    <a href="${prefix}pages/terms-conditions.html"
                       class="block w-full text-left px-4 py-2 text-xs font-semibold text-slate-700 hover:text-brand-600 hover:bg-brand-50/60 rounded-lg transition-colors">Terms & Conditions</a>
                     <div class="h-[1px] bg-slate-100 my-1 w-full"></div>
-                    <a href="${prefix}pages/terms-of-service.html"
+                    <a href="${prefix}pages/shipping-delivery.html"
                       class="block w-full text-left px-4 py-2 text-xs font-semibold text-slate-700 hover:text-brand-600 hover:bg-brand-50/60 rounded-lg transition-colors">Shipping & Delivery</a>
                     <div class="h-[1px] bg-slate-100 my-1 w-full"></div>
-                    <a href="${prefix}pages/contact.html"
+                    <a href="${prefix}pages/help-desk.html"
                       class="block w-full text-left px-4 py-2 text-xs font-semibold text-slate-700 hover:text-brand-600 hover:bg-brand-50/60 rounded-lg transition-colors">EduSolver Help Desk</a>
                   </div>
                 </div>
@@ -225,7 +236,7 @@
                 </a>
               </div>
 
-              <!-- Mobile Hamburguer Toggle Button -->
+              <!-- Mobile Hamburger Toggle Button -->
               <div class="flex lg:hidden items-center">
                 <button id="mobile-toggle" class="p-2 rounded-lg text-slate-600 hover:text-brand-500 focus:outline-none"
                   aria-label="Toggle navigation menu">
@@ -250,9 +261,11 @@
               Courses <i class="fa-solid fa-chevron-down text-xs transition-transform" id="mob-courses-arrow"></i>
             </button>
             <div id="mob-courses" class="hidden pl-4 space-y-2 text-sm">
-              <a href="${prefix}pages/service-detail.html?cat=masters&course=mba" class="block py-1 text-slate-600 hover:text-brand-500">Online MBA</a>
-              <a href="${prefix}pages/service-detail.html?cat=masters&course=mca" class="block py-1 text-slate-600 hover:text-brand-500">Online MCA</a>
-              <a href="${prefix}pages/service-detail.html?cat=graduation&course=bca" class="block py-1 text-slate-600 hover:text-brand-500">Online BBA/BCA</a>
+              <a href="${prefix}pages/courses/online-mba.html" class="block py-1 text-slate-600 hover:text-brand-500">Online MBA</a>
+              <a href="${prefix}pages/courses/online-mca.html" class="block py-1 text-slate-600 hover:text-brand-500">Online MCA</a>
+              <a href="${prefix}pages/courses/online-bba.html" class="block py-1 text-slate-600 hover:text-brand-500">Online BBA</a>
+              <a href="${prefix}pages/courses/online-bca.html" class="block py-1 text-slate-600 hover:text-brand-500">Online BCA</a>
+              <a href="${prefix}pages/courses/bsc-it-cs.html" class="block py-1 text-slate-600 hover:text-brand-500">B.Sc (IT/CS)</a>
             </div>
             <hr class="border-slate-100">
             <button
@@ -261,9 +274,11 @@
               Universities <i class="fa-solid fa-chevron-down text-xs transition-transform" id="mob-universities-arrow"></i>
             </button>
             <div id="mob-universities" class="hidden pl-4 space-y-2 text-sm">
-              <a href="${prefix}pages/universities.html" class="block py-1 text-slate-600 hover:text-brand-500">Amity University</a>
-              <a href="${prefix}pages/universities.html" class="block py-1 text-slate-600 hover:text-brand-500">LPU Online</a>
-              <a href="${prefix}pages/universities.html" class="block py-1 text-slate-600 hover:text-brand-500">Manipal University</a>
+              <a href="${prefix}pages/universities/amity-university.html" class="block py-1 text-slate-600 hover:text-brand-500">Amity University</a>
+              <a href="${prefix}pages/universities/lpu-online.html" class="block py-1 text-slate-600 hover:text-brand-500">LPU Online</a>
+              <a href="${prefix}pages/universities/manipal-university.html" class="block py-1 text-slate-600 hover:text-brand-500">Manipal University</a>
+              <a href="${prefix}pages/universities/chandigarh-university.html" class="block py-1 text-slate-600 hover:text-brand-500">Chandigarh University</a>
+              <a href="${prefix}pages/universities/jain-online.html" class="block py-1 text-slate-600 hover:text-brand-500">Jain Online</a>
             </div>
             <hr class="border-slate-100">
             <button
@@ -272,11 +287,12 @@
               Privacy & Policy <i class="fa-solid fa-chevron-down text-xs transition-transform" id="mob-privacy-arrow"></i>
             </button>
             <div id="mob-privacy" class="hidden pl-4 space-y-2 text-sm">
-              <a href="${prefix}pages/terms-of-service.html" class="block py-1 text-slate-600 hover:text-brand-500">Refund Policy</a>
-              <a href="${prefix}pages/contact.html" class="block py-1 text-slate-600 hover:text-brand-500">Pay Now</a>
-              <a href="${prefix}pages/terms-of-service.html" class="block py-1 text-slate-600 hover:text-brand-500">Terms & Conditions</a>
-              <a href="${prefix}pages/terms-of-service.html" class="block py-1 text-slate-600 hover:text-brand-500">Shipping & Delivery</a>
-              <a href="${prefix}pages/contact.html" class="block py-1 text-slate-600 hover:text-brand-500">EduSolver Help Desk</a>
+              <a href="${prefix}pages/privacy-policy.html" class="block py-1 text-slate-600 hover:text-brand-500">Privacy Policy</a>
+              <a href="${prefix}pages/refund-policy.html" class="block py-1 text-slate-600 hover:text-brand-500">Refund Policy</a>
+              <a href="${prefix}pages/pay-now.html" class="block py-1 text-slate-600 hover:text-brand-500">Pay Now</a>
+              <a href="${prefix}pages/terms-conditions.html" class="block py-1 text-slate-600 hover:text-brand-500">Terms & Conditions</a>
+              <a href="${prefix}pages/shipping-delivery.html" class="block py-1 text-slate-600 hover:text-brand-500">Shipping & Delivery</a>
+              <a href="${prefix}pages/help-desk.html" class="block py-1 text-slate-600 hover:text-brand-500">EduSolver Help Desk</a>
             </div>
             <hr class="border-slate-100">
             <a href="${prefix}pages/blog.html"
@@ -401,11 +417,11 @@
             <div class="space-y-3">
               <h4 class="text-xs font-bold text-white uppercase tracking-wider">Popular Programs</h4>
               <ul class="space-y-2 text-xs">
-                <li><a href="${prefix}pages/service-detail.html?cat=masters&course=mba" class="hover:text-white transition-colors">Online MBA Programs</a></li>
-                <li><a href="${prefix}pages/service-detail.html?cat=masters&course=mca" class="hover:text-white transition-colors">Online MCA Programs</a></li>
-                <li><a href="${prefix}pages/service-detail.html?cat=graduation&course=bba" class="hover:text-white transition-colors">Online BBA Programs</a></li>
-                <li><a href="${prefix}pages/service-detail.html?cat=graduation&course=bca" class="hover:text-white transition-colors">Online BCA Programs</a></li>
-                <li><a href="${prefix}pages/service-detail.html?cat=masters&course=m.sc" class="hover:text-white transition-colors">AI & Data Science M.Sc</a></li>
+                <li><a href="${prefix}pages/courses/online-mba.html" class="hover:text-white transition-colors">Online MBA Programs</a></li>
+                <li><a href="${prefix}pages/courses/online-mca.html" class="hover:text-white transition-colors">Online MCA Programs</a></li>
+                <li><a href="${prefix}pages/courses/online-bba.html" class="hover:text-white transition-colors">Online BBA Programs</a></li>
+                <li><a href="${prefix}pages/courses/online-bca.html" class="hover:text-white transition-colors">Online BCA Programs</a></li>
+                <li><a href="${prefix}pages/courses/ai-ml.html" class="hover:text-white transition-colors">AI & Machine Learning Pro</a></li>
               </ul>
             </div>
 
@@ -413,11 +429,11 @@
             <div class="space-y-3">
               <h4 class="text-xs font-bold text-white uppercase tracking-wider">Accredited Partner universities</h4>
               <ul class="space-y-2 text-xs">
-                <li><a href="${prefix}pages/universities.html" class="hover:text-white transition-colors">Amity University Online</a></li>
-                <li><a href="${prefix}pages/universities.html" class="hover:text-white transition-colors">LPU Online Programs</a></li>
-                <li><a href="${prefix}pages/universities.html" class="hover:text-white transition-colors">Sikkim Manipal Online</a></li>
-                <li><a href="${prefix}pages/universities.html" class="hover:text-white transition-colors">Chandigarh University Online</a></li>
-                <li><a href="${prefix}pages/universities.html" class="hover:text-white transition-colors">Jain University Online</a></li>
+                <li><a href="${prefix}pages/universities/amity-university.html" class="hover:text-white transition-colors">Amity University Online</a></li>
+                <li><a href="${prefix}pages/universities/lpu-online.html" class="hover:text-white transition-colors">LPU Online Programs</a></li>
+                <li><a href="${prefix}pages/universities/manipal-university.html" class="hover:text-white transition-colors">Sikkim Manipal Online</a></li>
+                <li><a href="${prefix}pages/universities/chandigarh-university.html" class="hover:text-white transition-colors">Chandigarh University Online</a></li>
+                <li><a href="${prefix}pages/universities/jain-online.html" class="hover:text-white transition-colors">Jain University Online</a></li>
               </ul>
             </div>
 
@@ -446,9 +462,9 @@
           <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between text-xs text-slate-600 gap-4 pt-4">
             <span>&copy; 2026 EduSolver Platform. All Rights Reserved.</span>
             <div class="flex space-x-4">
-              <a href="${prefix}pages/terms-of-service.html" class="hover:underline hover:text-slate-400">Terms of Service</a>
+              <a href="${prefix}pages/terms-conditions.html" class="hover:underline hover:text-slate-400">Terms of Service</a>
               <a href="${prefix}pages/privacy-policy.html" class="hover:underline hover:text-slate-400">Privacy Policy</a>
-              <a href="${prefix}pages/terms-of-service.html" class="hover:underline hover:text-slate-400">Refund Policy</a>
+              <a href="${prefix}pages/refund-policy.html" class="hover:underline hover:text-slate-400">Refund Policy</a>
             </div>
           </div>
         </footer>

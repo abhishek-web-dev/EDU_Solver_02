@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NIRF Ranked Online Universities | Government Methodology | EduSolver</title>
+  <meta name="description"
+    content="Understand the National Institutional Ranking Framework (NIRF) government parameters. Identify top ranked online higher education institutions, fees, and placements.">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+                        brand: {
+              50: '#f0fdf4',
+              100: '#dcfce7',
+              200: '#bbf7d0',
+              300: '#86efac',
+              400: '#4ade80',
+              500: '#12b809',
+              600: '#0f9a07',
+              700: '#0c7b05',
+              800: '#0a6104',
+              900: '#084e03',
+            },
+            slate: {
+              950: '#030712',
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Global Styling -->
+  <link rel="stylesheet" href="../../assets/css/style.css">
+
+  <style>
+    .reveal {
+      position: relative;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+
+<body
+  class="font-sans text-slate-800 bg-[#fbfcfb] selection:bg-brand-100 selection:text-brand-900 bg-grid-pattern min-h-screen flex flex-col overflow-x-hidden">
+
+  <!-- Dynamic Sticky Navbar -->
+  <edu-navbar></edu-navbar>
+
+  <!-- Spacer for fixed header -->
+  <div class="h-28"></div>
+
+  <!-- ==========================================
+       1. HERO HEADER AREA
+       ========================================== -->
+  <section class="relative min-h-[65vh] flex items-center justify-center py-20 bg-cover bg-center" 
+    style="background-image: linear-gradient(180deg, rgba(3, 7, 18, 0.85) 0%, rgba(3, 7, 18, 0.95) 100%), url('https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=1920&q=80');">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6 relative z-10">
+      <span
+        class="inline-flex items-center space-x-2 bg-brand-500/20 border border-brand-500/30 text-brand-300 px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-wider">
+        <i class="fa-solid fa-ranking-star text-brand-400 mr-1.5"></i> Govt. Audited Institutional Ranks
+      </span>
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-black text-white leading-[1.1] tracking-tight">
+        NIRF Rankings Framework<br>& Educational Metrics
+      </h1>
+      <p class="text-slate-300 text-xs sm:text-sm max-w-2xl mx-auto leading-relaxed">
+        The National Institutional Ranking Framework (NIRF) is the official government methodology approved by the Ministry of Education to rate higher education colleges.
+      </p>
+      <div class="pt-4">
+        <a href="#criteria-grid" class="px-8 py-4 bg-brand-500 hover:bg-brand-600 text-white font-extrabold text-xs sm:text-sm rounded-xl transition-all shadow-lg hover:-translate-y-0.5">
+          View Ranking Parameters
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       2. REGULATORY OVERVIEW & NIRF CRITERIA
+       ========================================== -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left: law summary -->
+        <div class="lg:col-span-8 space-y-6 text-left">
+          <span class="text-xs uppercase font-extrabold text-brand-600 tracking-widest block">NIRF METHODOLOGY</span>
+          <h2 class="text-3xl font-black text-slate-900 tracking-tight leading-snug">Official Ministry of Education Rankings Scope</h2>
+          <div class="h-1 w-20 bg-brand-500 rounded-full"></div>
+          <p class="text-slate-500 text-sm leading-relaxed">
+            The National Institutional Ranking Framework (NIRF) was launched by the Ministry of Education (formerly MHRD) in 2015 to establish credible, objective, and transparent metrics for ranking higher education institutions in India. Ranking is determined by multi-stage audit steps covering teaching qualities, research publications, graduation outputs, professional placements, and student perceptions.
+          </p>
+          <p class="text-slate-500 text-sm leading-relaxed">
+            For distance education and online university students, enrolling in highly ranked NIRF institutions ensures academic integrity. Top 100 NIRF colleges represent institutions that possess excellent learning resources, highly qualified PhD faculty, secure examination modules, and active career cells that coordinate placements dynamically with top MNCs.
+          </p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+            <div class="p-5 bg-slate-50 border border-slate-200 rounded-2xl">
+              <h4 class="text-sm font-bold text-slate-900">Govt. Audited Data</h4>
+              <p class="text-xs text-slate-455 mt-1">Official objective parameters verify and evaluate campus records directly.</p>
+            </div>
+            <div class="p-5 bg-slate-50 border border-slate-200 rounded-2xl">
+              <h4 class="text-sm font-bold text-slate-900">Top 100 Dominance</h4>
+              <p class="text-xs text-slate-455 mt-1">Partner colleges are rated under elite Top 100 national categories.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: approved checklist -->
+        <div class="lg:col-span-4 bg-slate-50 border border-slate-200 rounded-[32px] p-6 space-y-6">
+          <h3 class="text-lg font-black text-slate-950">Top NIRF Ranked Partners</h3>
+          <div class="space-y-3.5 text-xs font-semibold text-slate-700">
+            <div class="flex items-center gap-2.5 p-3 bg-white rounded-xl border border-slate-150">
+              <i class="fa-solid fa-circle-check text-brand-500"></i> Amity University Online
+            </div>
+            <div class="flex items-center gap-2.5 p-3 bg-white rounded-xl border border-slate-150">
+              <i class="fa-solid fa-circle-check text-brand-500"></i> LPU Online Programs
+            </div>
+            <div class="flex items-center gap-2.5 p-3 bg-white rounded-xl border border-slate-150">
+              <i class="fa-solid fa-circle-check text-brand-500"></i> Manipal Online Programs
+            </div>
+            <div class="flex items-center gap-2.5 p-3 bg-white rounded-xl border border-slate-150">
+              <i class="fa-solid fa-circle-check text-brand-500"></i> Chandigarh Online Programs
+            </div>
+            <div class="flex items-center gap-2.5 p-3 bg-white rounded-xl border border-slate-150">
+              <i class="fa-solid fa-circle-check text-brand-500"></i> Jain Online Programs
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       3. NIRF PARAMETERS STEPPER
+       ========================================== -->
+  <section class="py-20 bg-slate-50 border-t border-slate-200" id="criteria-grid">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-12">
+      <div class="space-y-3">
+        <span class="text-xs uppercase font-extrabold text-brand-600 tracking-widest">RANKING PARAMETERS</span>
+        <h2 class="text-3xl font-black text-slate-900 tracking-tight">Official NIRF Audit Pillars</h2>
+        <p class="text-slate-500 text-xs sm:text-sm">The 5 formal criteria utilized by the government panel to evaluate college ranks yearly.</p>
+      </div>
+
+      <div class="space-y-8 relative before:absolute before:inset-0 before:left-8 before:h-full before:w-0.5 before:bg-slate-200 text-left">
+        <!-- Step 1 -->
+        <div class="flex gap-6 relative">
+          <div class="w-16 h-16 rounded-full bg-slate-900 text-white flex items-center justify-center shrink-0 font-bold z-10">01</div>
+          <div class="space-y-1.5 pt-3">
+            <h4 class="text-base font-bold text-slate-900">Teaching, Learning & Resources (TLR)</h4>
+            <p class="text-xs text-slate-500 leading-relaxed">Audits teacher-student ratios, PhD faculties availability, financial logs usage, and virtual ODL classrooms libraries.</p>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="flex gap-6 relative">
+          <div class="w-16 h-16 rounded-full bg-slate-900 text-white flex items-center justify-center shrink-0 font-bold z-10">02</div>
+          <div class="space-y-1.5 pt-3">
+            <h4 class="text-base font-bold text-slate-900">Research & Professional Practice (RP)</h4>
+            <p class="text-xs text-slate-500 leading-relaxed">Measures academic publication volumes, indexing records in secure databases, and industrial case projects.</p>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="flex gap-6 relative">
+          <div class="w-16 h-16 rounded-full bg-slate-900 text-white flex items-center justify-center shrink-0 font-bold z-10">03</div>
+          <div class="space-y-1.5 pt-3">
+            <h4 class="text-base font-bold text-slate-900">Graduation Outcomes (GO)</h4>
+            <p class="text-xs text-slate-500 leading-relaxed">Evaluates student passing percentages, semestral graduation stats, and placement salary growth.</p>
+          </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="flex gap-6 relative">
+          <div class="w-16 h-16 rounded-full bg-slate-900 text-white flex items-center justify-center shrink-0 font-bold z-10">04</div>
+          <div class="space-y-1.5 pt-3">
+            <h4 class="text-base font-bold text-slate-900">Outreach & Inclusivity (OI)</h4>
+            <p class="text-xs text-slate-500 leading-relaxed">Measures geographical student diversities, women representations, and active scholarship portals concessions.</p>
+          </div>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="flex gap-6 relative">
+          <div class="w-16 h-16 rounded-full bg-brand-500 text-white flex items-center justify-center shrink-0 font-bold z-10"><i class="fa-solid fa-check"></i></div>
+          <div class="space-y-1.5 pt-3">
+            <h4 class="text-base font-bold text-slate-900">Perception (PR)</h4>
+            <p class="text-xs text-slate-500 leading-relaxed">Assembles feedback from corporate recruiters, academic peers, and general student groups ratings.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       4. RELATED UNIVERSITIES SECTION
+       ========================================== -->
+  <section class="py-20 bg-white border-t border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-12">
+      <div class="space-y-3">
+        <span class="text-xs uppercase font-extrabold text-brand-600 tracking-widest">ODL CAMPUSES</span>
+        <h2 class="text-3xl font-black text-slate-900 tracking-tight">Approved Top Partner Universities</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 text-left">
+        <!-- Amity -->
+        <div class="bg-slate-50 p-5 rounded-3xl border border-slate-200 hover:shadow-lg transition-all duration-300 flex flex-col justify-between space-y-4">
+          <h4 class="text-base font-extrabold text-slate-950">Amity University</h4>
+          <p class="text-[11px] text-slate-500">Premium global university experience holding NAAC A++ accreditation status.</p>
+          <a href="../universities/amity-university.html" class="inline-block text-xs font-bold text-brand-600 hover:text-brand-750">Explore Amity &rarr;</a>
+        </div>
+
+        <!-- LPU -->
+        <div class="bg-slate-50 p-5 rounded-3xl border border-slate-200 hover:shadow-lg transition-all duration-300 flex flex-col justify-between space-y-4">
+          <h4 class="text-base font-extrabold text-slate-950">LPU Online</h4>
+          <p class="text-[11px] text-slate-500">Massive tech-forward digital library with highly optimized semester structures.</p>
+          <a href="../universities/lpu-online.html" class="inline-block text-xs font-bold text-brand-600 hover:text-brand-750">Explore LPU &rarr;</a>
+        </div>
+
+        <!-- Manipal -->
+        <div class="bg-slate-50 p-5 rounded-3xl border border-slate-200 hover:shadow-lg transition-all duration-300 flex flex-col justify-between space-y-4">
+          <h4 class="text-base font-extrabold text-slate-950">Manipal Online</h4>
+          <p class="text-[11px] text-slate-500">Elite corporate heritage academic groups offering high placement scopes.</p>
+          <a href="../universities/manipal-university.html" class="inline-block text-xs font-bold text-brand-600 hover:text-brand-750">Explore Manipal &rarr;</a>
+        </div>
+
+        <!-- Chandigarh -->
+        <div class="bg-slate-50 p-5 rounded-3xl border border-slate-200 hover:shadow-lg transition-all duration-300 flex flex-col justify-between space-y-4">
+          <h4 class="text-base font-extrabold text-slate-950">Chandigarh Online</h4>
+          <p class="text-[11px] text-slate-500">Active online placements assistance portals and robust student platforms.</p>
+          <a href="../universities/chandigarh-university.html" class="inline-block text-xs font-bold text-brand-600 hover:text-brand-750">Explore CU &rarr;</a>
+        </div>
+
+        <!-- Jain -->
+        <div class="bg-slate-50 p-5 rounded-3xl border border-slate-200 hover:shadow-lg transition-all duration-300 flex flex-col justify-between space-y-4">
+          <h4 class="text-base font-extrabold text-slate-950">Jain Online</h4>
+          <p class="text-[11px] text-slate-500">Dual specialization structures configured for career progression.</p>
+          <a href="../universities/jain-online.html" class="inline-block text-xs font-bold text-brand-600 hover:text-brand-750">Explore Jain &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       5. RELATED COURSES SECTION
+       ========================================== -->
+  <section class="py-20 bg-slate-50 border-t border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-12">
+      <div class="space-y-3">
+        <span class="text-xs uppercase font-extrabold text-brand-600 tracking-widest">ACADEMIC CAREERS</span>
+        <h2 class="text-3xl font-black text-slate-900 tracking-tight">Valid Top Online Degrees</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-left">
+        <!-- MBA -->
+        <div class="bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl transition-all flex flex-col justify-between p-6 space-y-4">
+          <div class="space-y-2">
+            <h4 class="text-lg font-extrabold text-slate-900">Online MBA</h4>
+            <p class="text-xs text-slate-500">Focus on global operational business scales, marketing parameters and management grids.</p>
+          </div>
+          <a href="../courses/online-mba.html" class="px-4 py-2 bg-brand-50 hover:bg-brand-500 hover:text-white text-brand-650 font-black rounded-xl transition-all text-[10px] tracking-wider uppercase border border-brand-100 text-center">Compare MBA</a>
+        </div>
+
+        <!-- MCA -->
+        <div class="bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl transition-all flex flex-col justify-between p-6 space-y-4">
+          <div class="space-y-2">
+            <h4 class="text-lg font-extrabold text-slate-900">Online MCA</h4>
+            <p class="text-xs text-slate-500">Advance technical engineering logic completely online under UGC accredited validation.</p>
+          </div>
+          <a href="../courses/online-mca.html" class="px-4 py-2 bg-brand-50 hover:bg-brand-500 hover:text-white text-brand-650 font-black rounded-xl transition-all text-[10px] tracking-wider uppercase border border-brand-100 text-center">Compare MCA</a>
+        </div>
+
+        <!-- BBA -->
+        <div class="bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl transition-all flex flex-col justify-between p-6 space-y-4">
+          <div class="space-y-2">
+            <h4 class="text-lg font-extrabold text-slate-900">Online BBA</h4>
+            <p class="text-xs text-slate-500">Establish strong business leadership foundations with customized academic timelines.</p>
+          </div>
+          <a href="../courses/online-bba.html" class="px-4 py-2 bg-brand-50 hover:bg-brand-500 hover:text-white text-brand-650 font-black rounded-xl transition-all text-[10px] tracking-wider uppercase border border-brand-100 text-center">Compare BBA</a>
+        </div>
+
+        <!-- BCA -->
+        <div class="bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl transition-all flex flex-col justify-between p-6 space-y-4">
+          <div class="space-y-2">
+            <h4 class="text-lg font-extrabold text-slate-900">Online BCA</h4>
+            <p class="text-xs text-slate-500">Learn scalable frontend web composition, microservices backend, and datastores.</p>
+          </div>
+          <a href="../courses/online-bca.html" class="px-4 py-2 bg-brand-50 hover:bg-brand-500 hover:text-white text-brand-650 font-black rounded-xl transition-all text-[10px] tracking-wider uppercase border border-brand-100 text-center">Compare BCA</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       6. ACCREDITATION SPECIFIC FAQs
+       ========================================== -->
+  <section class="py-20 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-12">
+      <div class="space-y-3">
+        <span class="text-xs uppercase font-extrabold text-brand-600 tracking-widest">HELP DESK</span>
+        <h2 class="text-3xl font-black text-slate-900 tracking-tight">Frequently Asked Questions</h2>
+      </div>
+
+      <div class="text-left space-y-3">
+        <div class="border border-slate-200 rounded-[24px] overflow-hidden bg-white shadow-sm">
+          <button onclick="toggleFAQ(1)" class="w-full flex items-center justify-between p-6 text-left font-bold text-slate-900 focus:outline-none">
+            <span class="text-xs sm:text-sm">Does the Ministry of Education audit physical campus data for online ranks?</span>
+            <i class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-200" id="faq-arrow-1"></i>
+          </button>
+          <div id="faq-content-1" class="hidden border-t border-slate-200 p-6 text-xs text-slate-500 leading-relaxed bg-slate-50/50">
+            Yes. The rankings are awarded to the comprehensive university campus setup, but ODL operations leverage these infrastructure scopes to lock in excellent student learning outcomes.
+          </div>
+        </div>
+
+        <div class="border border-slate-200 rounded-[24px] overflow-hidden bg-white shadow-sm">
+          <button onclick="toggleFAQ(2)" class="w-full flex items-center justify-between p-6 text-left font-bold text-slate-900 focus:outline-none">
+            <span class="text-xs sm:text-sm">How often are NIRF ranking checklists refreshed?</span>
+            <i class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-200" id="faq-arrow-2"></i>
+          </button>
+          <div id="faq-content-2" class="hidden border-t border-slate-200 p-6 text-xs text-slate-500 leading-relaxed bg-slate-50/50">
+            NIRF updates rankings yearly, typically in the first half of the academic session, following exhaustive audits of institutional registries.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       7. HIGH-IMPACT CONVERSION AREA
+       ========================================== -->
+  <section class="py-20 bg-slate-50 border-t border-slate-200" id="admission-enquiry">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Form Info Left -->
+        <div class="lg:col-span-7 space-y-6 text-left">
+          <span class="inline-flex items-center space-x-2 bg-brand-50 border border-brand-200 text-brand-700 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider">
+            <i class="fa-solid fa-shield-halved text-brand-500 mr-1.5"></i> admissions helpline desk
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight leading-snug">
+            Need Expert Admissions Vetting for NIRF Approved Degrees?
+          </h2>
+          <p class="text-slate-500 text-sm leading-relaxed">
+            Avoid registration errors and check your concession coupon eligibility in real-time. Fill in our direct helpline card to consult designated technical academic counselors.
+          </p>
+        </div>
+
+        <!-- Form Right -->
+        <div class="lg:col-span-5 bg-white border border-slate-200 rounded-[32px] p-8 space-y-6 shadow-xl">
+          <div class="space-y-2">
+            <h3 class="text-lg font-extrabold text-slate-950">Vet My Admissions Eligibility</h3>
+            <p class="text-xs text-slate-450">Get direct registration checklists and pricing concessions.</p>
+          </div>
+
+          <form onsubmit="handleAdvisoryForm(event)" class="space-y-4">
+            <div>
+              <label class="block text-[9px] font-extrabold uppercase text-slate-400 mb-1">Full Name</label>
+              <input type="text" id="adv-name" required placeholder="Enter full name" 
+                class="w-full bg-slate-50 border border-slate-200 text-xs text-slate-800 px-4 py-3.5 rounded-xl focus:outline-none focus:border-brand-500 transition-all placeholder-slate-400 focus:bg-white" />
+            </div>
+            <div>
+              <label class="block text-[9px] font-extrabold uppercase text-slate-400 mb-1">Mobile Number</label>
+              <input type="tel" id="adv-phone" required placeholder="Enter mobile number" 
+                class="w-full bg-slate-50 border border-slate-200 text-xs text-slate-800 px-4 py-3.5 rounded-xl focus:outline-none focus:border-brand-500 transition-all placeholder-slate-400 focus:bg-white" />
+            </div>
+            <div>
+              <label class="block text-[9px] font-extrabold uppercase text-slate-400 mb-1">Email Address</label>
+              <input type="email" id="adv-email" required placeholder="Enter email address" 
+                class="w-full bg-slate-50 border border-slate-200 text-xs text-slate-800 px-4 py-3.5 rounded-xl focus:outline-none focus:border-brand-500 transition-all placeholder-slate-400 focus:bg-white" />
+            </div>
+
+            <button type="submit" class="w-full bg-brand-500 hover:bg-brand-600 text-white font-extrabold text-xs py-4 rounded-xl transition-all shadow-md">
+              Secure Direct Registration Slot
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       CONVERSION DIALOG POPUP
+       ========================================== -->
+  <div id="success-modal" class="fixed inset-0 z-50 overflow-y-auto hidden flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm">
+    <div class="bg-white rounded-3xl max-w-md w-full p-8 text-center space-y-6 shadow-2xl border border-slate-200 relative">
+      <div class="w-16 h-16 rounded-full bg-brand-50 border border-brand-200 flex items-center justify-center text-brand-650 text-2xl mx-auto"><i class="fa-solid fa-circle-check"></i></div>
+      
+      <div class="space-y-1">
+        <h4 class="text-xl font-extrabold text-slate-950">Registration Vouchered!</h4>
+        <p class="text-xs text-slate-400">Direct admission guides and concession vouchers have been allocated.</p>
+      </div>
+
+      <button onclick="closeModal()" class="w-full bg-brand-500 hover:bg-brand-600 text-white font-extrabold text-xs py-4 rounded-xl transition-all shadow-md">Continue, Thank You</button>
+    </div>
+  </div>
+
+  <!-- Dynamic Footer Component -->
+  <edu-footer></edu-footer>
+
+  <!-- Script triggers -->
+  <script src="../../assets/js/data.js"></script>
+  <script src="../../assets/js/component.js"></script>
+
+  <script type="text/javascript">
+    function toggleFAQ(id) {
+      const el = document.getElementById('faq-content-' + id);
+      const arrow = document.getElementById('faq-arrow-' + id);
+      if (el.classList.contains('hidden')) {
+        el.classList.remove('hidden');
+        arrow.style.transform = 'rotate(180deg)';
+      } else {
+        el.classList.add('hidden');
+        arrow.style.transform = 'rotate(0deg)';
+      }
+    }
+
+    function handleAdvisoryForm(e) {
+      e.preventDefault();
+      const modal = document.getElementById('success-modal');
+      modal.classList.remove('hidden');
+      document.body.style.overflow = "hidden";
+    }
+
+    function closeModal() {
+      const modal = document.getElementById('success-modal');
+      modal.classList.add('hidden');
+      document.body.style.overflow = "auto";
+      document.getElementById('adv-name').value = '';
+      document.getElementById('adv-phone').value = '';
+      document.getElementById('adv-email').value = '';
+    }
+  </script>
+</body>
+
+</html>

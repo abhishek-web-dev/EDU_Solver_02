@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chandigarh University Online | UGC-DEB NAAC A+ | Fees & Placements | EduSolver</title>
+  <meta name="description"
+    content="Compare Chandigarh University Online (CU) degree structures, semestral fees catalog, active placements grid, admissions stepper, and student counseling portals.">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+                        brand: {
+              50: '#f0fdf4',
+              100: '#dcfce7',
+              200: '#bbf7d0',
+              300: '#86efac',
+              400: '#4ade80',
+              500: '#12b809',
+              600: '#0f9a07',
+              700: '#0c7b05',
+              800: '#0a6104',
+              900: '#084e03',
+            },
+            slate: {
+              950: '#0f172a',
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Global Styling -->
+  <link rel="stylesheet" href="../../assets/css/style.css">
+
+  <style>
+    .reveal {
+      position: relative;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .cu-glow {
+      border: 1px solid rgba(18, 184, 9, 0.15);
+    }
+    .cu-glow:hover {
+      border: 1px solid rgba(18, 184, 9, 0.5);
+    }
+  </style>
+</head>
+
+<body
+  class="font-sans text-slate-800 bg-[#fbfbfb] selection:bg-brand-100 selection:text-brand-900 bg-grid-pattern min-h-screen flex flex-col overflow-x-hidden">
+
+  <!-- Dynamic Sticky Navbar -->
+  <edu-navbar></edu-navbar>
+
+  <!-- Spacer for fixed header -->
+  <div class="h-28"></div>
+
+  <!-- ==========================================
+       1. HERO BANNER (Innovation & Placements Theme)
+       ========================================== -->
+  <section class="relative min-h-[85vh] flex items-center justify-center py-20 bg-cover bg-center" 
+    style="background-image: linear-gradient(180deg, rgba(15, 23, 42, 0.8) 0%, rgba(15, 23, 42, 0.95) 100%), url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1920&q=80');">
+    
+    <div class="absolute inset-0 bg-gradient-to-r from-brand-950/20 to-slate-950/20 pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+      
+      <!-- Breadcrumbs -->
+      <nav class="flex items-center space-x-2 text-xs text-slate-400 font-bold mb-8">
+        <a href="../../index.html" class="hover:text-brand-400 text-slate-300 transition-colors">Home</a>
+        <i class="fa-solid fa-chevron-right text-[8px] text-slate-650"></i>
+        <a href="../universities.html" class="hover:text-brand-400 text-slate-300 transition-colors">Universities</a>
+        <i class="fa-solid fa-chevron-right text-[8px] text-slate-650"></i>
+        <span class="text-brand-400">Chandigarh University</span>
+      </nav>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left Hero Content -->
+        <div class="lg:col-span-8 space-y-6 text-left">
+          <span class="inline-flex items-center space-x-2 bg-brand-500/20 border border-brand-500/30 text-brand-300 px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-wider">
+            <i class="fa-solid fa-bolt text-brand-400 mr-1.5"></i> India's Leading Placement & Innovation Center
+          </span>
+          
+          <h1 class="text-4xl sm:text-5xl md:text-6xl font-black text-white leading-[1.1] tracking-tight">
+            Chandigarh Online<br><span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 to-brand-300">University Portal</span>
+          </h1>
+          
+          <p class="text-slate-300 text-sm sm:text-base max-w-2xl leading-relaxed">
+            Acquire an accredited online degree configured directly for placement growth. Access active university placements cells, mock tests, and verified MNC networks.
+          </p>
+
+          <div class="flex flex-wrap gap-3 pt-2 text-xs text-white">
+            <span class="px-4 py-2 bg-white/5 border border-white/10 rounded-full font-bold">NAAC A+ Approved</span>
+            <span class="px-4 py-2 bg-white/5 border border-white/10 rounded-full font-bold">NIRF Top Ranked</span>
+          </div>
+
+          <div class="flex flex-wrap gap-4 pt-4">
+            <a href="#fee-matrix" class="px-8 py-4 bg-brand-500 hover:bg-brand-600 text-white font-extrabold text-xs sm:text-sm rounded-xl transition-all shadow-lg hover:-translate-y-0.5">
+              Explore Programs & Fees
+            </a>
+            <a href="#admission-enquiry" class="px-8 py-4 bg-white/10 hover:bg-white/15 border border-white/20 text-white font-extrabold text-xs sm:text-sm rounded-xl transition-all hover:-translate-y-0.5">
+              Contact Counselor
+            </a>
+          </div>
+        </div>
+        
+        <!-- Right Hero Floating Stats Card -->
+        <div class="lg:col-span-4 w-full">
+          <div class="bg-slate-900/60 border border-white/10 backdrop-blur-md shadow-2xl rounded-2xl p-8 space-y-6">
+            <div class="flex items-center justify-between border-b border-white/10 pb-5">
+              <div>
+                <p class="text-[10px] text-slate-400 font-extrabold uppercase tracking-widest">Semester Fees Start</p>
+                <h3 class="text-3xl font-black text-brand-400">₹24,500 <span class="text-xs text-slate-350 font-normal">/Sem</span></h3>
+              </div>
+            </div>
+            
+            <div class="space-y-4 text-xs font-semibold text-slate-300">
+              <div class="flex justify-between items-center">
+                <span class="text-slate-400 flex items-center gap-1.5"><i class="fa-solid fa-building text-slate-500"></i> Institution:</span>
+                <span class="text-white font-bold">CU (Est. 2012)</span>
+              </div>
+              <div class="flex justify-between items-center">
+                <span class="text-slate-400 flex items-center gap-1.5"><i class="fa-solid fa-briefcase text-slate-500"></i> Placement Stats:</span>
+                <span class="text-brand-400 font-bold">Global Record Packages</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       2. RECOGNITION BADGES
+       ========================================== -->
+  <section class="py-12 bg-white border-b border-slate-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-slate-500 text-xs font-bold justify-items-center items-center font-mono">
+        <span class="flex items-center gap-2"><i class="fa-solid fa-stamp text-brand-500"></i> UGC-DEB Approved</span>
+        <span class="flex items-center gap-2"><i class="fa-solid fa-square-check text-brand-500"></i> AICTE Compliant</span>
+        <span class="flex items-center gap-2"><i class="fa-solid fa-award text-brand-500"></i> NAAC A+ Grade</span>
+        <span class="flex items-center gap-2"><i class="fa-solid fa-globe text-brand-500"></i> WES Accredited</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       3. ABOUT CAMPUS & HERITAGE
+       ========================================== -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <div class="lg:col-span-5">
+          <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=800&q=80" alt="Chandigarh University Campus" class="w-full h-96 object-cover rounded-3xl shadow-xl">
+        </div>
+
+        <div class="lg:col-span-7 space-y-6 text-left">
+          <span class="text-xs uppercase font-extrabold text-brand-600 tracking-widest block">CU HERITAGE</span>
+          <h2 class="text-3xl font-black text-slate-900 tracking-tight leading-snug">Empowering Innovation & Placements Excellence</h2>
+          <div class="h-1 w-20 bg-brand-500 rounded-full"></div>
+          <p class="text-slate-500 text-sm leading-relaxed">
+            Chandigarh University (CU) represents one of India's fastest growing premium higher education systems. With NAAC A+ accreditation status and high national government rankings (NIRF), CU is respected for its massive corporate placement partner networks, professional digital learning support systems, and tech-driven career portals.
+          </p>
+          <p class="text-slate-500 text-sm leading-relaxed">
+            Our online student support desks ensure every ODL learner acquires direct interview preparedness resources to secure high-growth career avenues.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       4. ADVANCED LMS SHOWCASE (PLACEMENT METRICS)
+       ========================================== -->
+  <section class="py-20 bg-slate-50 border-t border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-12">
+      <div class="space-y-3">
+        <span class="text-xs uppercase font-extrabold text-brand-600 tracking-widest">CAREER CELL</span>
+        <h2 class="text-3xl font-black text-slate-900 tracking-tight">Active Placement Assistance Portals</h2>
+        <p class="text-slate-500 text-xs sm:text-sm max-w-xl mx-auto">Discover the detailed tools configured by the Chandigarh University Online career cell to ensure student career success.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+        <div class="bg-white p-6 rounded-3xl border border-slate-200 space-y-4 shadow-sm hover:shadow-md transition-shadow cu-glow">
+          <div class="w-12 h-12 rounded-xl bg-brand-50 text-brand-500 flex items-center justify-center text-xl"><i class="fa-solid fa-briefcase"></i></div>
+          <h4 class="text-base font-bold text-slate-900">Virtual Placement Grids</h4>
+          <p class="text-xs text-slate-550 leading-relaxed">Participate directly in online hiring drives coordinated in coordination with global technology developers and MNC recruiters.</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-3xl border border-slate-200 space-y-4 shadow-sm hover:shadow-md transition-shadow cu-glow">
+          <div class="w-12 h-12 rounded-xl bg-brand-50 text-brand-500 flex items-center justify-center text-xl"><i class="fa-solid fa-comments"></i></div>
+          <h4 class="text-base font-bold text-slate-900">Mock Technical Audits</h4>
+          <p class="text-xs text-slate-550 leading-relaxed">Acquire personalized technical guidance from counselors to groom resume files and git repositories.</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-3xl border border-slate-200 space-y-4 shadow-sm hover:shadow-md transition-shadow cu-glow">
+          <div class="w-12 h-12 rounded-xl bg-brand-50 text-brand-500 flex items-center justify-center text-xl"><i class="fa-solid fa-rocket"></i></div>
+          <h4 class="text-base font-bold text-slate-900">MNC Career Roadmaps</h4>
+          <p class="text-xs text-slate-550 leading-relaxed">Identify structural professional skills gaps and solve specialized case metrics before core interviews.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       5. ONLINE PROGRAMS FEE MATRIX
+       ========================================== -->
+  <section class="py-20 bg-white" id="fee-matrix">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-12">
+      <div class="space-y-3">
+        <span class="text-xs uppercase font-extrabold text-brand-600 tracking-widest">FEES MATRIX</span>
+        <h2 class="text-3xl font-black text-slate-900 tracking-tight">Chandigarh Online Programs Catalog</h2>
+        <p class="text-slate-500 text-xs sm:text-sm max-w-xl mx-auto">Analyze accredited degrees, standard semestral durations, eligibility requirements, and tuition fee frameworks.</p>
+      </div>
+
+      <div class="overflow-x-auto rounded-[24px] border border-slate-200 shadow-sm">
+        <table class="w-full text-left text-xs border-collapse">
+          <thead>
+            <tr class="bg-slate-900 text-white uppercase font-extrabold text-[10px] tracking-wider">
+              <th class="p-5 border-r border-slate-800">Degree Program</th>
+              <th class="p-5 border-r border-slate-800">Semester Fees</th>
+              <th class="p-5 border-r border-slate-800">Duration</th>
+              <th class="p-5">Eligibility Criteria</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-200 font-semibold text-slate-700 bg-white">
+            <tr class="hover:bg-slate-50/50">
+              <td class="p-5 font-bold text-slate-900 border-r border-slate-150">Online MBA (Master of Business Administration)</td>
+              <td class="p-5 border-r border-slate-150">₹30,000 / Semester</td>
+              <td class="p-5 border-r border-slate-150">2 Years (4 Semesters)</td>
+              <td class="p-5">Graduation from any recognized stream</td>
+            </tr>
+            <tr class="hover:bg-slate-50/50 bg-slate-50/20">
+              <td class="p-5 font-bold text-slate-900 border-r border-slate-150">Online MCA (Master of Computer Applications)</td>
+              <td class="p-5 border-r border-slate-150">₹27,500 / Semester</td>
+              <td class="p-5 border-r border-slate-150">2 Years (4 Semesters)</td>
+              <td class="p-5">Graduation with Mathematics/BCA baseline</td>
+            </tr>
+            <tr class="hover:bg-slate-50/50">
+              <td class="p-5 font-bold text-slate-900 border-r border-slate-150">Online BBA (Bachelor of Business Administration)</td>
+              <td class="p-5 border-r border-slate-150">₹24,500 / Semester</td>
+              <td class="p-5 border-r border-slate-150">3 Years (6 Semesters)</td>
+              <td class="p-5">10+2 passing standard records from recognized board</td>
+            </tr>
+            <tr class="hover:bg-slate-50/50 bg-slate-50/20">
+              <td class="p-5 font-bold text-slate-900 border-r border-slate-150">Online BCA (Bachelor of Computer Applications)</td>
+              <td class="p-5 border-r border-slate-150">₹24,500 / Semester</td>
+              <td class="p-5 border-r border-slate-150">3 Years (6 Semesters)</td>
+              <td class="p-5">10+2 passing standard records from recognized board</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       6. ADMISSIONS STEPPER TIMELINE
+       ========================================== -->
+  <section class="py-20 bg-slate-50 border-t border-slate-200">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-12">
+      <div class="space-y-3">
+        <span class="text-xs uppercase font-extrabold text-brand-600 tracking-widest">ENROLLMENT FLOW</span>
+        <h2 class="text-3xl font-black text-slate-900 tracking-tight">Structured Admissions Stepper</h2>
+      </div>
+
+      <div class="space-y-8 relative before:absolute before:inset-0 before:left-8 before:h-full before:w-0.5 before:bg-slate-200 text-left">
+        <!-- Step 1 -->
+        <div class="flex gap-6 relative">
+          <div class="w-16 h-16 rounded-full bg-slate-900 text-white flex items-center justify-center shrink-0 font-bold z-10">01</div>
+          <div class="space-y-1.5 pt-3">
+            <h4 class="text-base font-bold text-slate-900">Program Application Vitals</h4>
+            <p class="text-xs text-slate-500 leading-relaxed">Access the EduSolver application matrix. Provide direct educational logs and certificates.</p>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="flex gap-6 relative">
+          <div class="w-16 h-16 rounded-full bg-slate-900 text-white flex items-center justify-center shrink-0 font-bold z-10">02</div>
+          <div class="space-y-1.5 pt-3">
+            <h4 class="text-base font-bold text-slate-900">Admissions Desk Review</h4>
+            <p class="text-xs text-slate-500 leading-relaxed">Admissions panels cross-verify qualification logs and eligibility for defense/merit waivers.</p>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="flex gap-6 relative">
+          <div class="w-16 h-16 rounded-full bg-slate-900 text-white flex items-center justify-center shrink-0 font-bold z-10">03</div>
+          <div class="space-y-1.5 pt-3">
+            <h4 class="text-base font-bold text-slate-900">Direct Fee Checkout</h4>
+            <p class="text-xs text-slate-500 leading-relaxed">Checkout semester fees securely or opt for flexible zero-cost monthly installments plans.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       7. VERIFIED ALUMNI TESTIMONIALS
+       ========================================== -->
+  <section class="py-20 bg-white">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-12">
+      <div class="space-y-3">
+        <span class="text-xs uppercase font-extrabold text-brand-600 tracking-widest">SUCCESS STORIES</span>
+        <h2 class="text-3xl font-black text-slate-900 tracking-tight">CU Online Alumni Insights</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
+        <div class="p-6 bg-slate-50 border border-slate-200 rounded-3xl space-y-4">
+          <p class="text-xs text-slate-500 italic">"Gaining direct mock interview preparation before placements drives locked in my dream job. Highly value CU's digital counselor structures."</p>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-slate-300 font-bold flex items-center justify-center text-slate-700">M</div>
+            <div>
+              <h5 class="text-xs font-bold text-slate-900">Manoj Kumar</h5>
+              <p class="text-[10px] text-slate-400">Software Engineer, Accenture</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-6 bg-slate-50 border border-slate-200 rounded-3xl space-y-4">
+          <p class="text-xs text-slate-500 italic">"Excellent semestral course frameworks. The direct zero-cost EMI plans allowed me to pursue computing degrees easily."</p>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-slate-300 font-bold flex items-center justify-center text-slate-700">P</div>
+            <div>
+              <h5 class="text-xs font-bold text-slate-900">Pooja Sharma</h5>
+              <p class="text-[10px] text-slate-400">System Analyst, IBM</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       8. EXPLORE TOP UNIVERSITIES (Dynamic Linking Section)
+       ========================================== -->
+  <section class="py-20 bg-slate-50 border-t border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-12">
+      <div class="space-y-3">
+        <span class="text-xs uppercase font-extrabold text-brand-600 tracking-widest">COMPARE ALTERNATIVES</span>
+        <h2 class="text-3xl font-black text-slate-900 tracking-tight">Explore Other Top Approved Universities</h2>
+        <p class="text-slate-500 text-xs sm:text-sm max-w-xl mx-auto">Contrasting and examining other premium online universities in India to find your ideal match.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-left">
+        <!-- Card 1: Amity University -->
+        <div class="bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group hover:-translate-y-1">
+          <div class="relative h-40 overflow-hidden shrink-0">
+            <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=400&q=80" alt="Amity Online Campus" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+            <span class="absolute top-3 right-3 bg-brand-500 text-white font-extrabold text-[8px] uppercase px-2 py-0.5 rounded-full tracking-wider shadow-sm">Grade A++</span>
+          </div>
+          <div class="p-5 flex-grow flex flex-col justify-between space-y-3">
+            <div class="space-y-1.5">
+              <h4 class="text-base font-black text-slate-900">Amity University</h4>
+              <p class="text-[11px] text-slate-450 leading-relaxed">Flagship digital library experience offering global curriculum recognition and elite mentor desks.</p>
+            </div>
+            <a href="amity-university.html" class="block w-full py-2 bg-brand-50 text-center hover:bg-brand-500 hover:text-white text-brand-650 font-black rounded-xl transition-all text-[10px] tracking-wider uppercase border border-brand-100">Explore Amity</a>
+          </div>
+        </div>
+
+        <!-- Card 2: LPU Online -->
+        <div class="bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group hover:-translate-y-1">
+          <div class="relative h-40 overflow-hidden shrink-0">
+            <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=400&q=80" alt="LPU Online Campus" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+            <span class="absolute top-3 right-3 bg-brand-500 text-white font-extrabold text-[8px] uppercase px-2 py-0.5 rounded-full tracking-wider shadow-sm">Grade A++</span>
+          </div>
+          <div class="p-5 flex-grow flex flex-col justify-between space-y-3">
+            <div class="space-y-1.5">
+              <h4 class="text-base font-black text-slate-900">LPU Online</h4>
+              <p class="text-[11px] text-slate-455 leading-relaxed">Highly affordable programs featuring professional placement grids and student tech forums.</p>
+            </div>
+            <a href="lpu-online.html" class="block w-full py-2 bg-brand-50 text-center hover:bg-brand-500 hover:text-white text-brand-650 font-black rounded-xl transition-all text-[10px] tracking-wider uppercase border border-brand-100">Explore LPU</a>
+          </div>
+        </div>
+
+        <!-- Card 3: Manipal University Online -->
+        <div class="bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group hover:-translate-y-1">
+          <div class="relative h-40 overflow-hidden shrink-0">
+            <img src="https://images.unsplash.com/photo-1498243691581-b145c3f54a5c?auto=format&fit=crop&w=400&q=80" alt="Manipal Campus" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+            <span class="absolute top-3 right-3 bg-brand-500 text-white font-extrabold text-[8px] uppercase px-2 py-0.5 rounded-full tracking-wider shadow-sm">Grade A+</span>
+          </div>
+          <div class="p-5 flex-grow flex flex-col justify-between space-y-3">
+            <div class="space-y-1.5">
+              <h4 class="text-base font-black text-slate-900">Manipal Online</h4>
+              <p class="text-[11px] text-slate-455 leading-relaxed">Elite corporate heritage programs offering high career spikes and designated industry projects.</p>
+            </div>
+            <a href="manipal-university.html" class="block w-full py-2 bg-brand-50 text-center hover:bg-brand-500 hover:text-white text-brand-650 font-black rounded-xl transition-all text-[10px] tracking-wider uppercase border border-brand-100">Explore Manipal</a>
+          </div>
+        </div>
+
+        <!-- Card 4: Jain Online -->
+        <div class="bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group hover:-translate-y-1">
+          <div class="relative h-40 overflow-hidden shrink-0">
+            <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=400&q=80" alt="Jain Campus" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+            <span class="absolute top-3 right-3 bg-brand-500 text-white font-extrabold text-[8px] uppercase px-2 py-0.5 rounded-full tracking-wider shadow-sm">Grade A+</span>
+          </div>
+          <div class="p-5 flex-grow flex flex-col justify-between space-y-3">
+            <div class="space-y-1.5">
+              <h4 class="text-base font-black text-slate-900">Jain Online</h4>
+              <p class="text-[11px] text-slate-455 leading-relaxed">Focus on dual specializations modules and certified global higher studies parity.</p>
+            </div>
+            <a href="jain-online.html" class="block w-full py-2 bg-brand-50 text-center hover:bg-brand-500 hover:text-white text-brand-650 font-black rounded-xl transition-all text-[10px] tracking-wider uppercase border border-brand-100">Explore Jain</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       9. HIGH-IMPACT CONVERSION AREA
+       ========================================== -->
+  <section class="py-20 bg-slate-50 border-t border-slate-200" id="admission-enquiry">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Form Info Left -->
+        <div class="lg:col-span-7 space-y-6 text-left">
+          <span class="inline-flex items-center space-x-2 bg-brand-50 border border-brand-200 text-brand-700 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider">
+            <i class="fa-solid fa-shield-halved text-brand-500 mr-1.5"></i> admissions helpline desk
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight leading-snug">
+            Need Expert Admissions Vetting for Chandigarh University?
+          </h2>
+          <p class="text-slate-500 text-sm leading-relaxed">
+            Avoid registration errors and check your concession coupon eligibility in real-time. Fill in our direct helpline card to consult Chandigarh University's designated advisory desk.
+          </p>
+        </div>
+
+        <!-- Form Right -->
+        <div class="lg:col-span-5 bg-white border border-slate-200 rounded-[32px] p-8 space-y-6 shadow-xl">
+          <div class="space-y-2">
+            <h3 class="text-lg font-extrabold text-slate-950">Vet My Admissions Eligibility</h3>
+            <p class="text-xs text-slate-450">Get direct registration checklists and pricing concessions.</p>
+          </div>
+
+          <form onsubmit="handleAdvisoryForm(event)" class="space-y-4">
+            <div>
+              <label class="block text-[9px] font-extrabold uppercase text-slate-400 mb-1">Full Name</label>
+              <input type="text" id="adv-name" required placeholder="Enter full name" 
+                class="w-full bg-slate-50 border border-slate-200 text-xs text-slate-800 px-4 py-3.5 rounded-xl focus:outline-none focus:border-brand-500 transition-all placeholder-slate-400 focus:bg-white" />
+            </div>
+            <div>
+              <label class="block text-[9px] font-extrabold uppercase text-slate-400 mb-1">Mobile Number</label>
+              <input type="tel" id="adv-phone" required placeholder="Enter mobile number" 
+                class="w-full bg-slate-50 border border-slate-200 text-xs text-slate-800 px-4 py-3.5 rounded-xl focus:outline-none focus:border-brand-500 transition-all placeholder-slate-400 focus:bg-white" />
+            </div>
+            <div>
+              <label class="block text-[9px] font-extrabold uppercase text-slate-400 mb-1">Email Address</label>
+              <input type="email" id="adv-email" required placeholder="Enter email address" 
+                class="w-full bg-slate-50 border border-slate-200 text-xs text-slate-800 px-4 py-3.5 rounded-xl focus:outline-none focus:border-brand-500 transition-all placeholder-slate-400 focus:bg-white" />
+            </div>
+
+            <button type="submit" class="w-full bg-brand-500 hover:bg-brand-600 text-white font-extrabold text-xs py-4 rounded-xl transition-all shadow-md">
+              Secure Direct Registration Slot
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       CONVERSION DIALOG POPUP
+       ========================================== -->
+  <div id="success-modal" class="fixed inset-0 z-50 overflow-y-auto hidden flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm">
+    <div class="bg-white rounded-3xl max-w-md w-full p-8 text-center space-y-6 shadow-2xl border border-slate-200 relative">
+      <div class="w-16 h-16 rounded-full bg-brand-50 border border-brand-200 flex items-center justify-center text-brand-650 text-2xl mx-auto"><i class="fa-solid fa-circle-check"></i></div>
+      
+      <div class="space-y-1">
+        <h4 class="text-xl font-extrabold text-slate-950">Registration Vouchered!</h4>
+        <p class="text-xs text-slate-400">Direct admission guides and concession vouchers have been allocated for Chandigarh University.</p>
+      </div>
+
+      <button onclick="closeModal()" class="w-full bg-brand-500 hover:bg-brand-600 text-white font-extrabold text-xs py-4 rounded-xl transition-all shadow-md">Continue, Thank You</button>
+    </div>
+  </div>
+
+  <!-- Dynamic Footer Component -->
+  <edu-footer></edu-footer>
+
+  <!-- Script triggers -->
+  <script src="../../assets/js/data.js"></script>
+  <script src="../../assets/js/component.js"></script>
+
+  <script type="text/javascript">
+    function handleAdvisoryForm(e) {
+      e.preventDefault();
+      const modal = document.getElementById('success-modal');
+      modal.classList.remove('hidden');
+      document.body.style.overflow = "hidden";
+    }
+
+    function closeModal() {
+      const modal = document.getElementById('success-modal');
+      modal.classList.add('hidden');
+      document.body.style.overflow = "auto";
+      document.getElementById('adv-name').value = '';
+      document.getElementById('adv-phone').value = '';
+      document.getElementById('adv-email').value = '';
+    }
+  </script>
+</body>
+
+</html>

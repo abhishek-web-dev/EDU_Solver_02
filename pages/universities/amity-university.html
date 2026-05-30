@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amity University Online | UGC-DEB approved NAAC A++ | EduSolver</title>
+  <meta name="description"
+    content="Explore Amity University Online programs, tuition fees, NAAC A++ accreditations, LMS digital interface features, and corporate placement support. Get free academic counseling.">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+                        brand: {
+              50: '#f0fdf4',
+              100: '#dcfce7',
+              200: '#bbf7d0',
+              300: '#86efac',
+              400: '#4ade80',
+              500: '#12b809',
+              600: '#0f9a07',
+              700: '#0c7b05',
+              800: '#0a6104',
+              900: '#084e03',
+            },
+            slate: {
+              950: '#030712',
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Global Styling -->
+  <link rel="stylesheet" href="../../assets/css/style.css">
+
+  <style>
+    .reveal {
+      position: relative;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+
+<body
+  class="font-sans text-slate-800 bg-[#fbfcfb] selection:bg-brand-100 selection:text-brand-900 bg-grid-pattern min-h-screen flex flex-col overflow-x-hidden">
+
+  <!-- Dynamic Sticky Navbar -->
+  <edu-navbar></edu-navbar>
+
+  <!-- Spacer for fixed header -->
+  <div class="h-28"></div>
+
+  <!-- ==========================================
+       1. PREMIUM UNIVERSITY HERO BANNER
+       ========================================== -->
+  <section class="relative min-h-[80vh] flex items-center justify-center py-20 bg-cover bg-center" 
+    style="background-image: linear-gradient(180deg, rgba(3, 7, 18, 0.75) 0%, rgba(3, 7, 18, 0.95) 100%), url('https://images.unsplash.com/photo-1498243691581-b145c3f54a5c?auto=format&fit=crop&w=1920&q=80');">
+    
+    <div class="absolute inset-0 bg-gradient-to-r from-brand-950/20 to-brand-950/20 pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+      
+      <!-- Breadcrumbs -->
+      <nav class="flex items-center space-x-2 text-xs text-slate-350 font-bold mb-8">
+        <a href="../../index.html" class="hover:text-brand-400 text-slate-300 transition-colors">Home</a>
+        <i class="fa-solid fa-chevron-right text-[8px] text-slate-500"></i>
+        <a href="../universities.html" class="hover:text-brand-400 text-slate-300 transition-colors">Universities</a>
+        <i class="fa-solid fa-chevron-right text-[8px] text-slate-500"></i>
+        <span class="text-brand-400">Amity University Online</span>
+      </nav>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left Hero Content -->
+        <div class="lg:col-span-8 space-y-6 text-left">
+          <span class="inline-flex items-center space-x-2 bg-brand-500/20 border border-brand-500/30 text-brand-300 px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-wider">
+            <i class="fa-solid fa-building-columns text-brand-400 mr-1.5"></i> INDIA'S ONLY NAAC A++ ONLINE CAMPUS
+          </span>
+          
+          <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white leading-[1.1] tracking-tight">
+            Amity University <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 to-brand-300">Online Learning Portal</span>
+          </h1>
+          
+          <p class="text-slate-300 text-base sm:text-lg max-w-2xl leading-relaxed">
+            Gain an elite UGC-DEB authorized degree from India's most highly ranked digital university. Accelerate your professional scope with career assistance and robust corporate placement drives.
+          </p>
+
+          <!-- Accreditations & Ratings Ribbon -->
+          <div class="flex flex-wrap gap-3 pt-2">
+            <span class="px-4.5 py-2.5 bg-white/5 backdrop-blur-md border border-white/10 text-white text-xs font-bold rounded-2xl flex items-center gap-1.5">
+              <i class="fa-solid fa-award text-brand-400"></i> NAAC A++ (CGPA 3.65)
+            </span>
+            <span class="px-4.5 py-2.5 bg-white/5 backdrop-blur-md border border-white/10 text-white text-xs font-bold rounded-2xl flex items-center gap-1.5">
+              <i class="fa-solid fa-circle-check text-brand-400"></i> UGC-DEB Approved
+            </span>
+            <span class="px-4.5 py-2.5 bg-white/5 backdrop-blur-md border border-white/10 text-white text-xs font-bold rounded-2xl flex items-center gap-1.5">
+              <i class="fa-solid fa-earth-americas text-brand-400"></i> WES Recognized
+            </span>
+          </div>
+
+          <!-- Primary Hero Actions -->
+          <div class="flex flex-wrap gap-4 pt-4">
+            <a href="#admission-form" class="px-8 py-4 bg-brand-500 hover:bg-brand-600 text-white font-extrabold text-xs sm:text-sm rounded-xl transition-all shadow-lg hover:-translate-y-0.5">
+              Explore Programs & Fees
+            </a>
+            <a href="#admission-form" class="px-8 py-4 bg-white/10 hover:bg-white/15 text-white font-extrabold text-xs sm:text-sm rounded-xl border border-white/20 backdrop-blur-sm transition-all hover:-translate-y-0.5">
+              Request Direct Counseling
+            </a>
+          </div>
+        </div>
+        
+        <!-- Right Hero Glass Info Block -->
+        <div class="lg:col-span-4 w-full">
+          <div class="glass-dark border border-white/10 shadow-2xl rounded-[32px] p-8 space-y-6">
+            <div class="flex items-center justify-between border-b border-white/10 pb-5">
+              <div>
+                <p class="text-[10px] text-slate-400 font-extrabold uppercase tracking-widest font-sans">TUITION FEES START</p>
+                <h3 class="text-3xl font-black text-brand-400">₹20,000 <span class="text-xs text-slate-350 font-normal">/Semester</span></h3>
+              </div>
+              <div class="w-14 h-14 bg-brand-500/10 text-brand-400 rounded-2xl flex items-center justify-center text-2xl shadow-inner border border-brand-500/25">
+                <i class="fa-solid fa-school"></i>
+              </div>
+            </div>
+            
+            <div class="space-y-4 text-xs font-semibold text-slate-300">
+              <div class="flex justify-between items-center">
+                <span class="text-slate-400"><i class="fa-solid fa-calendar-days mr-1.5 text-slate-500"></i> Academic Group:</span>
+                <span class="text-white font-bold">Amity (Est. 1995)</span>
+              </div>
+              <div class="flex justify-between items-center">
+                <span class="text-slate-400"><i class="fa-solid fa-laptop-code mr-1.5 text-slate-500"></i> LMS Platform:</span>
+                <span class="text-white font-bold">Amity virtual classroom app</span>
+              </div>
+              <div class="flex justify-between items-center">
+                <span class="text-slate-400"><i class="fa-solid fa-briefcase mr-1.5 text-slate-500"></i> Hiring Network:</span>
+                <span class="text-brand-400 font-bold">300+ Top Corporates</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       2. RECOGNITION & APPROVAL SEALS
+       ========================================== -->
+  <section class="py-12 bg-white border-b border-slate-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <p class="text-[10px] uppercase font-black tracking-widest text-slate-400 mb-6 font-bold">Fully Validated by Leading Regulatory Authorities</p>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-slate-500 text-xs font-bold justify-items-center items-center">
+        <span class="bg-slate-50 border border-slate-150 px-6 py-4 rounded-2xl flex items-center gap-2"><i class="fa-solid fa-circle-check text-brand-500"></i> UGC-DEB APPROVED</span>
+        <span class="bg-slate-50 border border-slate-150 px-6 py-4 rounded-2xl flex items-center gap-2"><i class="fa-solid fa-circle-check text-brand-500"></i> AICTE COMPLIANT</span>
+        <span class="bg-slate-50 border border-slate-150 px-6 py-4 rounded-2xl flex items-center gap-2"><i class="fa-solid fa-circle-check text-brand-500"></i> NAAC A++ GRADE</span>
+        <span class="bg-slate-50 border border-slate-150 px-6 py-4 rounded-2xl flex items-center gap-2"><i class="fa-solid fa-circle-check text-brand-500"></i> WES ACCREDITED</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       3. CAMPUS OVERVIEW & VALUE PROPOSITION
+       ========================================== -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Campus Image -->
+        <div class="lg:col-span-5 reveal">
+          <div class="relative rounded-3xl overflow-hidden shadow-2xl group">
+            <img src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&w=800&q=80" alt="Amity student cohort" class="w-full h-[400px] object-cover transition-transform duration-500 group-hover:scale-105">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 to-transparent flex flex-col justify-end p-6">
+              <span class="text-brand-400 text-xs font-black uppercase tracking-wider">Premium Infrastructure</span>
+              <h4 class="text-white font-extrabold text-lg">Amity Digital Learning Centers</h4>
+              <p class="text-slate-350 text-xs mt-1">Leverage elite virtual class technologies.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Text overview -->
+        <div class="lg:col-span-7 space-y-6 text-left">
+          <span class="text-xs uppercase font-extrabold text-brand-600 tracking-widest block">UNIVERSITY OVERVIEW</span>
+          <h2 class="text-3xl font-black text-slate-900 tracking-tight leading-snug">Institution Heritage & Academic Vision</h2>
+          <div class="h-1 w-20 bg-brand-500 rounded-full"></div>
+          <p class="text-slate-500 text-sm leading-relaxed">
+            Amity University Online is the dedicated digital education arm of the world-renowned Amity Education Group, which hosts over 150,000 students across global physical campuses in New Delhi, London, Dubai, and New York. Designed specifically to make premium tier-1 higher education available to working cohorts, Amity Online offers fully-accredited online UG, PG, and specialized diploma tracks.
+          </p>
+          <p class="text-slate-500 text-sm leading-relaxed">
+            Amity is India's first digital university to secure the highly prestigious **NAAC A++ grade (CGPA score of 3.65 out of 4)**, putting its academic structures at par with premier international learning frameworks. Degrees awarded hold identical value for competitive tests, government positions, and visa allocations.
+          </p>
+          
+          <div class="grid grid-cols-3 gap-4 pt-4 border-t border-slate-100">
+            <div>
+              <h4 class="text-2xl font-black text-slate-900">#1</h4>
+              <p class="text-[10px] font-extrabold text-slate-400 uppercase tracking-wider">Online Campus in India</p>
+            </div>
+            <div>
+              <h4 class="text-2xl font-black text-slate-900">300+</h4>
+              <p class="text-[10px] font-extrabold text-slate-400 uppercase tracking-wider">MNC Placement Partners</p>
+            </div>
+            <div>
+              <h4 class="text-2xl font-black text-slate-900">80,000+</h4>
+              <p class="text-[10px] font-extrabold text-slate-400 uppercase tracking-wider">Active Online Learners</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       4. LMS DIGITAL INTERFACE SHOWCASE (LMS Mockup)
+       ========================================== -->
+  <section class="py-20 bg-slate-50 border-y border-slate-150">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- LMS content -->
+        <div class="lg:col-span-7 space-y-6 text-left">
+          <span class="text-xs uppercase font-extrabold text-brand-600 tracking-widest block">LMS TECHNOLOGIES</span>
+          <h2 class="text-3xl font-black text-slate-900 tracking-tight leading-snug">Comprehensive Virtual Study Desk Platform</h2>
+          <p class="text-slate-500 text-sm leading-relaxed">
+            Amity's custom Learning Management System (LMS) is highly intuitive and accessible via smartphones, tablets, or computers. Engage in structured live panels, or catch up with recorded video content on weekends.
+          </p>
+          
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="bg-white p-5 rounded-2xl border border-slate-150 space-y-2">
+              <i class="fa-solid fa-play text-brand-500 text-xl"></i>
+              <h4 class="text-sm font-bold text-slate-900">Recorded Panels & Live Chats</h4>
+              <p class="text-xs text-slate-450 leading-relaxed">Revisit academic lectures anytime, resolving doubts via 24/7 custom text helplines.</p>
+            </div>
+            <div class="bg-white p-5 rounded-2xl border border-slate-150 space-y-2">
+              <i class="fa-solid fa-book text-brand-500 text-xl"></i>
+              <h4 class="text-sm font-bold text-slate-900">Digital Library & Cases</h4>
+              <p class="text-xs text-slate-450 leading-relaxed">Access standard academic e-books, case profiles, and executive portfolio sheets for free.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- LMS Image Visual -->
+        <div class="lg:col-span-5 reveal">
+          <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80" alt="LMS digital library mockup" class="w-full h-80 object-cover rounded-3xl shadow-xl border border-slate-200">
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       5. PROGRAMS CATALOG & FEES (Card Grids)
+       ========================================== -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-12">
+      <div class="space-y-3">
+        <span class="text-xs uppercase font-extrabold text-brand-600 tracking-widest">DIGITAL CURRICULA</span>
+        <h2 class="text-3xl font-black text-slate-900 tracking-tight">Amity Online Degree Catalog & Tuition Fees</h2>
+        <p class="text-slate-500 text-xs sm:text-sm max-w-xl mx-auto">Vetted courses offering high corporate parity, UGC validation, and standard EMIs.</p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 text-left">
+        <div class="bg-white border border-slate-200 p-6 rounded-3xl space-y-4 hover:shadow-md transition-shadow">
+          <div class="flex justify-between items-start">
+            <span class="w-10 h-10 rounded-xl bg-brand-50 text-brand-650 flex items-center justify-center text-lg"><i class="fa-solid fa-briefcase"></i></span>
+            <span class="px-2 py-0.5 bg-brand-100 text-brand-700 font-extrabold text-[9px] uppercase tracking-wider rounded-full font-bold">PG Degree</span>
+          </div>
+          <div>
+            <h4 class="text-base font-extrabold text-slate-900">Online MBA</h4>
+            <p class="text-xs text-slate-450 mt-1">Acquire leadership, financial analysis and sales skills.</p>
+          </div>
+          <div class="pt-3 border-t border-slate-100 flex justify-between items-center">
+            <span class="text-brand-650 font-black text-sm">₹35,000 <span class="text-[9px] text-slate-400 font-normal">/Semester</span></span>
+            <span class="text-[10px] text-slate-500 font-bold"><i class="fa-solid fa-clock mr-1"></i> 2 Years</span>
+          </div>
+        </div>
+
+        <div class="bg-white border border-slate-200 p-6 rounded-3xl space-y-4 hover:shadow-md transition-shadow">
+          <div class="flex justify-between items-start">
+            <span class="w-10 h-10 rounded-xl bg-brand-50 text-brand-650 flex items-center justify-center text-lg"><i class="fa-solid fa-laptop-code"></i></span>
+            <span class="px-2 py-0.5 bg-brand-100 text-brand-700 font-extrabold text-[9px] uppercase tracking-wider rounded-full font-bold">PG Degree</span>
+          </div>
+          <div>
+            <h4 class="text-base font-extrabold text-slate-900">Online MCA</h4>
+            <p class="text-xs text-slate-450 mt-1">Focus on advanced software systems and cloud design.</p>
+          </div>
+          <div class="pt-3 border-t border-slate-100 flex justify-between items-center">
+            <span class="text-brand-650 font-black text-sm">₹28,000 <span class="text-[9px] text-slate-400 font-normal">/Semester</span></span>
+            <span class="text-[10px] text-slate-500 font-bold"><i class="fa-solid fa-clock mr-1"></i> 2 Years</span>
+          </div>
+        </div>
+
+        <div class="bg-white border border-slate-200 p-6 rounded-3xl space-y-4 hover:shadow-md transition-shadow">
+          <div class="flex justify-between items-start">
+            <span class="w-10 h-10 rounded-xl bg-brand-50 text-brand-650 flex items-center justify-center text-lg"><i class="fa-solid fa-graduation-cap"></i></span>
+            <span class="px-2 py-0.5 bg-brand-100 text-brand-700 font-extrabold text-[9px] uppercase tracking-wider rounded-full font-bold">UG Degree</span>
+          </div>
+          <div>
+            <h4 class="text-base font-extrabold text-slate-900">Online BBA</h4>
+            <p class="text-xs text-slate-450 mt-1">Foundations of marketing, economics, and corporate HR.</p>
+          </div>
+          <div class="pt-3 border-t border-slate-100 flex justify-between items-center">
+            <span class="text-brand-650 font-black text-sm">₹20,000 <span class="text-[9px] text-slate-400 font-normal">/Semester</span></span>
+            <span class="text-[10px] text-slate-500 font-bold"><i class="fa-solid fa-clock mr-1"></i> 3 Years</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       6. INTERACTIVE 5-STEP TIMELINE STEPPER
+       ========================================== -->
+  <section class="py-20 bg-slate-50 border-y border-slate-150">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-12">
+      <div class="space-y-3">
+        <span class="text-xs uppercase font-extrabold text-brand-600 tracking-widest">Standard Admissions Flow</span>
+        <h2 class="text-3xl font-black text-slate-900 tracking-tight">Our Vetted Direct Admissions Timeline</h2>
+        <p class="text-slate-500 text-xs sm:text-sm max-w-xl mx-auto">Vetting your regulatory eligibility directly under Amity's registration desk guidelines.</p>
+      </div>
+
+      <!-- Vertical Timelines / Stepper -->
+      <div class="max-w-2xl mx-auto space-y-8 text-left">
+        <div class="flex gap-6 items-start">
+          <div class="w-10 h-10 rounded-full bg-brand-500 text-white flex items-center justify-center font-black text-xs shrink-0 shadow-md animate-bounce">1</div>
+          <div class="space-y-1">
+            <h4 class="text-base font-extrabold text-slate-900">Step 1: Document Upload Vetting</h4>
+            <p class="text-xs text-slate-500 leading-relaxed">Provide basic academic degrees (10th/12th/Graduation) to our chief advisors.</p>
+          </div>
+        </div>
+        <div class="flex gap-6 items-start">
+          <div class="w-10 h-10 rounded-full bg-brand-500 text-white flex items-center justify-center font-black text-xs shrink-0 shadow-md">2</div>
+          <div class="space-y-1">
+            <h4 class="text-base font-extrabold text-slate-900">Step 2: Admission Registration Audit</h4>
+            <p class="text-xs text-slate-500 leading-relaxed">Amity's digital admissions cell audits qualifications, generating authorization numbers in 48 hours.</p>
+          </div>
+        </div>
+        <div class="flex gap-6 items-start">
+          <div class="w-10 h-10 rounded-full bg-brand-500 text-white flex items-center justify-center font-black text-xs shrink-0 shadow-md">3</div>
+          <div class="space-y-1">
+            <h4 class="text-base font-extrabold text-slate-900">Step 3: Direct Semester Payment Gate</h4>
+            <p class="text-xs text-slate-500 leading-relaxed">Pay semester tuition directly inside official Amity channels with zero-interest EMIs.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       7. VERIFIED STUDENT REVIEWS & FAQs
+       ========================================== -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-12">
+      <div class="space-y-3">
+        <span class="text-xs uppercase font-extrabold text-brand-600 tracking-widest">ALUMNI VOICES</span>
+        <h2 class="text-3xl font-black text-slate-900 tracking-tight">Verified Alumni Success Stories</h2>
+        <p class="text-slate-500 text-xs sm:text-sm max-w-xl mx-auto">Listen directly from candidates who completed UGC accredited online programs at Amity.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
+        <div class="bg-slate-50 border border-slate-150 p-8 rounded-3xl space-y-4 shadow-sm">
+          <p class="text-slate-600 text-xs sm:text-sm leading-relaxed italic">
+            "Completing my MCA online while working full-time at standard technology corporations was extremely easy via Amity LMS. Proctored exams were easy to write from my desk, and the degree carries high value in recruiters reviews."
+          </p>
+          <h4 class="font-extrabold text-slate-900 text-sm">Amit Sharma (Online MCA Alumnus)</h4>
+        </div>
+        <div class="bg-slate-50 border border-slate-150 p-8 rounded-3xl space-y-4 shadow-sm">
+          <p class="text-slate-600 text-xs sm:text-sm leading-relaxed italic">
+            "The online business courses are top-tier. Highly advanced cases and corporate masterclasses by active managers gave me outstanding insights. Got promoted as Marketing Director!"
+          </p>
+          <h4 class="font-extrabold text-slate-900 text-sm">Neha Saxena (Online MBA Alumna)</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       8. EXPLORE TOP UNIVERSITIES (Dynamic Linking Section)
+       ========================================== -->
+  <section class="py-20 bg-slate-50 border-t border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-12">
+      <div class="space-y-3">
+        <span class="text-xs uppercase font-extrabold text-brand-600 tracking-widest">COMPARE ALTERNATIVES</span>
+        <h2 class="text-3xl font-black text-slate-900 tracking-tight">Explore Other Top Approved Universities</h2>
+        <p class="text-slate-500 text-xs sm:text-sm max-w-xl mx-auto">Contrasting and examining other premium online universities in India to find your ideal match.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-left">
+        <!-- Card 1: LPU Online -->
+        <div class="bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group hover:-translate-y-1">
+          <div class="relative h-40 overflow-hidden shrink-0">
+            <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=400&q=80" alt="LPU Online Campus" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+            <span class="absolute top-3 right-3 bg-brand-500 text-white font-extrabold text-[8px] uppercase px-2 py-0.5 rounded-full tracking-wider shadow-sm">Grade A+</span>
+          </div>
+          <div class="p-5 flex-grow flex flex-col justify-between space-y-3">
+            <div class="space-y-1.5">
+              <h4 class="text-base font-black text-slate-900">LPU Online</h4>
+              <p class="text-[11px] text-slate-450 leading-relaxed">Highly affordable programs featuring professional placement grids and student tech forums.</p>
+            </div>
+            <a href="lpu-online.html" class="block w-full py-2 bg-brand-50 text-center hover:bg-brand-500 hover:text-white text-brand-650 font-black rounded-xl transition-all text-[10px] tracking-wider uppercase border border-brand-100">Explore LPU</a>
+          </div>
+        </div>
+
+        <!-- Card 2: Manipal University Online -->
+        <div class="bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group hover:-translate-y-1">
+          <div class="relative h-40 overflow-hidden shrink-0">
+            <img src="https://images.unsplash.com/photo-1498243691581-b145c3f54a5c?auto=format&fit=crop&w=400&q=80" alt="Manipal Campus" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+            <span class="absolute top-3 right-3 bg-brand-500 text-white font-extrabold text-[8px] uppercase px-2 py-0.5 rounded-full tracking-wider shadow-sm">Grade A+</span>
+          </div>
+          <div class="p-5 flex-grow flex flex-col justify-between space-y-3">
+            <div class="space-y-1.5">
+              <h4 class="text-base font-black text-slate-900">Manipal Online</h4>
+              <p class="text-[11px] text-slate-455 leading-relaxed">Elite corporate heritage programs offering high career spikes and designated industry projects.</p>
+            </div>
+            <a href="manipal-university.html" class="block w-full py-2 bg-brand-50 text-center hover:bg-brand-500 hover:text-white text-brand-650 font-black rounded-xl transition-all text-[10px] tracking-wider uppercase border border-brand-100">Explore Manipal</a>
+          </div>
+        </div>
+
+        <!-- Card 3: Chandigarh University Online -->
+        <div class="bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group hover:-translate-y-1">
+          <div class="relative h-40 overflow-hidden shrink-0">
+            <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=400&q=80" alt="Chandigarh Campus" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+            <span class="absolute top-3 right-3 bg-brand-500 text-white font-extrabold text-[8px] uppercase px-2 py-0.5 rounded-full tracking-wider shadow-sm">Grade A+</span>
+          </div>
+          <div class="p-5 flex-grow flex flex-col justify-between space-y-3">
+            <div class="space-y-1.5">
+              <h4 class="text-base font-black text-slate-900">Chandigarh Online</h4>
+              <p class="text-[11px] text-slate-455 leading-relaxed">Dynamic academic catalogs with exceptional placement support modules and corporate tie-ups.</p>
+            </div>
+            <a href="chandigarh-university.html" class="block w-full py-2 bg-brand-50 text-center hover:bg-brand-500 hover:text-white text-brand-650 font-black rounded-xl transition-all text-[10px] tracking-wider uppercase border border-brand-100">Explore CU</a>
+          </div>
+        </div>
+
+        <!-- Card 4: Jain Online -->
+        <div class="bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group hover:-translate-y-1">
+          <div class="relative h-40 overflow-hidden shrink-0">
+            <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=400&q=80" alt="Jain Campus" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+            <span class="absolute top-3 right-3 bg-brand-500 text-white font-extrabold text-[8px] uppercase px-2 py-0.5 rounded-full tracking-wider shadow-sm">Grade A+</span>
+          </div>
+          <div class="p-5 flex-grow flex flex-col justify-between space-y-3">
+            <div class="space-y-1.5">
+              <h4 class="text-base font-black text-slate-900">Jain Online</h4>
+              <p class="text-[11px] text-slate-455 leading-relaxed">Focus on dual specializations modules and certified global higher studies parity.</p>
+            </div>
+            <a href="jain-online.html" class="block w-full py-2 bg-brand-50 text-center hover:bg-brand-500 hover:text-white text-brand-650 font-black rounded-xl transition-all text-[10px] tracking-wider uppercase border border-brand-100">Explore Jain</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       9. HIGH-IMPACT CONVERSION AREA
+       ========================================== -->
+  <section class="py-20 bg-slate-50 border-t border-slate-200" id="admission-form">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Form Info Left -->
+        <div class="lg:col-span-7 space-y-6 text-left">
+          <span class="inline-flex items-center space-x-2 bg-brand-50 border border-brand-200 text-brand-700 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider">
+            <i class="fa-solid fa-shield-halved text-brand-500 mr-1.5"></i> admissions helpline desk
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight leading-snug">
+            Need Expert Admissions Vetting for Amity Online?
+          </h2>
+          <p class="text-slate-500 text-sm leading-relaxed">
+            Avoid registration errors and check your concession coupon eligibility in real-time. Fill in our direct helpline card to consult Amity's designated advisory desk.
+          </p>
+
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-brand-50 border border-brand-100 text-brand-500 flex items-center justify-center text-sm"><i class="fa-solid fa-phone"></i></div>
+            <div>
+              <p class="text-[10px] text-slate-400 font-extrabold uppercase">Direct Admissions Line</p>
+              <h4 class="font-extrabold text-slate-900 text-sm">+91 1800-456-7890</h4>
+            </div>
+          </div>
+        </div>
+
+        <!-- Form Right -->
+        <div class="lg:col-span-5 bg-white border border-slate-200 rounded-[32px] p-8 space-y-6 shadow-xl">
+          <div class="space-y-2">
+            <h3 class="text-lg font-extrabold text-slate-950">Vet My Admissions Eligibility</h3>
+            <p class="text-xs text-slate-450">Get direct registration checklists and pricing concessions.</p>
+          </div>
+
+          <form onsubmit="handleAdvisoryForm(event)" class="space-y-4">
+            <div>
+              <label class="block text-[9px] font-extrabold uppercase text-slate-400 mb-1">Full Name</label>
+              <input type="text" id="adv-name" required placeholder="Enter full name" 
+                class="w-full bg-slate-50 border border-slate-200 text-xs text-slate-800 px-4 py-3.5 rounded-xl focus:outline-none focus:border-brand-500 transition-all placeholder-slate-400 focus:bg-white" />
+            </div>
+            <div>
+              <label class="block text-[9px] font-extrabold uppercase text-slate-400 mb-1">Mobile Number</label>
+              <input type="tel" id="adv-phone" required placeholder="Enter mobile number" 
+                class="w-full bg-slate-50 border border-slate-200 text-xs text-slate-800 px-4 py-3.5 rounded-xl focus:outline-none focus:border-brand-500 transition-all placeholder-slate-400 focus:bg-white" />
+            </div>
+            <div>
+              <label class="block text-[9px] font-extrabold uppercase text-slate-400 mb-1">Email Address</label>
+              <input type="email" id="adv-email" required placeholder="Enter email address" 
+                class="w-full bg-slate-50 border border-slate-200 text-xs text-slate-800 px-4 py-3.5 rounded-xl focus:outline-none focus:border-brand-500 transition-all placeholder-slate-400 focus:bg-white" />
+            </div>
+
+            <button type="submit" class="w-full bg-brand-500 hover:bg-brand-600 text-white font-extrabold text-xs py-4 rounded-xl transition-all shadow-md">
+              Secure Direct Registration Slot
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       CONVERSION DIALOG POPUP
+       ========================================== -->
+  <div id="success-modal" class="fixed inset-0 z-50 overflow-y-auto hidden flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm">
+    <div class="bg-white rounded-3xl max-w-md w-full p-8 text-center space-y-6 shadow-2xl border border-slate-200 relative">
+      <div class="w-16 h-16 rounded-full bg-brand-50 border border-brand-200 flex items-center justify-center text-brand-600 text-2xl mx-auto"><i class="fa-solid fa-circle-check"></i></div>
+      
+      <div class="space-y-1">
+        <h4 class="text-xl font-extrabold text-slate-950">Registration Vouchered!</h4>
+        <p class="text-xs text-slate-400">Direct admission guides and concession vouchers have been allocated for Amity Online.</p>
+      </div>
+
+      <div class="border border-slate-150 bg-slate-50 rounded-2xl p-5 text-left text-xs text-slate-700 space-y-2.5">
+        <div class="flex items-center justify-between border-b border-slate-200 pb-1.5">
+          <span class="text-slate-400 font-bold uppercase text-[9px]">Aspirant</span>
+          <span id="pop-name" class="font-extrabold text-slate-900">Rohan Kumar</span>
+        </div>
+        <div class="flex items-center justify-between">
+          <span class="text-slate-400 font-bold uppercase text-[9px]">Target Institution</span>
+          <span class="font-bold text-slate-900">Amity University Online</span>
+        </div>
+      </div>
+
+      <p class="text-[10px] text-slate-400">Check your mobile messaging client for official dial-in codes.</p>
+      <button onclick="closeModal()" class="w-full bg-brand-500 hover:bg-brand-600 text-white font-extrabold text-xs py-4 rounded-xl transition-all shadow-md">Continue, Thank You</button>
+    </div>
+  </div>
+
+  <!-- Dynamic Footer Component -->
+  <edu-footer></edu-footer>
+
+  <!-- Script triggers -->
+  <script src="../../assets/js/data.js"></script>
+  <script src="../../assets/js/component.js"></script>
+
+  <script type="text/javascript">
+    function toggleFAQ(id) {
+      const el = document.getElementById('faq-content-' + id);
+      const arrow = document.getElementById('faq-arrow-' + id);
+      if (el.classList.contains('hidden')) {
+        el.classList.remove('hidden');
+        arrow.style.transform = 'rotate(180deg)';
+      } else {
+        el.classList.add('hidden');
+        arrow.style.transform = 'rotate(0deg)';
+      }
+    }
+
+    function handleAdvisoryForm(e) {
+      e.preventDefault();
+      const name = document.getElementById('adv-name').value;
+      document.getElementById('pop-name').innerText = name;
+      const modal = document.getElementById('success-modal');
+      modal.classList.remove('hidden');
+      document.body.style.overflow = "hidden";
+    }
+
+    function closeModal() {
+      const modal = document.getElementById('success-modal');
+      modal.classList.add('hidden');
+      document.body.style.overflow = "auto";
+      document.getElementById('adv-name').value = '';
+      document.getElementById('adv-phone').value = '';
+      document.getElementById('adv-email').value = '';
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EduSolver Help Desk - Student Support Portal | EduSolver</title>
+  <meta name="description"
+    content="Access the official EduSolver help desk. Submit admissions support tickets, resolve billing queries, and check academic guidelines FAQs.">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+                        brand: {
+              50: '#f0fdf4',
+              100: '#dcfce7',
+              200: '#bbf7d0',
+              300: '#86efac',
+              400: '#4ade80',
+              500: '#12b809',
+              600: '#0f9a07',
+              700: '#0c7b05',
+              800: '#0a6104',
+              900: '#084e03',
+            },
+            slate: {
+              950: '#030712',
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Global Styling -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body
+  class="font-sans text-slate-800 bg-[#fbfcfb] selection:bg-brand-100 selection:text-brand-900 bg-grid-pattern min-h-screen flex flex-col overflow-x-hidden">
+
+  <!-- Dynamic Sticky Navbar -->
+  <edu-navbar></edu-navbar>
+
+  <!-- Spacer for fixed header -->
+  <div class="h-28"></div>
+
+  <!-- ==========================================
+       1. HERO HEADER AREA
+       ========================================== -->
+  <section class="relative min-h-[50vh] flex items-center justify-center py-16 bg-cover bg-center" 
+    style="background-image: linear-gradient(180deg, rgba(3, 7, 18, 0.8) 0%, rgba(3, 7, 18, 0.95) 100%), url('https://images.unsplash.com/photo-1521791136368-1a46827d03f6?auto=format&fit=crop&w=1920&q=80');">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6 relative z-10">
+      <span
+        class="inline-flex items-center space-x-2 bg-brand-500/20 border border-brand-500/30 text-brand-300 px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-wider">
+        <i class="fa-solid fa-headset text-brand-400 mr-1.5"></i> DEDICATED STUDENT SUPPORT DESK
+      </span>
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white leading-[1.1]">
+        EduSolver Student Help Desk
+      </h1>
+      <p class="text-slate-300 text-xs sm:text-sm max-w-xl mx-auto leading-relaxed">
+        Need assistance with your university admissions, documents verification, SLM shipping, or fee concessions? Register your case to obtain a secure support ticket.
+      </p>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       2. SUPPORT CATEGORY CARDS
+       ========================================== -->
+  <section class="py-12 bg-white border-b border-slate-100">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-8">
+      <p class="text-[10px] uppercase font-black tracking-widest text-slate-400">Select a support segment to fast-track your concern</p>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+        <div class="p-5 bg-slate-50 border border-slate-200 rounded-2xl flex items-start gap-4 text-left">
+          <span class="w-10 h-10 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center text-lg shrink-0"><i class="fa-solid fa-folder-open"></i></span>
+          <div>
+            <h4 class="text-sm font-extrabold text-slate-900">Admissions Vetting</h4>
+            <p class="text-[11px] text-slate-450 mt-1 leading-relaxed">Vetting high-fidelity documentations and standard UGC regulatory guidelines.</p>
+          </div>
+        </div>
+        <div class="p-5 bg-slate-50 border border-slate-200 rounded-2xl flex items-start gap-4 text-left">
+          <span class="w-10 h-10 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center text-lg shrink-0"><i class="fa-solid fa-truck"></i></span>
+          <div>
+            <h4 class="text-sm font-extrabold text-slate-900">Kit Delivery & SLM</h4>
+            <p class="text-[11px] text-slate-450 mt-1 leading-relaxed">Tracking physical books and dynamic virtual study desk credentials.</p>
+          </div>
+        </div>
+        <div class="p-5 bg-slate-50 border border-slate-200 rounded-2xl flex items-start gap-4 text-left">
+          <span class="w-10 h-10 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center text-lg shrink-0"><i class="fa-solid fa-credit-card"></i></span>
+          <div>
+            <h4 class="text-sm font-extrabold text-slate-900">Tuition Checkout</h4>
+            <p class="text-[11px] text-slate-450 mt-1 leading-relaxed">Resolving gateway transaction checkouts, EMI setup structures, and refunds.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       3. HELP DESK GRID
+       ========================================== -->
+  <section class="py-20 bg-white flex-grow">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch" id="ticket-form-view">
+        
+        <!-- Left: Ticket Filing (7 Cols) -->
+        <div class="lg:col-span-7 bg-[#f8fafc] border border-slate-200 rounded-[32px] p-6 sm:p-8 space-y-6">
+          <div class="space-y-2">
+            <span class="text-xs uppercase font-extrabold text-brand-600 tracking-wider">SECURE CASE RECORDING</span>
+            <h3 class="text-lg font-black text-slate-950 font-sans">File an Official Support Ticket</h3>
+            <p class="text-xs text-slate-450">Fill in details and our dedicated support team will reach out within 24 business hours.</p>
+          </div>
+
+          <form onsubmit="handleTicketForm(event)" class="space-y-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-[9px] font-extrabold uppercase text-slate-400 mb-1">Your Full Name</label>
+                <input type="text" id="t-name" required placeholder="Enter name" 
+                  class="w-full bg-white border border-slate-200 text-xs text-slate-800 px-4 py-3.5 rounded-xl focus:outline-none focus:border-brand-500 transition-all" />
+              </div>
+              <div>
+                <label class="block text-[9px] font-extrabold uppercase text-slate-400 mb-1">Email Address</label>
+                <input type="email" id="t-email" required placeholder="Enter email address" 
+                  class="w-full bg-white border border-slate-200 text-xs text-slate-800 px-4 py-3.5 rounded-xl focus:outline-none focus:border-brand-500 transition-all" />
+              </div>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-[9px] font-extrabold uppercase text-slate-400 mb-1">Mobile Number</label>
+                <input type="tel" id="t-phone" required placeholder="Enter mobile" 
+                  class="w-full bg-white border border-slate-200 text-xs text-slate-800 px-4 py-3.5 rounded-xl focus:outline-none focus:border-brand-500 transition-all" />
+              </div>
+              <div>
+                <label class="block text-[9px] font-extrabold uppercase text-slate-400 mb-1">Support Category</label>
+                <select id="t-cat" class="w-full bg-white border border-slate-200 text-xs text-slate-800 px-4 py-3.5 rounded-xl focus:outline-none focus:border-brand-500 transition-all">
+                  <option value="Admissions Help">Admissions Help & Verification</option>
+                  <option value="Fees Concessions">Fees Concessions & EMI Vouchers</option>
+                  <option value="LMS Interface">LMS & study portal issues</option>
+                  <option value="Degree Delivery">Degree/SLM courier tracking</option>
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-[9px] font-extrabold uppercase text-slate-400 mb-1">Detailed Message / Query</label>
+              <textarea id="t-msg" required placeholder="Outline your concern details..." rows="4" 
+                class="w-full bg-white border border-slate-200 text-xs text-slate-800 px-4 py-3.5 rounded-xl focus:outline-none focus:border-brand-500 transition-all"></textarea>
+            </div>
+
+            <button type="submit" class="w-full bg-brand-500 hover:bg-brand-600 text-white font-extrabold text-xs py-4 rounded-xl transition-all shadow-md">
+              File Ticket & Request Callback
+            </button>
+          </form>
+        </div>
+
+        <!-- Right: Contact info & Trust badges (5 Cols) -->
+        <div class="lg:col-span-5 border border-slate-200 bg-slate-50 rounded-[32px] p-6 sm:p-8 flex flex-col justify-between shadow-sm">
+          <div class="space-y-6">
+            <h3 class="text-lg font-black text-slate-950 border-b border-slate-200 pb-3">Admissions Support</h3>
+            
+            <div class="space-y-4 text-xs font-semibold text-slate-700 font-sans">
+              <div class="flex items-start gap-3">
+                <i class="fa-solid fa-phone text-brand-500 text-base shrink-0 mt-0.5"></i>
+                <div>
+                  <h4 class="text-xs font-bold text-slate-900">Toll Free Hotline</h4>
+                  <p class="text-[11px] text-slate-400 mt-0.5">+91 1800-456-7890 (9 AM - 6 PM)</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <i class="fa-solid fa-envelope text-brand-500 text-base shrink-0 mt-0.5"></i>
+                <div>
+                  <h4 class="text-xs font-bold text-slate-900">Email Helpdesk Desk</h4>
+                  <p class="text-[11px] text-slate-400 mt-0.5">support@edusolver.in</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <i class="fa-solid fa-location-dot text-brand-500 text-base shrink-0 mt-0.5"></i>
+                <div>
+                  <h4 class="text-xs font-bold text-slate-900">Corporate HQ Office</h4>
+                  <p class="text-[11px] text-slate-400 mt-0.5">Floor 4, EduSolver Hub, Connaught Place, New Delhi, India</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="border border-slate-150 rounded-2xl p-4 mt-6 bg-white flex items-start gap-2.5">
+            <i class="fa-solid fa-shield-halved text-brand-500 mt-0.5 text-base shrink-0"></i>
+            <p class="text-[9px] text-slate-400 leading-relaxed">
+              <strong>100% Unbiased Audited Guidance:</strong> Direct cooperation channels. no charges for student registrations, comparisons, or verified profiles.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Success Screen -->
+      <div id="ticket-success-screen" class="hidden bg-white border border-slate-150 shadow-2xl rounded-[32px] max-w-lg mx-auto p-8 text-center space-y-6">
+        <div class="w-20 h-20 rounded-full bg-brand-50 border border-brand-200 flex items-center justify-center text-brand-600 text-3xl mx-auto"><i class="fa-solid fa-circle-check"></i></div>
+        
+        <div class="space-y-1">
+          <h3 class="text-2xl font-black text-slate-950">Support Ticket Filed!</h3>
+          <p class="text-xs text-slate-400">Our chief student relations coordinator has registered your case in the database.</p>
+        </div>
+
+        <div class="border border-slate-200 bg-slate-50 rounded-2xl p-6 text-left text-xs text-slate-700 space-y-3 font-sans">
+          <div class="flex items-center justify-between border-b border-slate-200 pb-2">
+            <span class="text-slate-400 font-bold uppercase text-[9px]">Aspirant Name</span>
+            <span id="res-name" class="font-extrabold text-slate-900">Rohan Kumar</span>
+          </div>
+          <div class="flex items-center justify-between border-b border-slate-200 pb-2">
+            <span class="text-slate-400 font-bold uppercase text-[9px]">Assigned Ticket ID</span>
+            <span class="font-black text-brand-600" id="res-ticket-id">ES-TK9821</span>
+          </div>
+          <div class="flex items-center justify-between">
+            <span class="text-slate-400 font-bold uppercase text-[9px]">Topic Segment</span>
+            <span id="res-cat" class="font-bold text-slate-900">Admissions Help</span>
+          </div>
+        </div>
+
+        <p class="text-[10px] text-slate-400">A verification link and ticketing response coordinates have been sent to your email.</p>
+        <button onclick="resetTicketPage()" class="w-full bg-brand-500 hover:bg-brand-600 text-white font-extrabold text-xs py-4 rounded-xl transition-all shadow-md">Go Back</button>
+      </div>
+
+    </div>
+
+  <!-- ==========================================
+       3. PORTAL NAVIGATION DRAWERS & COUNSELOR CTA
+       ========================================== -->
+  <section class="py-20 bg-slate-50 border-t border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-12">
+      
+      <!-- counselor cta banner -->
+      <div class="bg-gradient-to-r from-slate-900 to-slate-950 border border-slate-800 rounded-3xl p-8 sm:p-12 text-left text-white flex flex-col md:flex-row justify-between items-center gap-6">
+        <div class="space-y-3">
+          <span class="text-[9px] uppercase font-mono font-black text-brand-400 bg-brand-500/20 px-3 py-1 rounded-full border border-brand-500/30">Need Counselor Guidance?</span>
+          <h3 class="text-2xl font-black tracking-tight">Need Free Vetting Before Finalizing Tuition Checkout?</h3>
+          <p class="text-xs text-slate-300 max-w-xl">Consult with our Chief Student Advisors to double check university approvals, admissions deadlines, and discount options.</p>
+        </div>
+        <a href="contact.html" class="px-6 py-3.5 bg-brand-500 hover:bg-brand-600 text-white font-extrabold text-xs rounded-xl transition-all shadow-md shrink-0 uppercase tracking-wider">Contact Counselor Desk</a>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
+        <!-- Courses Drawer -->
+        <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm space-y-4">
+          <h4 class="text-base font-black text-slate-950 border-b border-slate-100 pb-3 flex items-center gap-2"><i class="fa-solid fa-graduation-cap text-brand-500"></i> Popular Academic Degrees</h4>
+          <div class="grid grid-cols-2 gap-2 text-xs font-bold text-slate-600">
+            <a href="courses/online-mba.html" class="hover:text-brand-500 flex items-center gap-1.5"><i class="fa-solid fa-chevron-right text-[8px]"></i> Online MBA</a>
+            <a href="courses/online-mca.html" class="hover:text-brand-500 flex items-center gap-1.5"><i class="fa-solid fa-chevron-right text-[8px]"></i> Online MCA</a>
+            <a href="courses/online-bba.html" class="hover:text-brand-500 flex items-center gap-1.5"><i class="fa-solid fa-chevron-right text-[8px]"></i> Online BBA</a>
+            <a href="courses/online-bca.html" class="hover:text-brand-500 flex items-center gap-1.5"><i class="fa-solid fa-chevron-right text-[8px]"></i> Online BCA</a>
+            <a href="courses/bsc-it-cs.html" class="hover:text-brand-500 flex items-center gap-1.5"><i class="fa-solid fa-chevron-right text-[8px]"></i> B.Sc IT/CS</a>
+            <a href="courses/full-stack-development.html" class="hover:text-brand-500 flex items-center gap-1.5"><i class="fa-solid fa-chevron-right text-[8px]"></i> Full Stack Dev</a>
+          </div>
+        </div>
+
+        <!-- Universities Drawer -->
+        <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm space-y-4">
+          <h4 class="text-base font-black text-slate-950 border-b border-slate-100 pb-3 flex items-center gap-2"><i class="fa-solid fa-building-columns text-brand-500"></i> Top Partner Campuses</h4>
+          <div class="grid grid-cols-2 gap-2 text-xs font-bold text-slate-600">
+            <a href="universities/amity-university.html" class="hover:text-brand-500 flex items-center gap-1.5"><i class="fa-solid fa-chevron-right text-[8px]"></i> Amity University</a>
+            <a href="universities/lpu-online.html" class="hover:text-brand-500 flex items-center gap-1.5"><i class="fa-solid fa-chevron-right text-[8px]"></i> LPU Online</a>
+            <a href="universities/manipal-university.html" class="hover:text-brand-500 flex items-center gap-1.5"><i class="fa-solid fa-chevron-right text-[8px]"></i> Manipal Online</a>
+            <a href="universities/chandigarh-university.html" class="hover:text-brand-500 flex items-center gap-1.5"><i class="fa-solid fa-chevron-right text-[8px]"></i> Chandigarh Online</a>
+            <a href="universities/jain-online.html" class="hover:text-brand-500 flex items-center gap-1.5"><i class="fa-solid fa-chevron-right text-[8px]"></i> Jain Online</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dynamic Footer Component -->
+  <edu-footer></edu-footer>
+
+  <!-- Script triggers -->
+  <script src="../assets/js/data.js"></script>
+  <script src="../assets/js/component.js"></script>
+
+  <script type="text/javascript">
+    function handleTicketForm(e) {
+      e.preventDefault();
+      const name = document.getElementById('t-name').value.trim();
+      const cat = document.getElementById('t-cat').value;
+
+      const randomId = "ES-TK" + Math.floor(1000 + Math.random() * 9000);
+
+      document.getElementById('res-name').innerText = name;
+      document.getElementById('res-ticket-id').innerText = randomId;
+      document.getElementById('res-cat').innerText = cat;
+
+      document.getElementById('ticket-form-view').classList.add('hidden');
+      document.getElementById('ticket-success-screen').classList.remove('hidden');
+    }
+
+    function resetTicketPage() {
+      document.getElementById('t-name').value = '';
+      document.getElementById('t-email').value = '';
+      document.getElementById('t-phone').value = '';
+      document.getElementById('t-msg').value = '';
+
+      document.getElementById('ticket-success-screen').classList.add('hidden');
+      document.getElementById('ticket-form-view').classList.remove('hidden');
+    }
+  </script>
+</body>
+
+</html>
